@@ -25,7 +25,6 @@ external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Mail, icon: envelope, url: "mailto:natamleaoferreira@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/natamleao"}
   - {title: Discord, icon: discord, url: "https://discord.com/users/natam_ferreira"}
-  - {title: GitHub, icon: github, url: "https://github.com/natamleao"}
 
 comments:
 #  disqus_shortname: ""         # see https://disqus.com
