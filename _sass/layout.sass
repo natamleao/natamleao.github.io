@@ -103,7 +103,7 @@ h2, small, p
 
 .nav-card
   flex: 1
-  padding: 0.7rem 0.9rem
+  padding: 0.9rem 1.1rem
   border-radius: 8px
   text-decoration: none
 
@@ -111,34 +111,51 @@ h2, small, p
   flex-direction: column
 
   background: transparent
-  border: 1px solid light(100)   // 🔥 contorno branco
+  border: 1px solid rgba(255, 255, 255, 0.15)
   color: light(0, 100)
 
   transition: all 0.2s ease
 
   &:hover
-    background: light(93)
-    background: light(93, 16)
-    border-color: light(100)
+    background: rgba(255, 255, 255, 0.05)
+    border-color: rgba(255, 255, 255, 0.3)
     transform: translateY(-2px)
     box-shadow: 0 4px 12px light-dark(gray(20), transparent)
 
 
 .nav-label
-  font-size: 0.7rem
-  opacity: 0.5
-  margin-bottom: 0.2rem
-
+  font-size: 0.65rem
+  letter-spacing: 0.05em
+  text-transform: uppercase
 
 .nav-title
-  font-size: 0.9rem
-  font-weight: 500
-  line-height: 1.3
+  font-size: 0.95rem
+  font-weight: 600
 
 
 .prev
   text-align: left
 
 
+
+
+  
 .next
   text-align: right
+
+.nav-card.prev .nav-label::before
+  content: "←"
+  margin-right: 0.4rem
+  transition: transform 0.2s ease
+
+.nav-card.next .nav-label::after
+  content: "→"
+  margin-left: 0.4rem
+  transition: transform 0.2s ease
+
+.nav-card.prev:hover .nav-label::before
+  transform: translateX(-3px)
+
+.nav-card.next:hover .nav-label::after
+  transform: translateX(3px)
+
