@@ -1,8 +1,12 @@
 ---
 layout: page
 title: Portfolio
+permalink: /portfolio/
 ---
 
-{% if site.show_excerpts %} {% for post in site.posts %}
-
-{% include meta.html post=post %} {{ post.excerpt }} read more {% endfor %} {% else %} {% capture source %}{% include_relative archive.html title="Posts" %}{% endcapture %} {{ source | split: "---" | last }} {% endif %}
+{% for post in site.posts %}
+  {% if post.categories contains "portfolio" %}
+    {% include meta.html post=post %}
+    {{ post.excerpt }} <a href="{{ post.url }}">read more</a>
+  {% endif %}
+{% endfor %}
