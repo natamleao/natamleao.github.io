@@ -2,6 +2,18 @@
 layout: default
 ---
 
+<nav class="breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a> ›
+  
+  {% if page.categories %}
+    <span>{{ page.categories[0] | capitalize }}</span> ›
+  {% endif %}
+  
+  <span>{{ page.title }}</span>
+</nav>
+
+<a href="javascript:history.back()" class="back-button">← Voltar</a>
+
 <article>
   {% include meta.html post=page %}
   {{ content }}
@@ -15,9 +27,20 @@ layout: default
 
 {% unless site.show_minimal or site.footer  %}
 {% if page.next.url or page.previous.url %}
-<footer class="nowrap {% if site.show_frame %}dark{% else %}smooth{% endif %}">
-  {% if page.next.url %}<a href="{{ page.next.url | relative_url }}">« {{ page.next.title }}</a> {% endif %}
-  {% if page.previous.url %} <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }} »</a>{% endif %}
-</footer>
+{% if page.next.url or page.previous.url %}
+<div class="post-navigation">
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | relative_url }}" class="prev">
+      ← {{ page.previous.title }}
+    </a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url | relative_url }}" class="next">
+      {{ page.next.title }} →
+    </a>
+  {% endif %}
+</div>
+{% endif %}
 {% endif %}
 {% endunless %}
