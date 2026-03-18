@@ -79,22 +79,24 @@ h2, small, p
   align-items: center
   gap: 0.3rem
 
-  margin-bottom: 1rem
   padding: 0.2rem 0.4rem
   font-size: 0.8rem
   text-decoration: none
 
   border-radius: 6px
   border: 1px solid transparent
-  background: transparent
-  color: #111
+
+  background: light(100)
+  background: light(100, 17)
+
+  color: light(0, 100)
 
   transition: all 0.2s ease
 
   &:hover
-    background: #f3f4f6
-    border-color: #dcdcdc
-
+    background: light(93)
+    background: light(93, 16)
+    border-color: gray(20)
 
 .post-navigation
   display: flex
@@ -106,7 +108,6 @@ h2, small, p
     max-width: 50%
     margin-left: 0 !important   // força esquerda
 
-
 .nav-card
   flex: 1
   padding: 0.7rem 0.9rem
@@ -116,33 +117,34 @@ h2, small, p
   display: flex
   flex-direction: column
 
-  background: transparent
+  // 🔥 mesma cor do fundo real
+  background: light(100)
+  background: light(100, 17)
+
   border: 1px solid transparent
-  color: #111
+  color: light(0, 100)
 
   transition: all 0.2s ease
 
   &:hover
-    background: #f3f4f6
-    border-color: #dcdcdc
+    // 🔥 leve contraste com o body
+    background: light(93)
+    background: light(93, 16)
+    border-color: gray(20)
     transform: translateY(-2px)
-
 
 .nav-label
   font-size: 0.7rem
   opacity: 0.5
   margin-bottom: 0.2rem
 
-
 .nav-title
   font-size: 0.9rem
   font-weight: 500
   line-height: 1.3
 
-
 .prev
   text-align: left
-
 
 .next
   text-align: right
