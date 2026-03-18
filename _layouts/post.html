@@ -19,16 +19,7 @@ layout: default
 
 {% assign current_category = page.categories | first %}
 
-{% assign filtered_posts = "" | split: "" %}
-
-{% for post in site.posts %}
-  {% if post.categories contains current_category %}
-    {% assign filtered_posts = filtered_posts | push: post %}
-  {% endif %}
-{% endfor %}
-
-{% assign sorted_posts = filtered_posts | sort: "date" %}
-{% assign sorted_posts = sorted_posts | reverse %}
+{% assign sorted_posts = site.posts | where_exp: "post", "post.categories contains current_category" %}
 
 {% assign current_index = nil %}
 
