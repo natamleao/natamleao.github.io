@@ -73,10 +73,11 @@ h2, small, p
   a
     text-decoration: none
 
-  span, a
-    &::after
-      content: "›"
-      margin: 0 0.4rem   // 🔥 espaço igual dos dois lados
+  // 🔥 adiciona separador só entre elementos
+  a + span::before,
+  span + span::before
+    content: "›"
+    margin: 0 0.4rem
 
     &:last-child::after
       content: ""
