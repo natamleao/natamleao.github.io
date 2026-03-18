@@ -27,7 +27,8 @@ layout: default
   {% endif %}
 {% endfor %}
 
-{% assign sorted_posts = filtered_posts | sort: "date" | reverse %}
+{% assign sorted_posts = filtered_posts | sort: "date" %}
+{% assign sorted_posts = sorted_posts | reverse %}
 
 {% assign current_index = nil %}
 
