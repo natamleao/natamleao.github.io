@@ -38,9 +38,9 @@ layout: default
   {% endif %}
 {% endfor %}
 
-{% if current_index != nil %}
-  {% assign next_index = current_index | plus: 1 %}
-  {% assign prev_index = current_index | minus: 1 %}
+{% if current_index != nil %} 
+  {% assign prev_index = current_index | plus: 1 %} 
+  {% assign next_index = current_index | minus: 1 %}
 
   {% if prev_index < sorted_posts.size %}
     {% assign prev = sorted_posts[prev_index] %}
