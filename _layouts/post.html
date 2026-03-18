@@ -42,11 +42,11 @@ layout: default
   {% assign next_index = current_index | plus: 1 %}
   {% assign prev_index = current_index | minus: 1 %}
 
-  {% if prev_index < sorted_posts.size %}
+  {% if prev_index >= 0 %}
     {% assign prev = sorted_posts[prev_index] %}
   {% endif %}
-
-  {% if next_index >= 0 %}
+  
+  {% if next_index < sorted_posts.size %}
     {% assign next = sorted_posts[next_index] %}
   {% endif %}
 {% endif %}
