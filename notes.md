@@ -4,14 +4,18 @@ title: Notes
 permalink: /notes/
 ---
 
-{% for post in site.posts %}
-  {% if post.categories contains "notes" %}
-    <article>
-      {% include meta.html post=post %}
-      {{ post.excerpt }}
-      <footer class="button">
-        <a href="{{ post.url | relative_url }}">read more</a>
-      </footer>
-    </article>
-  {% endif %}
+{% assign posts = site.posts | where_exp: "post", "post.categories contains 'notes'" %}
+
+{% for post in posts %}
+  <article>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    
+    <small>{{ post.date | date: "%d %b %Y" }}</small>
+    
+    <p>{{ post.excerpt }}</p>
+
+    <footer>
+      <a href="{{ post.url | relative_url }}">Read more →</a>
+    </footer>
+  </article>
 {% endfor %}
