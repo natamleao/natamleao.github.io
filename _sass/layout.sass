@@ -77,36 +77,41 @@ h2, small, p
 .back-button
   display: inline-flex
   align-items: center
-  gap: 0.3rem
+  gap: 0.25rem
 
-  padding: 0.2rem 0.4rem
-  font-size: 0.8rem
+  padding: 0.15rem 0.3rem   // 🔥 menor (para não esticar)
+  font-size: 0.75rem
   text-decoration: none
 
   border-radius: 6px
-  border: 1px solid transparent
+  border: 1px solid light(100)   // 🔥 contorno branco
 
-  background: light(100)
-  background: light(100, 17)
-
+  background: transparent
   color: light(0, 100)
+
+  width: fit-content   // 🔥 impede de ocupar largura extra
 
   transition: all 0.2s ease
 
   &:hover
     background: light(93)
     background: light(93, 16)
-    border-color: gray(20)
+    border-color: light(100)
 
 .post-navigation
   display: flex
   gap: 0.8rem
   margin-top: 2rem
 
-  // 🔥 quando só tiver 1 botão (resolve teu bug)
   a:only-child
     max-width: 50%
-    margin-left: 0 !important   // força esquerda
+
+  // 🔥 CORREÇÃO REAL DO BUG
+  .next:only-child
+    margin-left: auto   // vai pra direita (correto no primeiro post)
+
+  .prev:only-child
+    margin-right: auto  // fica à esquerda
 
 .nav-card
   flex: 1
@@ -117,21 +122,18 @@ h2, small, p
   display: flex
   flex-direction: column
 
-  // 🔥 mesma cor do fundo real
-  background: light(100)
-  background: light(100, 17)
-
-  border: 1px solid transparent
+  background: transparent
+  border: 1px solid light(100)   // 🔥 contorno branco
   color: light(0, 100)
 
   transition: all 0.2s ease
 
   &:hover
-    // 🔥 leve contraste com o body
     background: light(93)
     background: light(93, 16)
-    border-color: gray(20)
+    border-color: light(100)
     transform: translateY(-2px)
+    box-shadow: 0 4px 12px light-dark(gray(20), transparent)
 
 .nav-label
   font-size: 0.7rem
