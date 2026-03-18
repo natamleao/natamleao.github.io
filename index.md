@@ -40,16 +40,3 @@ Próximo alvo:
 - Matemática avançada para física  
 
 ---
-
-## Posts recentes
-
-{% for post in site.posts limit:5 %}
-  <article>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <small>{{ post.date | date: "%d %b %Y" }}</small>
-    <p>{{ post.excerpt }}</p>
-    <footer>
-      <a href="{{ post.url | relative_url }}">Read more →</a>
-    </footer>
-  </article>
-{% endfor %}
