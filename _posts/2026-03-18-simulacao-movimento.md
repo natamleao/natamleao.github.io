@@ -6,7 +6,7 @@ categories: portfolio
 excerpt: "Implementação de uma Rede Neural Artificial Perceptron."
 ---
 
-# Perceptron Neural Network
+---
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Pytest](https://img.shields.io/badge/Tests-pytest-green)
