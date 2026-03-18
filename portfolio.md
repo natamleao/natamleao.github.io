@@ -4,27 +4,18 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-{% if site.show_excerpts %}
-  {% for post in site.posts %}
-    {% if post.categories contains "portfolio" %}
-      <article>
-        {% include meta.html post=post %}
-        {{ post.excerpt }}
-        <footer class="button">
-          <a href="{{ post.url | relative_url }}">read more</a>
-        </footer>
-      </article>
-    {% endif %}
-  {% endfor %}
-{% else %}
-  {% for post in site.posts %}
-    {% if post.categories contains "portfolio" %}
-      <div>
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%Y-%m-%d" }}
-        </time>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </div>
-    {% endif %}
-  {% endfor %}
-{% endif %}
+{% assign posts = site.posts | where_exp: "post", "post.categories contains 'portfolio'" %}
+
+{% for post in posts %}
+  <article>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    
+    <small>{{ post.date | date: "%d %b %Y" }}</small>
+    
+    <p>{{ post.excerpt }}</p>
+
+    <footer>
+      <a href="{{ post.url | relative_url }}">Read more →</a>
+    </footer>
+  </article>
+{% endfor %}
