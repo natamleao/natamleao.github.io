@@ -13,7 +13,7 @@ permalink: /portfolio/
       
       <small>{{ post.date | date: "%d %b %Y" }}</small>
       
-      <p>{{ post.excerpt }}</p>
+      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
     </article>
   </a>
 {% endfor %}
