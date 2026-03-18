@@ -20,11 +20,18 @@ layout: default
 </article>
 
 {% comment %}
-Filtra posts pela mesma categoria
+Filtra posts da mesma categoria
 {% endcomment %}
 
-{% assign current_category = page.categories[0] %}
-{% assign filtered_posts = site.posts | where_exp: "post", "post.categories contains current_category" %}
+{% assign filtered_posts = "" | split: "" %}
+
+{% for post in site.posts %}
+  {% if post.categories contains page.categories[0] %}
+    {% assign filtered_posts = filtered_posts | push: post %}
+  {% endif %}
+{% endfor %}
+
+{% assign filtered_posts = filtered_posts | sort: "date" | reverse %}
 
 {% for post in filtered_posts %}
   {% if post.url == page.url %}
@@ -32,22 +39,22 @@ Filtra posts pela mesma categoria
   {% endif %}
 {% endfor %}
 
-{% assign prev = filtered_posts[index | minus: 1] %}
-{% assign next = filtered_posts[index | plus: 1] %}
+{% assign prev = filtered_posts[index | plus: 1] %}
+{% assign next = filtered_posts[index | minus: 1] %}
 
 {% if prev or next %}
 <div class="post-navigation">
-  
+
   {% if prev %}
-    <a href="{{ prev.url | relative_url }}" class="nav-card prev">
-      <span class="nav-label">Anterior</span>
+    <a href="{{ prev.url | relative_url }}" class="prev">
+      <span class="nav-label">← Anterior</span>
       <span class="nav-title">{{ prev.title }}</span>
     </a>
   {% endif %}
 
   {% if next %}
-    <a href="{{ next.url | relative_url }}" class="nav-card next">
-      <span class="nav-label">Próximo</span>
+    <a href="{{ next.url | relative_url }}" class="next">
+      <span class="nav-label">Próximo →</span>
       <span class="nav-title">{{ next.title }}</span>
     </a>
   {% endif %}
