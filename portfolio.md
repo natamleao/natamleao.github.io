@@ -8,12 +8,12 @@ permalink: /portfolio/
 
 {% for post in posts %}
   <article>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <h2>{{ post.title }}</h2>
     
     <small>{{ post.date | date: "%d %b %Y" }}</small>
     
     <p>{{ post.excerpt }}</p>
-
+  
     <footer>
       <a href="{{ post.url | relative_url }}">Read more →</a>
     </footer>
