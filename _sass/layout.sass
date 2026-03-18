@@ -62,6 +62,9 @@ h2, small, p
   position: relative
   z-index: 1
 
+
+
+
 .breadcrumb
   font-size: 0.9rem
   margin-bottom: 0.5rem
@@ -69,6 +72,14 @@ h2, small, p
 
   a
     text-decoration: none
+
+  span, a
+    &::after
+      content: "›"
+      margin: 0 0.4rem   // 🔥 espaço igual dos dois lados
+
+    &:last-child::after
+      content: ""
 
 
     
