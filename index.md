@@ -3,15 +3,53 @@ layout: default
 title: "Home"
 ---
 
-{% if site.show_excerpts %}
-  {% for post in site.posts %}
-    <article>
-      {% include meta.html post=post %}
-      {{ post.excerpt }}
-      <footer class="button"><a href="{{ post.url | relative_url }}">read more</a></footer>
-    </article>
-  {% endfor %}
-{% else %}
-  {% capture source %}{% include_relative archive.html title="Posts" %}{% endcapture %}
-  {{ source | split: "---" | last }}
-{% endif %}
+## Natam Leão Ferreira
+
+Estudante em transição para física teórica.  
+Construindo, do zero, uma base sólida em matemática, física e computação.
+
+Meu objetivo é simples:
+
+> dominar matemática profundamente o suficiente para entender a estrutura do universo.
+
+---
+
+## O que você vai encontrar aqui
+
+- 📓 **Notes** → explicações, intuições e aprendizados reais  
+- 💻 **Portfolio** → projetos práticos (simulações, código, modelos)  
+- 🧠 **Evolução** → registro do meu progresso ao longo do tempo  
+
+Nada aqui é superficial.  
+Tudo é parte de um processo contínuo de construção intelectual.
+
+---
+
+## Em construção
+
+Atualmente estudando:
+
+- Cálculo (base rigorosa)
+- Álgebra Linear
+- Fundamentos de Física Clássica
+
+Próximo alvo:
+
+- Mecânica Lagrangiana  
+- Eletromagnetismo  
+- Matemática avançada para física  
+
+---
+
+## Posts recentes
+
+{% for post in site.posts limit:5 %}
+  <article>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <small>{{ post.date | date: "%d %b %Y" }}</small>
+    <p>{{ post.excerpt }}</p>
+    <footer>
+      <a href="{{ post.url | relative_url }}">Read more →</a>
+    </footer>
+  </article>
+{% endfor %}
