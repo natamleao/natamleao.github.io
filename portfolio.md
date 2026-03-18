@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Portfolio
-permalink: /portfolio/
 ---
 
 {% for post in site.posts %}
