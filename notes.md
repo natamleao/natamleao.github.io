@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Notes
-permalink: /notes/
 ---
 
 {% for post in site.posts %}
