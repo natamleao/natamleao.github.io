@@ -19,10 +19,19 @@ layout: default
   {{ content }}
 </article>
 
-{% assign current_category = page.categories[0] %}
+{% assign current_category = page.categories | first %}
 
-{% assign filtered_posts = site.posts | where_exp: "post", "post.categories contains current_category" %}
+{% assign filtered_posts = "" | split: "" %}
+
+{% for post in site.posts %}
+  {% if post.categories contains current_category %}
+    {% assign filtered_posts = filtered_posts | push: post %}
+  {% endif %}
+{% endfor %}
+
 {% assign sorted_posts = filtered_posts | sort: "date" | reverse %}
+
+{% assign current_index = nil %}
 
 {% for post in sorted_posts %}
   {% if post.url == page.url %}
@@ -30,47 +39,15 @@ layout: default
   {% endif %}
 {% endfor %}
 
-{% assign prev = sorted_posts[current_index | plus: 1] %}
-{% assign next = sorted_posts[current_index | minus: 1] %}
+{% if current_index != nil %}
+  {% assign prev_index = current_index | plus: 1 %}
+  {% assign next_index = current_index | minus: 1 %}
 
-{% if prev or next %}
-<div class="post-navigation">
-
-  {% if prev %}
-    <a href="{{ prev.url | relative_url }}" class="nav-card prev">
-      <span class="nav-direction">← Anterior</span>
-      <span class="nav-title">{{ prev.title }}</span>
-      
-      <div class="nav-meta">
-        <small>{{ prev.date | date: "%d %b %Y" }}</small>
-        {% if prev.categories %}
-          <span class="nav-category">{{ prev.categories[0] }}</span>
-        {% endif %}
-      </div>
-
-      <p class="nav-excerpt">
-        {{ prev.excerpt | strip_html | truncate: 100 }}
-      </p>
-    </a>
+  {% if prev_index < sorted_posts.size %}
+    {% assign prev = sorted_posts[prev_index] %}
   {% endif %}
 
-  {% if next %}
-    <a href="{{ next.url | relative_url }}" class="nav-card next">
-      <span class="nav-direction">Próximo →</span>
-      <span class="nav-title">{{ next.title }}</span>
-
-      <div class="nav-meta">
-        <small>{{ next.date | date: "%d %b %Y" }}</small>
-        {% if next.categories %}
-          <span class="nav-category">{{ next.categories[0] }}</span>
-        {% endif %}
-      </div>
-
-      <p class="nav-excerpt">
-        {{ next.excerpt | strip_html | truncate: 100 }}
-      </p>
-    </a>
+  {% if next_index >= 0 %}
+    {% assign next = sorted_posts[next_index] %}
   {% endif %}
-
-</div>
 {% endif %}
