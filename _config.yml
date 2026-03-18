@@ -19,11 +19,11 @@ show_minimal: false             # remove all clutter
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation: # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.md", title: "Home", sidebaricon: home}
-  - {file: "about.md", title: "About", sidebaricon: user}
-  - {file: "portfolio.md", title: "Projects", sidebaricon: code}
-  - {file: "notes.md", title: "Notes", sidebaricon: book} 
-  - {file: "cv.pdf", title: "CV", sidebaricon: file-alt}
+  - {title: "Home", url: "/", sidebaricon: home}
+  - {title: "About", url: "/about/", sidebaricon: user}
+  - {title: "Portfolio", url: "/portfolio/", sidebaricon: code}
+  - {title: "Notes", url: "/notes/", sidebaricon: book}
+  - {title: "CV", url: "/CV.pdf", sidebaricon: file-alt}
 
 external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Mail, icon: envelope, url: "mailto:natamleaoferreira@gmail.com"}
