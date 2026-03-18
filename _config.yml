@@ -18,7 +18,7 @@ show_minimal: false             # remove all clutter
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation: # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html", title: "Home", sidebaricon: home}
+  - {file: "archive.html", title: "Home", sidebaricon: home}
   - {file: "about.md", title: "About", sidebaricon: user}
   - {file: "portfolio.md", title: "Projects", sidebaricon: code}
   - {file: "notes.md", title: "Notes", sidebaricon: book}
