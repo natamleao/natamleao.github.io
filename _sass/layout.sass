@@ -62,10 +62,6 @@ h2, small, p
   position: relative
   z-index: 1
 
-
-
-
-
 .breadcrumb
   font-size: 0.9rem
   margin-bottom: 0.5rem
@@ -74,71 +70,79 @@ h2, small, p
   a
     text-decoration: none
 
-.back-button
-  display: inline-block
-  margin-bottom: 1rem
-  padding: 0.2rem 0.5rem   // 🔥 menor horizontalmente
-  font-size: 0.75rem
-  text-decoration: none
-  border-radius: 4px
 
-  background: #f3f4f6
-  border: 1px solid #dcdcdc
+    
+    
+    
+.back-button
+  display: inline-flex
+  align-items: center
+  gap: 0.3rem
+
+  margin-bottom: 1rem
+  padding: 0.2rem 0.4rem
+  font-size: 0.8rem
+  text-decoration: none
+
+  border-radius: 6px
+  border: 1px solid transparent
+  background: transparent
   color: #111
 
-  transition: 0.2s
+  transition: all 0.2s ease
 
   &:hover
-    background: #e5e7eb
+    background: #f3f4f6
+    border-color: #dcdcdc
+
 
 .post-navigation
   display: flex
   gap: 0.8rem
   margin-top: 2rem
 
-  // 🔥 quando só tem 1 botão
+  // 🔥 quando só tiver 1 botão (resolve teu bug)
   a:only-child
     max-width: 50%
+    margin-left: 0 !important   // força esquerda
 
-  // 🔥 posicionamento correto
-  .next:only-child
-    margin-left: 0   // fica à esquerda
-
-  .prev:only-child
-    margin-left: auto // fica à direita
 
 .nav-card
   flex: 1
   padding: 0.7rem 0.9rem
   border-radius: 8px
   text-decoration: none
-  transition: all 0.2s ease
 
   display: flex
   flex-direction: column
 
-  // 💥 remove branco puro
-  background: #f3f4f6
-  border: 1px solid #dcdcdc
+  background: transparent
+  border: 1px solid transparent
   color: #111
 
+  transition: all 0.2s ease
+
   &:hover
-    background: #e5e7eb
-    border-color: #cfcfcf
+    background: #f3f4f6
+    border-color: #dcdcdc
     transform: translateY(-2px)
+
 
 .nav-label
   font-size: 0.7rem
   opacity: 0.5
   margin-bottom: 0.2rem
 
+
 .nav-title
   font-size: 0.9rem
   font-weight: 500
   line-height: 1.3
 
+
 .prev
   text-align: left
+
 
 .next
   text-align: right
