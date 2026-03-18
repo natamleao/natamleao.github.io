@@ -76,46 +76,62 @@ h2, small, p
 
 .back-button
   display: inline-block
-  margin-bottom: 0.8rem
+  margin-bottom: 1rem
+  padding: 0.3rem 0.6rem
   font-size: 0.8rem
   text-decoration: none
-  opacity: 0.6
+  border-radius: 5px
+
+  background: #f2f2f2
+  border: 1px solid #ddd
+  color: inherit
+
+  transition: all 0.2s ease
 
   &:hover
-    opacity: 1
+    background: #e8e8e8
+    border-color: #ccc
 
 .post-navigation
   display: flex
   gap: 0.8rem
   margin-top: 2rem
 
+  // 🔥 evita card gigante quando só tem 1
+  a:only-child
+    max-width: 50%
+
 .nav-card
   flex: 1
-  padding: 0.7rem 0.9rem
-  border: 1px solid #ddd
-  border-radius: 6px
+  padding: 0.8rem 1rem
+  border-radius: 8px
   text-decoration: none
-  transition: all 0.15s ease
-  background: #fafafa
+  transition: all 0.2s ease
 
   display: flex
   flex-direction: column
 
+  // 💥 visual mais sólido (não branco morto)
+  background: #f7f7f7
+  border: 1px solid #e0e0e0
+
   &:hover
-    background: #f0f0f0
+    background: #efefef
     border-color: #ccc
+    transform: translateY(-2px)
 
 .nav-label
   font-size: 0.7rem
   opacity: 0.5
-  margin-bottom: 0.2rem
+  margin-bottom: 0.25rem
 
 .nav-title
-  font-size: 0.9rem
+  font-size: 0.95rem
   font-weight: 500
+  line-height: 1.3
 
 .prev
   text-align: left
 
 .next
-  text-align: right  
+  text-align: right
