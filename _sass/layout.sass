@@ -73,14 +73,11 @@ h2, small, p
   a
     text-decoration: none
 
-  // 🔥 adiciona separador só entre elementos
-  a + span::before,
-  span + span::before
-    content: "›"
-    margin: 0 0.4rem
-
-    &:last-child::after
-      content: ""
+  // 🔥 pega QUALQUER item depois do primeiro
+  > * + *
+    &::before
+      content: "›"
+      margin: 0 0.4rem
 
 
     
