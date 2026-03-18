@@ -19,7 +19,7 @@ show_minimal: false             # remove all clutter
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation: # accepts {file, title, url, icon, sidebaricon}
-  - {title: "Home", url: "/", sidebaricon: home}
+  - {title: "Natam Leão Ferreira", url: "/", sidebaricon: home}
   - {title: "About", url: "/about/", sidebaricon: user}
   - {title: "Portfolio", url: "/portfolio/", sidebaricon: code}
   - {title: "Notes", url: "/notes/", sidebaricon: book}
