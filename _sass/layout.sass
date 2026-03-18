@@ -124,9 +124,10 @@ h2, small, p
 
 
 .nav-label
-  font-size: 0.65rem
-  letter-spacing: 0.05em
-  text-transform: uppercase
+  font-size: 0.7rem
+  letter-spacing: 0.03em
+  text-transform: capitalize
+  opacity: 0.6
 
 .nav-title
   font-size: 0.95rem
@@ -136,26 +137,5 @@ h2, small, p
 .prev
   text-align: left
 
-
-
-
-  
 .next
   text-align: right
-
-.nav-card.prev .nav-label::before
-  content: "←"
-  margin-right: 0.4rem
-  transition: transform 0.2s ease
-
-.nav-card.next .nav-label::after
-  content: "→"
-  margin-left: 0.4rem
-  transition: transform 0.2s ease
-
-.nav-card.prev:hover .nav-label::before
-  transform: translateX(-3px)
-
-.nav-card.next:hover .nav-label::after
-  transform: translateX(3px)
-
