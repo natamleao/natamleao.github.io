@@ -77,33 +77,39 @@ h2, small, p
 .back-button
   display: inline-block
   margin-bottom: 1rem
-  padding: 0.3rem 0.6rem
-  font-size: 0.8rem
+  padding: 0.2rem 0.5rem   // 🔥 menor horizontalmente
+  font-size: 0.75rem
   text-decoration: none
-  border-radius: 5px
+  border-radius: 4px
 
-  background: #f2f2f2
-  border: 1px solid #ddd
-  color: inherit
+  background: #f3f4f6
+  border: 1px solid #dcdcdc
+  color: #111
 
-  transition: all 0.2s ease
+  transition: 0.2s
 
   &:hover
-    background: #e8e8e8
-    border-color: #ccc
+    background: #e5e7eb
 
 .post-navigation
   display: flex
   gap: 0.8rem
   margin-top: 2rem
 
-  // 🔥 evita card gigante quando só tem 1
+  // 🔥 quando só tem 1 botão
   a:only-child
     max-width: 50%
 
+  // 🔥 posicionamento correto
+  .next:only-child
+    margin-left: 0   // fica à esquerda
+
+  .prev:only-child
+    margin-left: auto // fica à direita
+
 .nav-card
   flex: 1
-  padding: 0.8rem 1rem
+  padding: 0.7rem 0.9rem
   border-radius: 8px
   text-decoration: none
   transition: all 0.2s ease
@@ -111,22 +117,23 @@ h2, small, p
   display: flex
   flex-direction: column
 
-  // 💥 visual mais sólido (não branco morto)
-  background: #f7f7f7
-  border: 1px solid #e0e0e0
+  // 💥 remove branco puro
+  background: #f3f4f6
+  border: 1px solid #dcdcdc
+  color: #111
 
   &:hover
-    background: #efefef
-    border-color: #ccc
+    background: #e5e7eb
+    border-color: #cfcfcf
     transform: translateY(-2px)
 
 .nav-label
   font-size: 0.7rem
   opacity: 0.5
-  margin-bottom: 0.25rem
+  margin-bottom: 0.2rem
 
 .nav-title
-  font-size: 0.95rem
+  font-size: 0.9rem
   font-weight: 500
   line-height: 1.3
 
