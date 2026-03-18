@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Natam Leão Ferreira"
+title: "Home"
 ---
 
 ## Natam Leão Ferreira
