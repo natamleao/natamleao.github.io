@@ -1,8 +1,9 @@
 ---
 title: "About Me"
 layout: post
-body_class: about-page
 ---
+
+<h1 style="display: none;">About Me</h1>
 
 <div style="max-width: 700px; margin: auto; font-family: 'Segoe UI', Tahoma, sans-serif; color: #fff; line-height: 1.6;">
 
