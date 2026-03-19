@@ -8,6 +8,19 @@
 
 <link rel="icon" type="image/png" href="{{ "/assets/images/umbrellan.png" | relative_url }}">
 
+<!-- Open Graph -->
+<meta property="og:title" content="{{ page.title | escape }} | {{ site.title | escape }}">
+<meta property="og:description" content="© 2026 Natam Leão Ferreira">
+<meta property="og:image" content="{{ '/assets/images/umbrellan.png' | relative_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | escape }} | {{ site.title | escape }}">
+<meta name="twitter:description" content="© 2026 Natam Leão Ferreira">
+<meta name="twitter:image" content="{{ '/assets/images/umbrellan.png' | relative_url }}">
+
 {%- if site.show_minimal -%}
 <link rel="stylesheet" href="{{ "/assets/css/minimal.css" | relative_url }}">
 {%- elsif site.show_frame -%}
