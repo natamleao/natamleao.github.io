@@ -16,6 +16,22 @@ title: "About Me"
     <p style="font-size: 1.1rem; color: #ccc;">Cametá, Pará | Curioso e explorador de ideias</p>
   </div>
 
+ ---
+title: "About Me"
+layout: default
+---
+
+<div style="max-width: 700px; margin: auto; font-family: 'Segoe UI', Tahoma, sans-serif; color: #fff; line-height: 1.6;">
+
+  <!-- Foto e Nome -->
+  <div style="text-align: center; margin-bottom: 40px;">
+    <img src="/assets/images/umbrellan.png"  
+         alt="Natam" 
+         style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #fff;">
+    <h1 style="margin-top: 15px; color: #fff;">Natam Leão Ferreira</h1>
+    <p style="font-size: 1.1rem; color: #ccc;">Cametá, Pará | Curioso e explorador de ideias</p>
+  </div>
+
   <!-- Sobre -->
   <div style="margin-bottom: 30px;">
     <p>Sou alguém que adora explorar o mundo e a mente humana. Curioso por natureza, gosto de mergulhar em tópicos que me fascinam e compartilhar ideias com quem estiver disposto a ouvir. Disciplina, reflexão e crescimento pessoal são pilares da minha vida.</p>
@@ -48,7 +64,7 @@ title: "About Me"
 
 </div>
 
-<!-- Hover effect suave -->
+<!-- Hover effect suave para os cards -->
 <style>
   div[style*="transition: all 0.3s"]:hover {
     transform: translateY(-5px);
