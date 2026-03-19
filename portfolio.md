@@ -4,7 +4,7 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-<section class="container portfolio">
+<section class="container section">
 
   <!-- INTRO -->
   <div class="portfolio-intro">
