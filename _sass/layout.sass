@@ -155,9 +155,30 @@ h2, small, p
   margin: 0 auto
   padding: 2rem
 
-/* SEÇÕES (espaçamento vertical consistente) */
+/* ===== SECTIONS (PADRÃO GERAL) ===== */
+
 .section
+  color: #fff
+
+  h1, h2
+    color: #fff
+
+.section-intro
+  max-width: 700px
   margin-bottom: 2.5rem
+
+  h1
+    font-size: 2rem
+    margin-bottom: 0.6rem
+
+  p
+    color: rgba(255,255,255,0.8)
+    margin-bottom: 0.8rem
+
+.section-list
+  display: flex
+  flex-direction: column
+  gap: 1.5rem
 
 /* TIPOGRAFIA PADRÃO */
 .text-muted
