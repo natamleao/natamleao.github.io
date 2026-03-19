@@ -3,8 +3,6 @@ layout: page
 title: "About Me"
 ---
 
-<section class="container">
-
   <!-- Header -->
   <div class="about-header">
     <img src="/assets/images/umbrellan.png" alt="Natam Leão Ferreira">
@@ -49,5 +47,3 @@ title: "About Me"
   <div class="about-quote">
     <p>“Evolução constante. Sem atalhos.”</p>
   </div>
-
-</section>
