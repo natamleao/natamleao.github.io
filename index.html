@@ -3,52 +3,52 @@ layout: default
 title: ""
 ---
 
-  <!-- HERO -->
-  <section class="home-hero">
-    <h1>Natam Leão Ferreira</h1>
-    <p class="signature">
-      Construindo algo que ainda não existe.
-    </p>
-    <p class="intro">
-      Um espaço onde registro projetos, ideias e evolução ao longo do tempo.
-      Sem filtros, sem promessas — só progresso real.
-    </p>
-  </section>
+<!-- HERO -->
+<section class="home-hero">
+  <h1>Natam Leão Ferreira</h1>
+  <p class="signature">
+    Construindo algo que ainda não existe.
+  </p>
+  <p class="intro">
+    Um espaço onde registro projetos, ideias e evolução ao longo do tempo.
+    Sem filtros, sem promessas — só progresso real.
+  </p>
+</section>
 
-  <!-- VISÃO GERAL -->
-  <section class="home-about">
-    <h2>Sobre</h2>
+<!-- VISÃO GERAL -->
+<section class="home-about">
+  <h2>Sobre</h2>
+  <p>
+    Este site funciona como um ponto central do que estou construindo.
+    Aqui você encontra projetos, anotações e registros do processo.
+  </p>
+  <p>
+    Nada aqui é definitivo. Tudo está em movimento.
+  </p>
+</section>
+
+<!-- DESTAQUE -->
+<section class="home-highlight">
+  <h2>Destaque</h2>
+  <div class="highlight-card">
+    <h3>Em construção</h3>
     <p>
-      Este site funciona como um ponto central do que estou construindo.
-      Aqui você encontra projetos, anotações e registros do processo.
+      Projetos, ideias e sistemas sendo desenvolvidos continuamente.
+      Esse espaço reflete evolução — não resultado final.
     </p>
-    <p>
-      Nada aqui é definitivo. Tudo está em movimento.
-    </p>
-  </section>
+  </div>
+</section>
 
-  <!-- DESTAQUE -->
-  <section class="home-highlight">
-    <h2>Destaque</h2>
-    <div class="highlight-card">
-      <h3>Em construção</h3>
-      <p>
-        Projetos, ideias e sistemas sendo desenvolvidos continuamente.
-        Esse espaço reflete evolução — não resultado final.
-      </p>
-    </div>
-  </section>
+<!-- POSTS -->
+<section class="home-posts-section">
+  <h2>Posts recentes</h2>
 
-  <!-- POSTS -->
-  <section class="home-posts-section">
-    <h2>Posts recentes</h2>
-
-    <div class="home-posts">
-      {% for post in site.posts limit:4 %}
-        <a href="{{ post.url | relative_url }}" class="home-card">
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
-        </a>
-      {% endfor %}
-    </div>
-  </section>
+  <div class="home-posts">
+    {% for post in site.posts limit:4 %}
+      <a href="{{ post.url | relative_url }}" class="home-card">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>
