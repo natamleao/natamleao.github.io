@@ -4,7 +4,7 @@ title: Notes
 permalink: /notes/
 ---
 
-<section class="container notes">
+<section class="container section">
 
   <!-- INTRO -->
   <div class="notes-intro">
