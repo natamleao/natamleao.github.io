@@ -7,7 +7,7 @@ permalink: /portfolio/
 <section class="container section">
 
   <!-- INTRO -->
-  <div class="portfolio-intro">
+  <div class="section-intro">
     <h1>Portfolio</h1>
     <p>
       Aqui estão alguns dos projetos que venho desenvolvendo ao longo do tempo.
@@ -21,7 +21,7 @@ permalink: /portfolio/
   <!-- LISTA DE PROJETOS -->
   {% assign posts = site.posts | where_exp: "post", "post.categories contains 'portfolio'" %}
 
-  <div class="portfolio-list">
+  <div class="section-list">
     {% for post in posts %}
       <article class="post-card">
         <a href="{{ post.url | relative_url }}" class="post-link-overlay"></a>
