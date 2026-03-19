@@ -22,45 +22,43 @@ layout: default
   {% include meta.html post=page %}
 </div>
 
-<main class="container">
-  <!-- Conteúdo do post -->
-  {{ content }}
+<!-- Conteúdo do post -->
+{{ content }}
 
-  <!-- Navegação anterior / próximo -->
-  {% assign current_category = page.categories | first %}
-  {% assign sorted_posts = site.posts | where_exp: "post", "post.categories contains current_category" %}
-  {% assign current_index = nil %}
-  {% for post in sorted_posts %}
-    {% if post.url == page.url %}
-      {% assign current_index = forloop.index0 %}
-    {% endif %}
-  {% endfor %}
-
-  {% if current_index != nil %} 
-    {% assign next_index = current_index | plus: 1 %}
-    {% assign prev_index = current_index | minus: 1 %}
-    {% if prev_index >= 0 %}
-      {% assign prev = sorted_posts[prev_index] %}
-    {% endif %}
-    {% if next_index < sorted_posts.size %}
-      {% assign next = sorted_posts[next_index] %}
-    {% endif %}
+<!-- Navegação anterior / próximo -->
+{% assign current_category = page.categories | first %}
+{% assign sorted_posts = site.posts | where_exp: "post", "post.categories contains current_category" %}
+{% assign current_index = nil %}
+{% for post in sorted_posts %}
+  {% if post.url == page.url %}
+    {% assign current_index = forloop.index0 %}
   {% endif %}
+{% endfor %}
 
-  {% if prev or next %}
-    <div class="post-navigation">
-      {% if prev %}
-        <a href="{{ prev.url | relative_url }}" class="nav-card prev">
-          <span class="nav-label">Anterior</span>
-          <span class="nav-title">{{ prev.title }}</span>
-        </a>
-      {% endif %}
-      {% if next %}
-        <a href="{{ next.url | relative_url }}" class="nav-card next">
-          <span class="nav-label">Próximo</span>
-          <span class="nav-title">{{ next.title }}</span>
-        </a>
-      {% endif %}
-    </div>
+{% if current_index != nil %} 
+  {% assign next_index = current_index | plus: 1 %}
+  {% assign prev_index = current_index | minus: 1 %}
+  {% if prev_index >= 0 %}
+    {% assign prev = sorted_posts[prev_index] %}
   {% endif %}
-</main>
+  {% if next_index < sorted_posts.size %}
+    {% assign next = sorted_posts[next_index] %}
+  {% endif %}
+{% endif %}
+
+{% if prev or next %}
+  <div class="post-navigation">
+    {% if prev %}
+      <a href="{{ prev.url | relative_url }}" class="nav-card prev">
+        <span class="nav-label">Anterior</span>
+        <span class="nav-title">{{ prev.title }}</span>
+      </a>
+    {% endif %}
+    {% if next %}
+      <a href="{{ next.url | relative_url }}" class="nav-card next">
+        <span class="nav-label">Próximo</span>
+        <span class="nav-title">{{ next.title }}</span>
+      </a>
+    {% endif %}
+  </div>
+{% endif %}
