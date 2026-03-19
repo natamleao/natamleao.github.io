@@ -66,20 +66,21 @@ h2, small, p
 
 
 .breadcrumb
-  font-size: 1.35em      // mesma font-size do h1 > a
-  line-height: 1.2        // alinhamento vertical parecido
-  display: flex
-  align-items: baseline   // alinha pelo baseline do texto
+  font-size: 0.9rem
   margin-bottom: 0.5rem
   opacity: 0.6
+  display: flex
+  align-items: center
+  flex-wrap: wrap
   gap: 0
 
   a, span
     display: inline-flex
-    align-items: baseline   // mantém o baseline alinhado
-    margin: 0
-    padding: 0
-    height: auto
+    align-items: center
+    margin: 0 0 0 0  // remove qualquer margem extra que venha de nav a
+
+  .separator
+    margin: 0 0.3rem
 
 
     
