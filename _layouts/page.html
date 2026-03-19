@@ -2,6 +2,14 @@
 layout: default
 ---
 
-<article class="page-content">
+<div class="header-container">
+  <nav class="breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <span class="separator">›</span>
+    <span>{{ page.title }}</span>
+  </nav>
+</div>
+
+<main class="container">
   {{ content }}
-</article>
+</main>
