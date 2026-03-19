@@ -1,5 +1,6 @@
 ---
 layout: post
+title: "About Me"
 ---
 
 <h1 style="display: none;">About Me</h1>
