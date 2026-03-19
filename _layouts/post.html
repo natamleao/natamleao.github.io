@@ -5,8 +5,12 @@ layout: default
 <nav class="breadcrumb">
   <a href="{{ '/' | relative_url }}">Home</a>
   {% if page.categories %}
-    <span class="separator">›</span>
-    <span>{{ page.categories[0] | capitalize }}</span>
+    {% for category in page.categories %}
+      <span class="separator">›</span>
+      <a href="{{ '/categories/' | append: category | relative_url }}">
+        {{ category | capitalize }}
+      </a>
+    {% endfor %}
   {% endif %}
   <span class="separator">›</span>
   <span>{{ page.title }}</span>
