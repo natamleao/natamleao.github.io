@@ -4,7 +4,17 @@ layout: default
 ---
 
 <style>
-  .article-title { display: none !important; }
+  .article-title {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 </style>
 
 <div style="max-width: 700px; margin: auto; font-family: 'Segoe UI', Tahoma, sans-serif; color: #fff; line-height: 1.6;">
