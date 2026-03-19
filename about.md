@@ -7,7 +7,7 @@ layout: post
 
   <!-- Foto e Nome -->
   <div style="text-align: center; margin-bottom: 40px;">
-    <img src="https://user-images.githubusercontent.com/4943215/74586455-c8048300-4fe7-11ea-84ba-aa49f3abb014.jpeg" 
+    <img src="/assets/images/umbrellan.png" 
          alt="Natam" 
          style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #fff;">
     <h1 style="margin-top: 15px; color: #fff;">Natam</h1>
