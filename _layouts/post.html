@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="header-container">
-  <!-- Breadcrumb apenas Home e categorias -->
+  <!-- Breadcrumb com o título do post incluído -->
   <nav class="breadcrumb">
     <a href="{{ '/' | relative_url }}">Home</a>
     {% if page.categories %}
@@ -14,16 +14,15 @@ layout: default
         </a>
       {% endfor %}
     {% endif %}
+    <span class="separator">›</span>
+    <span>{{ page.title }}</span> <!-- título do post aqui -->
   </nav>
-</div>
-
-<article>
-  <!-- Título do post -->
-  <h1 class="article-title">{{ page.title }}</h1>
 
   <!-- Meta do post (data, autor, etc) -->
   {% include meta.html post=page %}
+</div>
 
+<article>
   <!-- Conteúdo do post -->
   {{ content }}
 
