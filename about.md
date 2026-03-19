@@ -4,15 +4,16 @@ title: "About Me"
 ---
 
 <section class="about container">
+
   <!-- Header -->
-  <div class="about-header section">
+  <div class="about-header">
     <img src="/assets/images/umbrellan.png" alt="Natam Leão Ferreira">
     <h1>Natam Leão Ferreira</h1>
     <p class="about-subtitle">Cametá, Pará • Explorador de ideias</p>
   </div>
 
   <!-- Texto -->
-  <div class="about-text section">
+  <div class="about-text">
     <p>
       Sou movido por curiosidade. Gosto de explorar ideias, entender padrões e ir além do óbvio.
     </p>
@@ -25,7 +26,7 @@ title: "About Me"
   </div>
 
   <!-- Cards -->
-  <div class="about-cards section">
+  <div class="about-cards">
 
     <div class="about-card">
       <h3>Hobbies</h3>
@@ -45,7 +46,8 @@ title: "About Me"
   </div>
 
   <!-- Quote -->
-  <div class="about-quote section">
+  <div class="about-quote">
     <p>“Evolução constante. Sem atalhos.”</p>
   </div>
-  </section>
+
+</section>
