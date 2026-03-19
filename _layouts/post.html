@@ -3,19 +3,25 @@ layout: default
 ---
 
 <div class="header-container">
-  <!-- Breadcrumb com o título do post incluído -->
+  <!-- Breadcrumb condicional -->
   <nav class="breadcrumb">
     <a href="{{ '/' | relative_url }}">Home</a>
-    {% if page.categories %}
-      {% for category in page.categories %}
-        <span class="separator">›</span>
-        <a href="{{ '/' | append: category | relative_url }}">
-          {{ category | capitalize }}
-        </a>
-      {% endfor %}
+
+    {% if page.title == "About Me" %}
+      <span class="separator">›</span>
+      <span>Natam</span> <!-- breadcrumb personalizada só para o About -->
+    {% else %}
+      {% if page.categories %}
+        {% for category in page.categories %}
+          <span class="separator">›</span>
+          <a href="{{ '/' | append: category | relative_url }}">
+            {{ category | capitalize }}
+          </a>
+        {% endfor %}
+      {% endif %}
+      <span class="separator">›</span>
+      <span>{{ page.title }}</span> <!-- breadcrumb normal para os outros posts -->
     {% endif %}
-    <span class="separator">›</span>
-    <span>{{ page.title }}</span> <!-- título do post aqui -->
   </nav>
 
   <!-- Meta do post (data, autor, etc) -->
