@@ -4,15 +4,40 @@ title: "Home"
 ---
 
 <main class="home">
-  <h2>Bem-vindo</h2>
-  <p>Aqui é onde você apresenta sua ideia, identidade ou foco.</p>
 
-  <div class="home-posts">
-    {% for post in site.posts limit:4 %}
-      <a href="{{ post.url | relative_url }}" class="home-card">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
-      </a>
-    {% endfor %}
-  </div>
+  <!-- HERO / IDENTIDADE -->
+  <section class="home-hero">
+    <h1>Natam Leão</h1>
+    <p>
+      Um espaço para ideias, projetos e reflexões. 
+      Aqui você vai encontrar tudo que estou construindo — código, pensamento e evolução pessoal.
+    </p>
+  </section>
+
+  <!-- VISÃO GERAL -->
+  <section class="home-about">
+    <h2>Sobre o site</h2>
+    <p>
+      Esse site é um registro do que estou fazendo e aprendendo ao longo do tempo.
+      Sem filtro, sem perfeição — só progresso real.
+    </p>
+    <p>
+      Você pode explorar projetos no portfólio, ler anotações em Notes ou simplesmente acompanhar a evolução.
+    </p>
+  </section>
+
+  <!-- POSTS RECENTES -->
+  <section class="home-posts-section">
+    <h2>Posts recentes</h2>
+
+    <div class="home-posts">
+      {% for post in site.posts limit:4 %}
+        <a href="{{ post.url | relative_url }}" class="home-card">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
 </main>
