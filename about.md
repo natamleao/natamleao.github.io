@@ -9,7 +9,7 @@ layout: post
   <div style="text-align: center; margin-bottom: 40px;">
     <img src="/assets/images/umbrellan.png" 
          alt="Natam" 
-         style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #fff;">
+         style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #fff;">
     <h1 style="margin-top: 15px; color: #fff;">Natam</h1>
     <p style="font-size: 1.1rem; color: #ccc;">Russas, Ceará | Curioso e explorador de ideias</p>
   </div>
