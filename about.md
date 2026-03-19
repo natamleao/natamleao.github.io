@@ -1,6 +1,7 @@
 ---
 title: "About Me"
-layout: page
+layout: default
+body_class: about-page
 ---
 
 <div style="max-width: 700px; margin: auto; font-family: 'Segoe UI', Tahoma, sans-serif; color: #fff; line-height: 1.6;">
