@@ -65,20 +65,20 @@ h2, small, p
 .header-container
   max-width: 900px
   margin: 0 auto
-  padding: 1.5rem 2rem 0
+  padding: 2rem 0 1rem        // mesmo padding vertical do container
   width: 100%
 
-/* Breadcrumb */
 .breadcrumb
   display: flex
   flex-wrap: wrap
-  align-items: baseline       // alinha Home, categorias e título do breadcrumb
+  align-items: baseline
   font-size: 0.9rem
   line-height: 1.2
   opacity: 0.6
   gap: 0.3rem
   margin: 0
-  width: auto                 // respeita o padding do container
+  width: 100%                 // ocupa toda largura do container
+  box-sizing: border-box       // respeita padding se tiver
 
   a, span
     display: inline-flex
