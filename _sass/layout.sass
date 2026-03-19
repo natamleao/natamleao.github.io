@@ -72,18 +72,14 @@ h2, small, p
   display: flex
   align-items: center
   flex-wrap: wrap
-  gap: 0
+  gap: 0  // vamos controlar com margin dos separadores
 
   a, span
     display: inline-flex
     align-items: center
 
-  // 🔥 apenas itens a partir do segundo recebem o "›"
-  > * + *
-    &::before
-      content: "›"
-      opacity: 0.7
-      margin: 0 0.3rem  // espaço uniforme antes e depois
+  .separator
+    margin: 0 0.3rem  // espaço uniforme antes e depois do "›"
 
 
     
