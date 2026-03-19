@@ -4,11 +4,11 @@ layout: default
 
 <nav class="breadcrumb">
   <a href="{{ '/' | relative_url }}">Home</a>
-  
   {% if page.categories %}
+    <span class="separator">›</span>
     <span>{{ page.categories[0] | capitalize }}</span>
   {% endif %}
-  
+  <span class="separator">›</span>
   <span>{{ page.title }}</span>
 </nav>
 
