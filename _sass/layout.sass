@@ -150,10 +150,16 @@ h2, small, p
 .next
   text-align: right
 
-.home
+/* CONTAINER GLOBAL (ESSA É A BASE DE TUDO) */
+.container
   max-width: 900px
   margin: 0 auto
+  width: 100%
   padding: 2rem
+
+/* HOME */
+
+.home
   color: #fff
 
   p
@@ -161,6 +167,8 @@ h2, small, p
 
   h1, h2, h3
     color: #fff
+
+/* HERO */
 
 .home-hero
   margin-bottom: 2.5rem
@@ -178,8 +186,12 @@ h2, small, p
 .intro
   max-width: 600px
 
+/* SOBRE */
+
 .home-about
   margin-bottom: 2.5rem
+
+/* DESTAQUE */
 
 .home-highlight
   margin: 2.5rem 0
@@ -194,6 +206,8 @@ h2, small, p
   &:hover
     transform: translateY(-3px)
     box-shadow: 0 6px 18px rgba(255,255,255,0.08)
+
+/* POSTS */
 
 .home-posts
   display: flex
@@ -212,70 +226,3 @@ h2, small, p
   &:hover
     transform: translateY(-5px)
     box-shadow: 0 8px 20px rgba(255,255,255,0.1)
-
-.about
-  max-width: 700px
-  margin: 0 auto
-  padding: 2rem
-  color: #fff
-  line-height: 1.6
-
-.about-header
-  text-align: center
-  margin-bottom: 2.5rem
-
-  img
-    width: 180px
-    height: 180px
-    border-radius: 50%
-    object-fit: cover
-    border: 2px solid #fff
-
-  h1
-    margin-top: 1rem
-
-.about-subtitle
-  color: rgba(255,255,255,0.7)
-
-.about-text
-  margin-bottom: 2rem
-
-.about-cards
-  display: flex
-  flex-wrap: wrap
-  gap: 20px
-  justify-content: center
-  margin-bottom: 2.5rem
-
-.about-card
-  flex: 1 1 200px
-  min-width: 200px
-  padding: 1.5rem
-  border-radius: 12px
-  border: 1px solid rgba(255,255,255,0.15)
-  background: rgba(255,255,255,0.05)
-  text-align: center
-  transition: 0.3s
-
-  &:hover
-    transform: translateY(-5px)
-    box-shadow: 0 8px 20px rgba(255,255,255,0.1)
-
-.about-quote
-  text-align: center
-  font-style: italic
-  color: rgba(255,255,255,0.7)
-
-.page-content
-  padding: 0 !important
-
-.about
-  max-width: 900px
-  margin-left: auto
-  margin-right: auto
-  padding: 2rem
-
-.container
-  max-width: 900px
-  margin: 0 auto
-  width: 100%
