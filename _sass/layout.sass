@@ -65,45 +65,58 @@ h2, small, p
 
 
 .header-container
-  padding: 1.5rem 101.37px
-  width: 100%
+  padding: 1.5rem 101.37px    // padding lateral exato
   display: flex
   flex-direction: column
-  gap: 0.25rem
+  gap: 0.25rem                // espaçamento entre breadcrumb e meta
+  width: 100%
 
+/* Breadcrumb */
 .breadcrumb
+  display: flex
+  flex-wrap: wrap
+  align-items: baseline       // alinha Home, categorias e título do breadcrumb
   font-size: 0.9rem
   line-height: 1.2
   opacity: 0.6
-  display: flex
-  align-items: baseline      // <--- aqui
-  flex-wrap: wrap
   gap: 0.3rem
-  width: auto     
+  margin: 0
+  width: auto                 // respeita o padding do container
 
   a, span
     display: inline-flex
-    align-items: baseline     // mantém alinhamento interno
+    align-items: baseline
     margin: 0
 
   .separator
     margin: 0 0.2rem
 
+/* Título do post destacado */
+.article-title
+  font-size: 1.75em
+  line-height: 1.2
+  margin: 0
+
 
     
+/* Meta do post (data, autor, etc) */
 .post-meta
   font-size: 0.85rem
   color: #666
   margin-top: 0.25rem
 
+/* Navegação anterior/próximo */
 .post-navigation
   display: flex
   gap: 0.8rem
   margin-top: 2rem
+
   a:only-child
     max-width: 50%
+
   .next:only-child
     margin-left: auto
+
   .prev:only-child
     margin-right: auto
 
@@ -113,22 +126,18 @@ h2, small, p
   padding: 0.9rem 1.1rem
   border-radius: 8px
   text-decoration: none
-
   display: flex
   flex-direction: column
-
   background: transparent
   border: 1px solid rgba(255, 255, 255, 0.15)
   color: light(0, 100)
-
   transition: all 0.2s ease
 
   &:hover
     background: rgba(255, 255, 255, 0.05)
     border-color: rgba(255, 255, 255, 0.3)
     transform: translateY(-2px)
-    box-shadow: 0 4px 12px light-dark(gray(20), transparent)
-
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1)
 
 .nav-label
   font-size: 0.7rem
@@ -139,7 +148,6 @@ h2, small, p
 .nav-title
   font-size: 0.95rem
   font-weight: 600
-
 
 .prev
   text-align: left
