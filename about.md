@@ -10,7 +10,7 @@ layout: post
     <img src="/assets/images/umbrellan.png" 
          alt="Natam" 
          style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #fff;">
-    <h1 style="margin-top: 15px; color: #fff;">Natam</h1>
+    <h1 style="margin-top: 15px; color: #fff;">Natam Leão Ferreira</h1>
     <p style="font-size: 1.1rem; color: #ccc;">Russas, Ceará | Curioso e explorador de ideias</p>
   </div>
 
