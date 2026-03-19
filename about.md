@@ -8,7 +8,7 @@ layout: default
   <!-- Foto e Nome -->
   <div style="text-align: center; margin-bottom: 40px;">
     <img src="assets/images/umbrellan.png" 
-         alt="Natam" 
+         alt="Natam Leão Ferreira" 
          style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 2px solid #fff;">
     <h1 style="margin-top: 15px; color: #fff;">Natam Leão Ferreira</h1>
     <p style="font-size: 1.1rem; color: #ccc;">Cametá, Pará | Curioso e explorador de ideias</p>
