@@ -149,11 +149,12 @@ h2, small, p
 .next
   text-align: right
 
-/* CONTAINER GLOBAL */
+/* Container global padronizado para todas as páginas */
 .container
   max-width: 900px
   margin: 0 auto
-  padding: 2rem
+  padding: 2rem               // 32px de cada lado
+  box-sizing: border-box      // evita distorção de largura
 
 /* PADRÃO GLOBAL DE SEÇÃO */
 .section
@@ -325,19 +326,8 @@ h2, small, p
 
 /*Fim About Me*/
 
-/* ===== PORTFOLIO ===== */
-
-.portfolio
+/* Portfolio e Notes */
+.portfolio, .notes
+  width: 100%                 // ocupa todo o container
+  box-sizing: border-box      // respeita padding
   color: #fff
-
-  h1, h2
-    color: #fff
-
-
-/* ===== NOTES ===== */
-
-.notes
-  color: #fff
-
-  h1, h2
-    color: #fff
