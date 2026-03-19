@@ -3,22 +3,25 @@ layout: page
 title: "About Me"
 ---
 
-<div class="about">
+<section class="about">
 
-  <!-- Foto e Nome -->
+  <!-- Header -->
   <div class="about-header">
     <img src="/assets/images/umbrellan.png" alt="Natam Leão Ferreira">
     <h1>Natam Leão Ferreira</h1>
-    <p class="about-subtitle">Cametá, Pará | Curioso e explorador de ideias</p>
+    <p class="about-subtitle">Cametá, Pará • Explorador de ideias</p>
   </div>
 
-  <!-- Sobre -->
+  <!-- Texto -->
   <div class="about-text">
     <p>
-      Sou alguém que adora explorar o mundo e a mente humana. Curioso por natureza, gosto de mergulhar em tópicos que me fascinam e compartilhar ideias com quem estiver disposto a ouvir.
+      Sou movido por curiosidade. Gosto de explorar ideias, entender padrões e ir além do óbvio.
     </p>
     <p>
-      Disciplina, reflexão e crescimento pessoal são pilares da minha vida.
+      Esse espaço é parte do processo — um registro de evolução, pensamento e construção.
+    </p>
+    <p>
+      Disciplina, consistência e crescimento contínuo são o que sustentam tudo isso.
     </p>
   </div>
 
@@ -32,19 +35,19 @@ title: "About Me"
 
     <div class="about-card">
       <h3>Interesses</h3>
-      <p>Neurociência, Comportamento Humano, Biohacking, Tecnologia</p>
+      <p>Neurociência, Comportamento, Biohacking, Tecnologia</p>
     </div>
 
     <div class="about-card">
       <h3>Valores</h3>
-      <p>Disciplina, Curiosidade, Crescimento Pessoal, Persistência</p>
+      <p>Disciplina, Curiosidade, Persistência</p>
     </div>
 
   </div>
 
-  <!-- Lema -->
+  <!-- Quote -->
   <div class="about-quote">
-    <p>“Curiosidade e vontade de evoluir são sempre bem-vindas.”</p>
+    <p>“Evolução constante. Sem atalhos.”</p>
   </div>
 
-</div>
+</section>
