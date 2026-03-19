@@ -1,11 +1,10 @@
 ---
 title: "About Me"
 layout: default
----
 
 <div style="max-width: 700px; margin: auto; font-family: 'Segoe UI', Tahoma, sans-serif; color: #fff; line-height: 1.6;">
 
-  <!-- Foto e Nome -->
+ <!-- Foto e Nome -->
   <div style="text-align: center; margin-bottom: 40px;">
     <img src="/assets/images/umbrellan.png" 
          alt="Natam Leão Ferreira" 
@@ -46,7 +45,7 @@ layout: default
 
 </div>
 
-<!-- Hover effect suave para os cards -->
+<!-- Hover effect suave -->
 <style>
   div[style*="transition: all 0.3s"]:hover {
     transform: translateY(-5px);
