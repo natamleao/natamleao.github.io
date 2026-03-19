@@ -25,6 +25,8 @@ layout: default
   {% include meta.html post=page %}
 </div>
 
+{{ content }}
+
 {% assign current_category = page.categories | first %}
 
 {% assign sorted_posts = site.posts | where_exp: "post", "post.categories contains current_category" %}
