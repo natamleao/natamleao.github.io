@@ -26,7 +26,12 @@ permalink: /notes/
         <a href="{{ post.url | relative_url }}" class="post-link-overlay"></a>
 
         <h2>{{ post.title }}</h2>
-        <small>{{ post.date | date: "%d %b %Y" }}</small>
+        <small>
+          {{ post.date | date: "%d %b %Y" }}
+          {% if post.categories %}
+            • {{ post.categories | join: ", " }}
+          {% endif %}
+        </small>
         <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
       </article>
     {% endfor %}
