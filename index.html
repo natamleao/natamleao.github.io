@@ -1,0 +1,18 @@
+---
+layout: default
+title: ""
+---
+
+<main class="home">
+  <h2>Bem-vindo</h2>
+  <p>Aqui é onde você apresenta sua ideia, identidade ou foco.</p>
+
+  <div class="home-posts">
+    {% for post in site.posts limit:4 %}
+      <a href="{{ post.url | relative_url }}" class="home-card">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncate: 80 }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</main>
