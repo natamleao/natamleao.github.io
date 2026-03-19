@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About Me"
----
+--- 
 
 <div style="max-width: 700px; margin: auto; font-family: 'Segoe UI', Tahoma, sans-serif; color: #fff; line-height: 1.6;">
 
