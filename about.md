@@ -3,7 +3,7 @@ layout: page
 title: "About Me"
 ---
 
-<section class="about container">
+<section class="container">
 
   <!-- Header -->
   <div class="about-header">
