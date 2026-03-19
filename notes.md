@@ -7,7 +7,7 @@ permalink: /notes/
 <section class="container section">
 
   <!-- INTRO -->
-  <div class="notes-intro">
+  <div class="section-intro">
     <h1>Notes</h1>
     <p>
       Um espaço para registrar ideias, reflexões e aprendizados ao longo do caminho.
@@ -20,7 +20,7 @@ permalink: /notes/
   <!-- LISTA -->
   {% assign posts = site.posts | where_exp: "post", "post.categories contains 'notes'" %}
 
-  <div class="notes-list">
+  <div class="section-list">
     {% for post in posts %}
       <article class="post-card">
         <a href="{{ post.url | relative_url }}" class="post-link-overlay"></a>
