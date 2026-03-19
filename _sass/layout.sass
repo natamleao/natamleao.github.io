@@ -40,6 +40,13 @@ header h1
 
 article, main
   flex-grow: 1
+
+main.container
+  max-width: 900px
+  padding: 2rem
+  margin: 0 auto
+  margin-left: 18em   // espaço para aside fixo
+  box-sizing: border-box
   
 .post-card
   position: relative
@@ -331,3 +338,8 @@ h2, small, p
   width: 100%                 // ocupa todo o container
   box-sizing: border-box      // respeita padding
   color: #fff
+
+.notes .section-intro,
+.notes .section-list
+  max-width: 700px
+  margin: 0 auto
