@@ -1,3 +1,8 @@
+---
+layout: page
+title: "About Me"
+---
+
 <div class="about">
 
   <!-- Foto e Nome -->
