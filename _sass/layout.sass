@@ -77,7 +77,10 @@ h2, small, p
   a, span
     display: inline-flex
     align-items: center
-    margin: 0 0 0 0  // remove qualquer margem extra que venha de nav a
+    margin: 0        // remove margens externas
+    padding: 0       // remove qualquer padding que aumente a caixa
+    line-height: 1   // garante alinhamento vertical
+    height: auto     // deixa a altura só do texto
 
   .separator
     margin: 0 0.3rem
