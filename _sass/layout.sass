@@ -64,18 +64,21 @@ h2, small, p
 
 
 
-
+.header-container
+  display: flex
+  flex-direction: column       // breadcrumb em cima, título embaixo
+  gap: 0.3rem                  // espaço entre breadcrumb e título
+  padding: 1.5rem 101.37px     // padding lateral
+  width: 100%
+  
 .breadcrumb
-  width: 100%               // ocupa toda a horizontal
-  padding: 1.5rem 101.37px 1.5rem 101.37px  // topo/direita/baixo/esquerda
   font-size: 0.9rem
   line-height: 1.2
-  margin-bottom: 0.5rem
   opacity: 0.6
   display: flex
   align-items: center
   flex-wrap: wrap
-  gap: 0
+  gap: 0.3rem
 
   a, span
     display: inline-flex
