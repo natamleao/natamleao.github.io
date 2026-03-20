@@ -5,7 +5,7 @@ title: Notes
  
 <!-- INTRO -->
 <div class="section-intro"> 
-  <p>
+  <p> 
     Um espaço para registrar ideias, reflexões e aprendizados ao longo do caminho.
   </p>
   <p>
