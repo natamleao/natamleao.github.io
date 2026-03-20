@@ -315,3 +315,29 @@ h2, small, p
 
 .next
   text-align: right
+
+/* BREADCRUMB*/
+  
+.header-container
+  max-width: 900px
+  margin: 0
+  padding: 0 2rem
+  display: flex
+  align-items: center
+  height: 3rem
+
+.breadcrumb
+  font-size: 0.9rem
+  color: $white-opacity-75
+  display: flex
+  align-items: center
+  gap: 0.4rem   // espaçamento entre links e separadores
+  a
+    color: $white
+    text-decoration: none
+    transition: color 0.2s
+    &:hover
+      color: $white-opacity-85
+  .separator
+    margin: 0 0.3rem
+    color: $white-opacity-5
