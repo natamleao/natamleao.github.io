@@ -1,7 +1,6 @@
 ---
-layout: post
+layout: page
 title: Notes
-permalink: /notes/
 ---
 
 <!-- INTRO -->
