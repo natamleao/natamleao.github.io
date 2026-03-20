@@ -375,8 +375,8 @@ h2, small, p
   max-width: 900px       // mesma largura do container das outras seções
   margin-left: auto
   margin-right: auto
-  padding-left: 0        // se quiser que fique exatamente colado
-  padding-right: 0
+  padding-left: 0 !important   // força zerar mesmo se pai tiver padding
+  padding-right: 0 !important
 
 .breadcrumb
   display: flex
