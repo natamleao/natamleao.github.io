@@ -92,8 +92,11 @@ h2, small, p
 
 .section-list
   display: flex
-  flex-direction: column
-  gap: 1.5rem
+  flex-wrap: wrap
+  gap: 20px
+
+.section-list .post-card
+  flex: 1 1 250px
 
 .text-muted
   color: rgba(255,255,255,0.7)
@@ -221,14 +224,27 @@ h2, small, p
   box-sizing: border-box
   color: $white
 
-  .section-intro,
-  .section-list
+  // INTRO
+  .section-intro
     max-width: 900px
-    margin: 0 auto   // centraliza
-    padding: 0 2rem  // mesmo padding horizontal do container
+    margin: 0 auto
+    padding: 0 2rem
     display: flex
     flex-direction: column
     gap: 1.5rem
+
+  // LISTA DE PROJETOS / NOTAS
+  .section-list
+    display: flex
+    flex-wrap: wrap
+    gap: 20px
+    max-width: 900px
+    margin: 0 auto
+    padding: 0 2rem
+
+    .post-card
+      flex: 1 1 250px
+      margin-bottom: 0
 
 /*========================= POST CARD =========================*/
 .post-card
