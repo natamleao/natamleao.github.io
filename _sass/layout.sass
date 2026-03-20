@@ -15,9 +15,9 @@ $transition-speed: 0.25s
   transition: $transition-speed
   &:hover
     transform: translateY($y)
-    if $bg
+    @if $bg != null
       background: $bg
-    if $shadow
+    @if $shadow != null
       box-shadow: $shadow
 
 /*========================= Estilo Global =========================*/
