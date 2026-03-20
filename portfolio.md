@@ -8,7 +8,7 @@ title: Portfolio
   <p>
     Aqui estão alguns dos projetos que venho desenvolvendo ao longo do tempo. Cada um representa uma etapa do processo — ideias testadas, sistemas construídos e aprendizados aplicados.
   </p>
-  <p>
+  <p> 
     Não é sobre perfeição, é sobre evolução constante.
   </p>
 </div>
