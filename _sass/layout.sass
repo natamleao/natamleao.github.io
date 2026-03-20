@@ -273,38 +273,41 @@ h2, small, p
     color: rgba(255,255,255,0.6)
 
 /*========================= PORTFOLIO / NOTES =========================*/
-.section-intro
-  p
-    color: $white-opacity-85
-    line-height: 1.6
-    margin-bottom: 0.8rem
+.portfolio, .notes
+  width: 100%
+  box-sizing: border-box
+  color: $white
+  padding-top: 15rem     // ↑ garante espaço do topo da página
 
-.section-list .post-card
-  background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.07))
-  border-radius: $border-radius
-  border: 1px solid $white-opacity-15
-  padding: 1.8rem
-  transition: transform $transition-speed, box-shadow $transition-speed, background $transition-speed
-  position: relative
+  .portfolio .section-intro
+    max-width: 900px
+    margin: 0 auto 2.5rem auto   // só margem inferior
+    padding: 0 2rem
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    line-height: 1.7
+  
+    p
+      margin-bottom: 0
 
-  h2
-    font-size: 1.6rem
-    margin-bottom: 0.3rem
-    color: $white
+  .section-list
+    display: flex
+    flex-wrap: wrap
+    gap: 30px
+    max-width: 900px
+    margin: 0 auto
+    padding: 0
 
-  small
-    font-size: 0.85rem
-    color: $white-opacity-7
+    .post-card
+      flex: 1 1 250px
+      box-sizing: border-box
+      padding: 2rem
+      border-radius: $border-radius
+      border: 1px solid $white-opacity-15
+      background: $white-opacity-5
+      line-height: 1.6
 
-  p
-    color: $white-opacity-85
-    font-size: 0.95rem
-    line-height: 1.5
-
-  &:hover
-    transform: translateY(-4px)
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08)
-    background: rgba(255,255,255,0.1)      
 /*========================= POST CARD =========================*/
 .post-card
   width: 100%
