@@ -141,8 +141,6 @@ h2, small, p
 /*========================= HOME =========================*/
 .home
   color: $white
-  font-family: "Inter", sans-serif
-  line-height: 1.6
 
   p
     color: $white-opacity-8
@@ -152,95 +150,72 @@ h2, small, p
     color: $white
     margin-bottom: 0.8rem
 
-  /*========== Corrige alinhamento geral ==========*/
+  /*========== Ajuste de margens e paddings gerais ==========*/
   margin-left: auto
   margin-right: auto
-  padding-left: 1rem
-  padding-right: 1rem
-  max-width: 1200px
-
-  &-hero,
-  &-about,
-  &-highlight,
-  &-posts-section
-    margin-left: auto
-    margin-right: auto
-    padding-left: 0
-    padding-right: 0
+  padding-left: 0
+  padding-right: 0
 
   &-hero
-    margin-bottom: 3rem
-    text-align: center
+    margin-bottom: 2rem
 
     h1
-      font-size: 2.8rem
-      margin-bottom: 0.6rem
+      font-size: 2.3rem
+      margin-bottom: 0.5rem
 
     .signature
-      font-size: 1.3rem
+      font-size: 1.2rem
       font-weight: 600
       opacity: 0.9
-      margin-bottom: 0.8rem
+      margin-bottom: 0.5rem
 
     .intro
-      max-width: 700px
-      margin: 0 auto
-      padding-left: 0
-      padding-right: 0
+      padding-top: 0.5rem
+      padding-bottom: 0.5rem
+      max-width: 100%
 
   &-about
-    margin-bottom: 3rem
-    text-align: center
-
+    margin-bottom: 2rem
     p
-      max-width: 700px
-      margin-left: auto
-      margin-right: auto
+      margin-bottom: 0.8rem
 
   &-highlight
-    margin: 3rem 0
-    display: flex
-    justify-content: center
+    margin: 2rem 0
 
     .highlight-card
-      max-width: 600px
-      padding: 2rem
+      padding: 1.5rem
+      margin-bottom: 1rem
       border-radius: $border-radius
       border: 1px solid $white-opacity-15
       background: $white-opacity-4
       +hover-lift(-3px, null, 0 6px 18px rgba(255,255,255,0.08))
-      text-align: center
 
   &-posts-section
-    margin-bottom: 3rem
+    margin-bottom: 2rem
 
     h2
-      margin-bottom: 1.5rem
-      text-align: center
+      margin-bottom: 1rem
 
     .home-posts
       display: flex
       flex-wrap: wrap
-      gap: 1.5rem
-      justify-content: center
+      gap: 20px
 
       .home-card
-        flex: 1 1 260px
-        max-width: 320px
-        background: $white-opacity-5
-        padding: 1.8rem
+        flex: 1 1 250px
+        margin-bottom: 1rem
+        padding: 1.5rem
         border-radius: $border-radius
         border: 1px solid $white-opacity-15
+        background: $white-opacity-5
         text-decoration: none
         color: $white
-        transition: all 0.3s ease
         +hover-lift(-5px, null, 0 8px 20px rgba(255,255,255,0.1))
 
         h3
-          margin-bottom: 0.6rem
+          margin-bottom: 0.5rem
 
         p
-          color: inherit
           margin-bottom: 0
           
 /*========================= ABOUT =========================*/
