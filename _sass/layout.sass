@@ -144,55 +144,57 @@ h2, small, p
 
   p
     color: $white-opacity-8
-    margin-bottom: 1rem
 
   h1, h2, h3
     color: $white
-    margin-bottom: 0.8rem
 
-  /*========== Ajuste de margens e paddings gerais ==========*/
+  /*========== Corrige alinhamento geral ==========*/
   margin-left: auto
   margin-right: auto
   padding-left: 0
   padding-right: 0
 
+  &-hero,
+  &-about,
+  &-highlight,
+  &-posts-section
+    margin-left: auto
+    margin-right: auto
+    padding-left: 0
+    padding-right: 0
+
   &-hero
-    margin-bottom: 2rem
+    margin-bottom: 2.5rem
 
     h1
       font-size: 2.3rem
-      margin-bottom: 0.5rem
+      margin-bottom: 0.4rem
 
     .signature
       font-size: 1.2rem
       font-weight: 600
       opacity: 0.9
-      margin-bottom: 0.5rem
+      margin-bottom: 0.6rem
 
     .intro
-      padding-top: 0.5rem
-      padding-bottom: 0.5rem
-      max-width: 100%
+      max-width: 100%       // ocupa toda a largura
+      padding-left: 0
+      padding-right: 0
 
   &-about
-    margin-bottom: 2rem
-    p
-      margin-bottom: 0.8rem
+    margin-bottom: 2.5rem
 
   &-highlight
-    margin: 2rem 0
+    margin: 2.5rem 0
 
     .highlight-card
       padding: 1.5rem
-      margin-bottom: 1rem
       border-radius: $border-radius
       border: 1px solid $white-opacity-15
       background: $white-opacity-4
       +hover-lift(-3px, null, 0 6px 18px rgba(255,255,255,0.08))
 
   &-posts-section
-    margin-bottom: 2rem
-
     h2
       margin-bottom: 1rem
 
@@ -203,20 +205,16 @@ h2, small, p
 
       .home-card
         flex: 1 1 250px
-        margin-bottom: 1rem
+        background: $white-opacity-5
         padding: 1.5rem
         border-radius: $border-radius
         border: 1px solid $white-opacity-15
-        background: $white-opacity-5
         text-decoration: none
         color: $white
         +hover-lift(-5px, null, 0 8px 20px rgba(255,255,255,0.1))
 
-        h3
-          margin-bottom: 0.5rem
-
-        p
-          margin-bottom: 0
+        h3, p
+          color: inherit
           
 /*========================= ABOUT =========================*/
 .about
