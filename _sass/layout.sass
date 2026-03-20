@@ -319,25 +319,34 @@ h2, small, p
 /* BREADCRUMB*/
   
 .header-container
-  max-width: 900px
-  margin: 0
-  padding: 0 2rem
+  padding: 1.5rem 101.37px    // padding lateral exato
   display: flex
-  align-items: center
-  height: 3rem
+  flex-direction: column
+  gap: 0.25rem                // espaçamento entre breadcrumb e meta
+  width: 100%
 
+/* Breadcrumb */
 .breadcrumb
-  font-size: 0.9rem
-  color: $white-opacity-75
   display: flex
-  align-items: center
-  gap: 0.4rem   // espaçamento entre links e separadores
-  a
-    color: $white
-    text-decoration: none
-    transition: color 0.2s
-    &:hover
-      color: $white-opacity-85
+  flex-wrap: wrap
+  align-items: baseline       // alinha Home, categorias e título do breadcrumb
+  font-size: 0.9rem
+  line-height: 1.2
+  opacity: 0.6
+  gap: 0.3rem
+  margin: 0
+  width: auto                 // respeita o padding do container
+
+  a, span
+    display: inline-flex
+    align-items: baseline
+    margin: 0
+
   .separator
-    margin: 0 0.3rem
-    color: $white-opacity-5
+    margin: 0 0.2rem
+
+/* Título do post destacado */
+.article-title
+  font-size: 1.75em
+  line-height: 1.2
+  margin: 0
