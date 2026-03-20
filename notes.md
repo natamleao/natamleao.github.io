@@ -21,7 +21,7 @@ title: Notes
     <article class="post-card">
       <a href="{{ post.url | relative_url }}" class="post-link-overlay"></a>
 
-      <h2>{{ post.title }}</h2>
+      <h3>{{ post.title }}</h3>
       <small>
         {{ post.date | date: "%d %b %Y" }}
         {% if post.categories %}
