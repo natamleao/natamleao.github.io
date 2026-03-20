@@ -9,7 +9,7 @@ excerpt: "Implementação de uma simulação física usando método de Euler par
 
 ---
 
-![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Python](https://img.shields.io/badge/Python-3.11-blue) 
 ![Pytest](https://img.shields.io/badge/Tests-pytest-green)
 ![Status](https://img.shields.io/badge/Project-Personal-orange)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
