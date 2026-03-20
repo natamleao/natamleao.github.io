@@ -2,7 +2,7 @@
 layout: page
 title: Notes
 ---
-
+ 
 <!-- INTRO -->
 <div class="section-intro">
   <h1>Notes</h1>
