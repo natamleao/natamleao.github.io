@@ -12,7 +12,7 @@ title: Notes
   <p>
     Nem tudo aqui está finalizado — muitas coisas estão sendo pensadas, testadas ou apenas exploradas.
   </p>
-</div>
+</div> 
 
 <!-- LISTA -->
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'notes'" %}
