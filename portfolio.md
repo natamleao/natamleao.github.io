@@ -13,7 +13,7 @@ title: Portfolio
     Não é sobre perfeição, é sobre evolução constante.
   </p>
 </div>
-
+ 
 <!-- LISTA DE PROJETOS -->
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'portfolio'" %}
 
