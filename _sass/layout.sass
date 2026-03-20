@@ -346,16 +346,15 @@ h2, small, p
       position: relative
       transition: all $transition-speed
       +hover-lift(-4px, null, 0 10px 25px rgba(0,0,0,0.08))
-
-      // TAGS
-      .post-tags
-        margin-top: 12px
-        display: flex
-        flex-wrap: wrap
-        gap: 6px
-        position: relative
-        z-index: 20
-
+        
+        .post-tags
+          margin-top: 12px
+          display: flex
+          flex-wrap: wrap
+          gap: 6px
+          position: relative
+          z-index: 20
+        
         .tag
           font-size: 0.75rem
           padding: 4px 8px
@@ -368,11 +367,11 @@ h2, small, p
           &:hover
             background: $white-opacity-15
             color: $white
-
-      .post-link-overlay
-        position: absolute
-        inset: 0
-        z-index: 10
+          
+        .post-link-overlay
+          position: absolute
+          inset: 0
+          z-index: 10
 
       h2
         font-size: 1.5rem
