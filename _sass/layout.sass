@@ -223,11 +223,17 @@ h2, small, p
 
   .section-intro,
   .section-list
-    max-width: 900px       // igual ao main.container
-    margin: 0 auto
+    max-width: 900px
+    margin: 0 auto   // centraliza
+    padding: 0 2rem  // mesmo padding horizontal do container
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
 
 /*========================= POST CARD =========================*/
 .post-card
+  width: 100%
+  box-sizing: border-box  // inclui padding e borda na largura
   position: relative
   padding: 1.5rem
   margin-bottom: 1.5rem
