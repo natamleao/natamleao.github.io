@@ -23,7 +23,18 @@ title: Portfolio
 
       <h2>{{ post.title }}</h2>
       <small>{{ post.date | date: "%d %b %Y" }}</small>
+
       <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+
+      <!-- TAGS -->
+      {% if post.tags %}
+        <div class="post-tags">
+          {% for tag in post.tags %}
+            <span class="tag">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+
     </article>
   {% endfor %}
 </div>
