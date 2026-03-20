@@ -164,17 +164,17 @@ h2, small, p
     padding-right: 0
 
   &-hero
-    margin-bottom: 2.5rem
+    margin-bottom: 4rem      // mais espaço abaixo
 
     h1
       font-size: 2.3rem
-      margin-bottom: 0.4rem
+      margin-bottom: 0.6rem   // um pouco mais de respiro
 
     .signature
       font-size: 1.2rem
       font-weight: 600
       opacity: 0.9
-      margin-bottom: 0.6rem
+      margin-bottom: 0.8rem   // aumenta espaço
 
     .intro
       max-width: 100%       // ocupa toda a largura
@@ -182,31 +182,36 @@ h2, small, p
       padding-right: 0
 
   &-about
-    margin-bottom: 2.5rem
+    margin-bottom: 4rem      // mais espaço entre seções
+    padding-top: 2rem        // respiro extra no topo
 
   &-highlight
-    margin: 2.5rem 0
+    margin: 4rem 0           // espaçamento maior entre seções
 
     .highlight-card
-      padding: 1.5rem
+      padding: 2rem          // mais espaçamento interno
       border-radius: $border-radius
       border: 1px solid $white-opacity-15
       background: $white-opacity-4
       +hover-lift(-3px, null, 0 6px 18px rgba(255,255,255,0.08))
+      margin-bottom: 2rem    // garante espaço abaixo do card
 
   &-posts-section
+    margin-bottom: 4rem      // mais espaço final
+    padding-top: 2rem
+
     h2
-      margin-bottom: 1rem
+      margin-bottom: 1.5rem
 
     .home-posts
       display: flex
       flex-wrap: wrap
-      gap: 20px
+      gap: 30px              // aumenta distância entre cards
 
       .home-card
         flex: 1 1 250px
         background: $white-opacity-5
-        padding: 1.5rem
+        padding: 2rem        // mais respiro interno
         border-radius: $border-radius
         border: 1px solid $white-opacity-15
         text-decoration: none
