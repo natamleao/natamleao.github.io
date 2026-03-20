@@ -4,7 +4,7 @@ title: Notes
 ---
  
 <!-- INTRO -->
-<div class="section-intro">
+<div class="section-intro"> 
   <h1>Notes</h1>
   <p>
     Um espaço para registrar ideias, reflexões e aprendizados ao longo do caminho.
