@@ -2,7 +2,7 @@
 layout: post        # ou portfolio, se você tiver layout separado
 title: "Perceptron Neural Network"
 date: 2026-03-20
-categories: portfolio neural-network
+categories: portfolio
 tags: [Python, Machine Learning, AI, Perceptron]
 image: /assets/images/perceptron-thumbnail.png  # thumbnail do projeto
 github: https://github.com/natamleao/Perceptron-Neural-Network
