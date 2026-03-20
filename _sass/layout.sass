@@ -1,14 +1,29 @@
-/*========================= RESET E PADRONIZAÇÃO =========================*/
+/*========================= Variáveis Globais =========================*/
+$white: #fff
 $spacing-vertical: 1.5rem
 $padding-horizontal: 2rem
+$white-opacity-85: rgba(255,255,255,0.85)
+$white-opacity-75: rgba(255,255,255,0.75)
+$white-opacity-7: rgba(255,255,255,0.7)
+$white-opacity-5: rgba(255,255,255,0.05)
+$white-opacity-8: rgba(255,255,255,0.08)
+$white-opacity-4: rgba(255,255,255,0.04)
+$white-opacity-10: rgba(255,255,255,0.1)
+$white-opacity-15: rgba(255,255,255,0.15)
+$border-radius: 12px
+$transition-speed: 0.25s 
+
+/*========================= RESET E PADRONIZAÇÃO =========================*/
 
 body
   display: flex
   flex-direction: column
-  min-height: 100vh 
+  min-height: 100vh
   padding: 0 $padding-horizontal
   margin: 0
   overflow-y: scroll
+  box-sizing: border-box
+  -webkit-text-size-adjust: 100%
 
 header,
 main,
@@ -28,19 +43,6 @@ nav
   padding-left: $padding-horizontal
   padding-right: $padding-horizontal
 
-/*========================= Variáveis Globais =========================*/
-$white: #fff
-$white-opacity-85: rgba(255,255,255,0.85)
-$white-opacity-75: rgba(255,255,255,0.75)
-$white-opacity-7: rgba(255,255,255,0.7)
-$white-opacity-5: rgba(255,255,255,0.05)
-$white-opacity-8: rgba(255,255,255,0.08)
-$white-opacity-4: rgba(255,255,255,0.04)
-$white-opacity-10: rgba(255,255,255,0.1)
-$white-opacity-15: rgba(255,255,255,0.15)
-$border-radius: 12px
-$transition-speed: 0.25s 
-
 /*========================= Mixins =========================*/
 =hover-lift($y, $bg: null, $shadow: null)
   transition: $transition-speed
@@ -52,13 +54,6 @@ $transition-speed: 0.25s
       box-shadow: $shadow
 
 /*========================= Estilo Global =========================*/
-body
-  display: flex
-  flex-direction: column
-  min-height: 100vh
-  margin: 0
-  box-sizing: border-box
-  -webkit-text-size-adjust: 100%
 
 body > header, body > footer
   display: flex
@@ -98,12 +93,6 @@ article, main
 h2, small, p
   position: relative
   z-index: 1
-
-.container
-  max-width: 900px
-  margin: 0 auto
-  padding: 2rem
-  box-sizing: border-box
 
 .section
   color: $white
@@ -180,15 +169,26 @@ h2, small, p
     margin: 1rem 0           // espaçamento maior entre seções
 
     .highlight-card
-      padding: 1rem 2rem         // mais espaçamento interno
+      flex: 1 1 250px
+      box-sizing: border-box
+      padding: 1rem 2rem
       border-radius: $border-radius
       border: 1px solid $white-opacity-15
-      background: $white-opacity-4
-      +hover-lift(-3px, null, 0 6px 18px rgba(255,255,255,0.08))
-      margin-bottom: 1.5rem    // garante espaço abaixo do card
+      background: $white-opacity-5
+      line-height: 1.5
+      position: relative
+      transition: all $transition-speed
+      +hover-lift(-4px, null, 0 10px 25px rgba(0,0,0,0.08))
 
     h3
+      font-size: 1.5rem
       margin: 0.5rem 0
+      color: $white
+
+    p
+      font-size: 0.95rem
+      color: $white-opacity-75
+      margin-bottom: 0
 
   &-posts-section
     margin: 1rem 0      // mais espaço final
@@ -201,56 +201,8 @@ h2, small, p
       flex-wrap: wrap
       gap: 30px              // aumenta distância entre cards
 
-      .home-card
-        flex: 1 1 250px
-        background: $white-opacity-5
-        padding: 1rem 2rem
-        border-radius: $border-radius
-        border: 1px solid $white-opacity-15
-        text-decoration: none
-        color: $white
-        +hover-lift(-5px, null, 0 8px 20px rgba(255,255,255,0.1))
-        margin-bottom: 1.5rem    // garante espaço abaixo do card
-
-        // TAGS
-        .post-tags
-          margin-top: 12px
-          display: flex
-          flex-wrap: wrap
-          gap: 6px
-          position: relative
-          z-index: 20
-  
-          .tag
-            font-size: 0.75rem
-            padding: 4px 8px
-            border-radius: 6px
-            background: $white-opacity-10
-            color: $white-opacity-85
-            border: 1px solid $white-opacity-15
-            transition: all $transition-speed
-  
-            &:hover
-              background: $white-opacity-15
-              color: $white
-
-        h3
-          margin: 0.5rem 0
-  
-        .post-link-overlay
-          position: absolute
-          inset: 0
-          z-index: 10
-
-      small
-        display: block
-        margin: 0.4rem 0
-        color: $white-opacity-7
-        font-size: 0.85rem
-
-        h3, p
-          color: inherit
-          
+      .post-card
+      
 /*========================= ABOUT =========================*/
 .about
   color: $white
@@ -354,57 +306,8 @@ h2, small, p
       +hover-lift(-4px, null, 0 10px 25px rgba(0,0,0,0.08))
       
       .post-tags
-        margin-top: 12px
-        display: flex
-        flex-wrap: wrap
-        gap: 6px
-        position: relative
-        z-index: 20
         
-        .tag
-          font-size: 0.75rem
-          padding: 4px 8px
-          border-radius: 6px
-          background: $white-opacity-10
-          color: $white-opacity-85
-          border: 1px solid $white-opacity-15
-          transition: all $transition-speed
-  
-          &:hover
-            background: $white-opacity-15
-            color: $white
-          
-      .post-link-overlay
-        position: absolute
-        inset: 0
-        z-index: 10
-  
-      h2
-        font-size: 1.5rem
-        margin: 0.5rem 0
-        color: $white
-  
-      small
-        display: block
-        margin: 0.4rem 0
-        color: $white-opacity-7
-        font-size: 0.85rem
-  
-      p
-        font-size: 0.95rem
-        color: $white-opacity-75
-        margin-bottom: 0
 /*========================= POST CARD =========================*/
-.post-card
-  width: 100%
-  box-sizing: border-box
-  position: relative
-  padding: 1rem 2rem
-  margin-bottom: 1.5rem
-  border-radius: $border-radius
-  border: 1px solid #ddd
-  transition: all 0.2s ease
-  +hover-lift(-3px, null, 0 10px 25px rgba(0,0,0,0.08))
 
 .post-link-overlay
   position: absolute
@@ -492,3 +395,59 @@ h2, small, p
 
   .separator
     margin: 0 0.2rem
+
+
+/*============================== GLOBAL CARD ==============================*/
+.post-card
+  flex: 1 1 250px
+  box-sizing: border-box
+  padding: 1rem 2rem
+  border-radius: $border-radius
+  border: 1px solid $white-opacity-15
+  background: $white-opacity-5
+  line-height: 1.5
+  position: relative
+  transition: all $transition-speed
+  +hover-lift(-4px, null, 0 10px 25px rgba(0,0,0,0.08))
+  
+  .post-tags
+    margin-top: 12px
+    display: flex
+    flex-wrap: wrap
+    gap: 6px
+    position: relative
+    z-index: 20
+    
+    .tag
+      font-size: 0.75rem
+      padding: 4px 8px
+      border-radius: 6px
+      background: $white-opacity-10
+      color: $white-opacity-85
+      border: 1px solid $white-opacity-15
+      transition: all $transition-speed
+
+      &:hover
+        background: $white-opacity-15
+        color: $white
+      
+  .post-link-overlay
+    position: absolute
+    inset: 0
+    z-index: 10
+
+  h2
+    font-size: 1.5rem
+    margin: 0.5rem 0
+    color: $white
+
+  small
+    display: block
+    margin: 0.4rem 0
+    color: $white-opacity-7
+    font-size: 0.85rem
+
+  p
+    font-size: 0.95rem
+    color: $white-opacity-75
+    margin-bottom: 0
