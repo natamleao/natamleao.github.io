@@ -280,28 +280,32 @@ h2, small, p
     margin: 2rem 0
 
 /*========================= PORTFOLIO / NOTES =========================*/
-.portfolio, .notes
+.portfolio
   width: 100%
   box-sizing: border-box
   color: $white
-  padding-top: 15rem     // ↑ garante espaço do topo da página
+  padding-top: 10rem
 
-  .portfolio .section-intro
+  // INTRO
+  .section-intro
     max-width: 900px
-    margin: 0 auto 2.5rem auto   // só margem inferior
+    margin: 0 auto 2.5rem auto
     padding: 0 2rem
     display: flex
     flex-direction: column
-    gap: 2rem
-    line-height: 1.7
-  
+    gap: 1rem
+    line-height: 1.6
+
     p
       margin-bottom: 0
+      color: $white-opacity-85
+      font-size: 1rem
 
+  // LISTA DE PROJETOS
   .section-list
     display: flex
     flex-wrap: wrap
-    gap: 30px
+    gap: 20px
     max-width: 900px
     margin: 0 auto
     padding: 0
@@ -313,7 +317,31 @@ h2, small, p
       border-radius: $border-radius
       border: 1px solid $white-opacity-15
       background: $white-opacity-5
-      line-height: 1.6
+      line-height: 1.5
+      position: relative
+      transition: all $transition-speed
+      +hover-lift(-4px, null, 0 10px 25px rgba(0,0,0,0.08))
+
+      h2
+        font-size: 1.5rem
+        margin-bottom: 0.5rem
+        color: $white
+
+      small
+        display: block
+        margin-bottom: 0.75rem
+        color: $white-opacity-7
+        font-size: 0.85rem
+
+      p
+        font-size: 0.95rem
+        color: $white-opacity-75
+        margin-bottom: 0
+
+      .post-link-overlay
+        position: absolute
+        inset: 0
+        z-index: 10
 
 /*========================= POST CARD =========================*/
 .post-card
