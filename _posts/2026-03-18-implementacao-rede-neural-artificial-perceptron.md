@@ -12,7 +12,7 @@ excerpt: "Implementação de uma Rede Neural Artificial Perceptron."
 ![Pytest](https://img.shields.io/badge/Tests-pytest-green)
 ![Status](https://img.shields.io/badge/Project-Personal-orange)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
+ 
 ---
 
 ## Sobre o projeto
