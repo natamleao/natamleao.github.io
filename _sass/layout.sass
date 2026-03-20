@@ -1,3 +1,19 @@
+/*========================= Variáveis =========================*/
+$white: #fff
+$white-opacity-8: rgba(255,255,255,0.8)
+$white-opacity-5: rgba(255,255,255,0.05)
+$white-opacity-4: rgba(255,255,255,0.04)
+$white-opacity-15: rgba(255,255,255,0.15)
+$transition-speed: 0.3s
+$border-radius: 12px
+
+/*========================= Mixins =========================*/
+=hover-lift($y, $shadow)
+  transition: $transition-speed
+  &:hover
+    transform: translateY($y)
+    box-shadow: $shadow
+
 body
   display: flex
   flex-direction: column
@@ -191,81 +207,74 @@ h2, small, p
 .text-muted
   color: rgba(255,255,255,0.7)
 
-/* HOME */
 
+
+/*========================= HOME =========================*/
 .home
-  color: #fff
+  color: $white
 
   p
-    color: rgba(255,255,255,0.8)
+    color: $white-opacity-8
 
   h1, h2, h3
-    color: #fff
+    color: $white
 
-/* HERO */
+  // HERO
+  &-hero
+    margin-bottom: 2.5rem
 
-.home-hero
-  margin-bottom: 2.5rem
+    h1
+      font-size: 2.3rem
+      margin-bottom: 0.4rem
 
-  h1
-    font-size: 2.3rem
-    margin-bottom: 0.4rem
+    .signature
+      font-size: 1.2rem
+      font-weight: 600
+      opacity: 0.9
+      margin-bottom: 0.6rem
 
-.signature
-  font-size: 1.2rem
-  font-weight: 600
-  opacity: 0.9
-  margin-bottom: 0.6rem
+    .intro
+      max-width: 600px
 
-.intro
-  max-width: 600px
+  // SOBRE
+  &-about
+    margin-bottom: 2.5rem
 
-/* SOBRE */
+  // DESTAQUE
+  &-highlight
+    margin: 2.5rem 0
 
-.home-about
-  margin-bottom: 2.5rem
+    .highlight-card
+      padding: 1.5rem
+      border-radius: $border-radius
+      border: 1px solid $white-opacity-15
+      background: $white-opacity-4
+      +hover-lift(-3px, 0 6px 18px rgba(255,255,255,0.08))
 
-/* DESTAQUE */
+  // POSTS
+  &-posts-section
+    h2
+      margin-bottom: 1rem
 
-.home-highlight
-  margin: 2.5rem 0
+    .home-posts
+      display: flex
+      flex-wrap: wrap
+      gap: 20px
 
-.highlight-card
-  padding: 1.5rem
-  border-radius: 12px
-  border: 1px solid rgba(255,255,255,0.15)
-  background: rgba(255,255,255,0.04)
-  transition: 0.3s
+      .home-card
+        flex: 1 1 250px
+        background: $white-opacity-5
+        padding: 1.5rem
+        border-radius: $border-radius
+        border: 1px solid $white-opacity-15
+        text-decoration: none
+        color: $white
+        +hover-lift(-5px, 0 8px 20px rgba(255,255,255,0.1))
 
-  &:hover
-    transform: translateY(-3px)
-    box-shadow: 0 6px 18px rgba(255,255,255,0.08)
-
-/* POSTS */
-
-.home-posts
-  display: flex
-  flex-wrap: wrap
-  gap: 20px
-
-.home-card
-  flex: 1 1 250px
-  background: rgba(255,255,255,0.05)
-  padding: 1.5rem
-  border-radius: 12px
-  border: 1px solid rgba(255,255,255,0.15)
-  text-decoration: none
-  transition: 0.3s
-
-  color: #fff
-
-  h3, p
-    color: inherit
-
-  &:hover
-    transform: translateY(-5px)
-    box-shadow: 0 8px 20px rgba(255,255,255,0.1)
-/*Fim Home*/
+        h3, p
+          color: inherit
+          
+/*========================= Fim Home =========================*/
 
 .about
   color: #fff
