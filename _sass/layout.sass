@@ -335,11 +335,32 @@ h2, small, p
         color: $white-opacity-75
         margin-bottom: 0
 
+      // TAGS
+      .post-tags
+        margin-top: 12px
+        display: flex
+        flex-wrap: wrap
+        gap: 6px
+        position: relative
+        z-index: 20
+
+        .tag
+          font-size: 0.75rem
+          padding: 4px 8px
+          border-radius: 6px
+          background: $white-opacity-10
+          color: $white-opacity-85
+          border: 1px solid $white-opacity-15
+          transition: all $transition-speed
+
+          &:hover
+            background: $white-opacity-15
+            color: $white
+
       .post-link-overlay
         position: absolute
         inset: 0
         z-index: 10
-
 /*========================= POST CARD =========================*/
 .post-card
   width: 100%
