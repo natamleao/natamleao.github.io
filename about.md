@@ -5,7 +5,7 @@ title: "About Me"
 
 <!-- Header -->
 <div class="about-header">
-  <img src="/assets/images/natam-leao-ferreira.jpeg" alt="Natam Leão Ferreira">
+  <img src="/assets/images/umbrellan.png" alt="Natam Leão Ferreira">
   <h1>Natam Leão Ferreira</h1>
   <p class="about-subtitle">Cametá, Pará • Explorador de ideias e processos</p>
 </div>
