@@ -371,17 +371,17 @@ h2, small, p
   text-align: right
 
 /*========================= BREADCRUMB =========================*/
-.header-container
-  padding: 0.75rem 0
-  display: flex
-  flex-direction: column
-  gap: 0.25rem
-  width: 100%
+.header-container.home
+  max-width: 900px       // mesma largura do container das outras seções
+  margin-left: auto
+  margin-right: auto
+  padding-left: 0        // se quiser que fique exatamente colado
+  padding-right: 0
 
 .breadcrumb
   display: flex
   flex-wrap: wrap
-  align-items: left
+  align-items: baseline
   font-size: 0.9rem
   line-height: 1.2
   opacity: 0.6
