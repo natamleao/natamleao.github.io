@@ -273,33 +273,28 @@ h2, small, p
     color: rgba(255,255,255,0.6)
 
 /*========================= PORTFOLIO / NOTES =========================*/
-/*========================= PORTFOLIO / NOTES ESTILIZADO =========================*/
 .portfolio, .notes
   width: 100%
   box-sizing: border-box
   color: $white
-  padding-top: 15rem
+  padding-top: 15rem     // ↑ garante espaço do topo da página
 
   .portfolio .section-intro
     max-width: 900px
-    margin: 0 auto 3rem auto
+    margin: 0 auto 2.5rem auto   // só margem inferior
     padding: 0 2rem
     display: flex
     flex-direction: column
-    gap: 1.8rem
-    line-height: 1.8
-    font-family: 'Inter', sans-serif
-    font-weight: 400
-    color: $white-opacity-85
-
+    gap: 2rem
+    line-height: 1.7
+  
     p
       margin-bottom: 0
-      font-size: 1.05rem
 
   .section-list
     display: flex
     flex-wrap: wrap
-    gap: 25px
+    gap: 30px
     max-width: 900px
     margin: 0 auto
     padding: 0
@@ -310,67 +305,9 @@ h2, small, p
       padding: 2rem
       border-radius: $border-radius
       border: 1px solid $white-opacity-15
-      background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.08))
+      background: $white-opacity-5
       line-height: 1.6
-      backdrop-filter: blur(6px)
-      transition: all $transition-speed
-      cursor: pointer
 
-      h2
-        font-size: 1.5rem
-        margin-bottom: 0.5rem
-        font-weight: 600
-        color: $white
-        transition: color $transition-speed
-
-      small
-        display: block
-        font-size: 0.8rem
-        color: $white-opacity-7
-        margin-bottom: 0.8rem
-
-      p
-        font-size: 0.95rem
-        color: $white-opacity-75
-
-      +hover-lift(-4px, null, 0 12px 28px rgba(0,0,0,0.12))
-      &:hover h2
-        color: $white-opacity-85
-
-.post-link-overlay
-  position: absolute
-  inset: 0
-  z-index: 10
-  border-radius: $border-radius
-
-/*========================= CARD DETALHES =========================*/
-.post-card::before
-  content: ""
-  position: absolute
-  inset: 0
-  border-radius: $border-radius
-  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.04))
-  z-index: 0
-
-.post-card h2, .post-card p, .post-card small
-  position: relative
-  z-index: 1
-
-/*========================= RESPONSIVIDADE SUAVE =========================*/
-@media (max-width: 768px)
-  .section-list
-    flex-direction: column
-    gap: 20px
-
-/*========================= TOQUE FINAL =========================*/
-.section-intro p
-  letter-spacing: 0.3px
-  line-height: 1.7
-
-.section-list .post-card
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06)
-  &:hover
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12)
 /*========================= POST CARD =========================*/
 .post-card
   width: 100%
