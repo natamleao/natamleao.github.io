@@ -16,7 +16,7 @@ excerpt: "Implementação de uma simulação física usando método de Euler par
 
 ---
 
-## Sobre o projeto
+## Sobre o projeto 
 
 > [!NOTE]
 > Este projeto apresenta a implementação de uma **Rede Neural Artificial do tipo Perceptron**, proposta por [Frank Rosenblatt](https://en.wikipedia.org/wiki/Frank_Rosenblatt) em 1958.
