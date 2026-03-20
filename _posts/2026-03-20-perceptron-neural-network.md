@@ -44,7 +44,7 @@ Execução real do projeto, mostrando o conjunto de dados e a fronteira de decis
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
   <iframe 
-    src="https://www.youtube.com/embed/_C0A5zX-iqM" 
+    src="https://www.youtube.com/embed/Pk5vEqu2-FY" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen
