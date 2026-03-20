@@ -1,3 +1,41 @@
+/*========================= RESET E PADRONIZAÇÃO =========================*/
+$spacing-vertical: 1.5rem
+$padding-horizontal: 2rem
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  padding: 0 $padding-horizontal
+  margin: 0
+
+header,
+main,
+footer,
+section,
+article,
+nav
+  margin-left: auto
+  margin-right: auto
+  padding-left: $padding-horizontal / 2
+  padding-right: $padding-horizontal / 2
+  margin-top: $spacing-vertical
+  margin-bottom: $spacing-vertical
+
+.container
+  max-width: 900px
+  margin-left: auto
+  margin-right: auto
+  padding-left: $padding-horizontal
+  padding-right: $padding-horizontal
+
 /*========================= Variáveis Globais =========================*/
 $white: #fff
 $white-opacity-85: rgba(255,255,255,0.85)
@@ -63,8 +101,6 @@ header h1
 
 article, main
   flex-grow: 1
-
-/*+++++++++++++++++++++++++++++++++++++++++*/
 
 h2, small, p
   position: relative
@@ -238,18 +274,18 @@ h2, small, p
     gap: 20px
     max-width: 900px
     margin: 0 auto
-    padding: 0          // remove o padding horizontal extra
+    padding: 0
 
     .post-card
       flex: 1 1 250px
-      margin: 0          // remove margem extra
+      margin: 0
       box-sizing: border-box
-      padding: 1.5rem    // mantém padding interno sem quebrar layout
+      padding: 1.5rem
 
 /*========================= POST CARD =========================*/
 .post-card
   width: 100%
-  box-sizing: border-box  // inclui padding e borda na largura
+  box-sizing: border-box
   position: relative
   padding: 1.5rem
   margin-bottom: 1.5rem
@@ -316,16 +352,14 @@ h2, small, p
 .next
   text-align: right
 
-/* BREADCRUMB*/
-  
+/*========================= BREADCRUMB =========================*/
 .header-container
-  padding: 0.75rem 0       // menos espaço acima e abaixo, padding lateral zero
+  padding: 0.75rem 0
   display: flex
   flex-direction: column
-  gap: 0.25rem             // mantém o espaçamento entre breadcrumb e título
+  gap: 0.25rem
   width: 100%
 
-/* Breadcrumb */
 .breadcrumb
   display: flex
   flex-wrap: wrap
@@ -343,9 +377,3 @@ h2, small, p
 
   .separator
     margin: 0 0.2rem
-    
-/* Título do post destacado */
-.article-title
-  font-size: 1.75em
-  line-height: 1.2
-  margin: 0
