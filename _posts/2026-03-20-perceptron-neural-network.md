@@ -42,7 +42,8 @@ E isso fica claro nos experimentos.
 
 Execução real do projeto, mostrando o conjunto de dados e a fronteira de decisão aprendida:
 
-{% include embed.html url="https://www.youtube.com/embed/_C0A5zX-iqM" %}
+{% include embed.html url="[https://www.youtube.com/embed/_C0A5zX-iqM](https://youtube.com/shorts/Pk5vEqu2-FY)" %}
+
 
 ---
 
