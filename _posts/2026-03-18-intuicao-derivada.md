@@ -7,3 +7,4 @@ mathjax: true
 excerpt: "Uma visão intuitiva da derivada como taxa de variação — do ponto de vista físico."
 ---
 
+ 
