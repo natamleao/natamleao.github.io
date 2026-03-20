@@ -319,15 +319,14 @@ h2, small, p
 /* BREADCRUMB*/
   
 .header-container
-  padding: 1.5rem 101.37px
+  padding: 0.75rem 0       // menos espaço acima e abaixo, padding lateral zero
   display: flex
   flex-direction: column
-  gap: 0.25rem
+  gap: 0.25rem             // mantém o espaçamento entre breadcrumb e título
   width: 100%
 
-/* Breadcrumb alinhado à esquerda ignorando o padding do container */
+/* Breadcrumb */
 .breadcrumb
-  margin-left: -101.37px   // “puxa” para esquerda o mesmo valor do padding
   display: flex
   flex-wrap: wrap
   align-items: baseline
@@ -335,7 +334,7 @@ h2, small, p
   line-height: 1.2
   opacity: 0.6
   gap: 0.3rem
-  width: auto
+  margin: 0
 
   a, span
     display: inline-flex
