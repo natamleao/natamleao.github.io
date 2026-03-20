@@ -17,10 +17,10 @@ layout: default
     <span class="separator">›</span>
     <span>{{ page.title }}</span> <!-- título do post aqui -->
   </nav>
-
-  <!-- Meta do post (data, autor, etc) -->
-  {% include meta.html post=page %}
 </div>
+
+<!-- Meta do post (data, autor, etc) -->
+{% include meta.html post=page %}
 
 <!-- Conteúdo do post -->
 {{ content }}
