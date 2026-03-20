@@ -273,52 +273,38 @@ h2, small, p
     color: rgba(255,255,255,0.6)
 
 /*========================= PORTFOLIO / NOTES =========================*/
-.portfolio-intro
-  text-align: center
-  margin-bottom: 3rem
+.section-intro
   p
-    font-size: 1.1rem
     color: $white-opacity-85
     line-height: 1.6
-    max-width: 700px
-    margin: 0.8rem auto
+    margin-bottom: 0.8rem
 
-.portfolio-list
-  display: grid
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-  gap: 2rem
-
-.portfolio-card
-  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.08))
+.section-list .post-card
+  background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.07))
   border-radius: $border-radius
   border: 1px solid $white-opacity-15
   padding: 1.8rem
-  position: relative
   transition: transform $transition-speed, box-shadow $transition-speed, background $transition-speed
+  position: relative
+
+  h2
+    font-size: 1.6rem
+    margin-bottom: 0.3rem
+    color: $white
+
+  small
+    font-size: 0.85rem
+    color: $white-opacity-7
+
+  p
+    color: $white-opacity-85
+    font-size: 0.95rem
+    line-height: 1.5
 
   &:hover
-    transform: translateY(-6px)
-    box-shadow: 0 12px 25px rgba(0,0,0,0.1)
-    background: rgba(255,255,255,0.1)
-
-  .post-card-content
-    display: flex
-    flex-direction: column
-    gap: 0.5rem
-
-    h2
-      font-size: 1.6rem
-      margin-bottom: 0.3rem
-      color: $white
-
-    small
-      font-size: 0.85rem
-      color: $white-opacity-7
-
-    p
-      font-size: 0.95rem
-      color: $white-opacity-85
-      
+    transform: translateY(-4px)
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08)
+    background: rgba(255,255,255,0.1)      
 /*========================= POST CARD =========================*/
 .post-card
   width: 100%
