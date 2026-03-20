@@ -224,7 +224,6 @@ h2, small, p
   box-sizing: border-box
   color: $white
 
-  // INTRO
   .section-intro
     max-width: 900px
     margin: 0 auto
@@ -233,18 +232,19 @@ h2, small, p
     flex-direction: column
     gap: 1.5rem
 
-  // LISTA DE PROJETOS / NOTAS
   .section-list
     display: flex
     flex-wrap: wrap
     gap: 20px
     max-width: 900px
     margin: 0 auto
-    padding: 0 2rem
+    padding: 0          // remove o padding horizontal extra
 
     .post-card
       flex: 1 1 250px
-      margin-bottom: 0
+      margin: 0          // remove margem extra
+      box-sizing: border-box
+      padding: 1.5rem    // mantém padding interno sem quebrar layout
 
 /*========================= POST CARD =========================*/
 .post-card
