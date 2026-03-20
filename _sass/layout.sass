@@ -280,34 +280,32 @@ h2, small, p
 
   .section-intro
     max-width: 900px
-    margin: 0 auto
+    margin: 3rem auto 2.5rem auto  // mais espaço acima e entre intro e lista
     padding: 0 2rem
     display: flex
     flex-direction: column
-    gap: 2rem       // aumentei o gap para dar mais respiro entre títulos e texto
+    gap: 2rem                     // espaço maior entre parágrafos
+    line-height: 1.7
 
-    h1, h2
-      margin-bottom: 0.8rem   // títulos respiram mais do que o normal
     p
-      margin-bottom: 1.2rem   // parágrafos têm espaço maior
+      margin-bottom: 0            // já que o gap cuida do espaçamento
 
   .section-list
     display: flex
     flex-wrap: wrap
-    gap: 25px        // aumenta o espaçamento entre cards
+    gap: 30px                     // espaço generoso entre cards
     max-width: 900px
     margin: 0 auto
     padding: 0
 
     .post-card
       flex: 1 1 250px
-      margin: 0
       box-sizing: border-box
-      padding: 1.8rem   // aumenta o padding interno para que o conteúdo não fique espremido
-      line-height: 1.6  // melhora leitura
+      padding: 2rem               // cards mais “respiráveis”
       border-radius: $border-radius
       border: 1px solid $white-opacity-15
       background: $white-opacity-5
+      line-height: 1.6
 
 /*========================= POST CARD =========================*/
 .post-card
