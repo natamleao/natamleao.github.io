@@ -319,23 +319,23 @@ h2, small, p
 /* BREADCRUMB*/
   
 .header-container
-  padding: 1.5rem 101.37px    // padding lateral exato
+  padding: 1.5rem 101.37px
   display: flex
   flex-direction: column
-  gap: 0.25rem                // espaçamento entre breadcrumb e meta
+  gap: 0.25rem
   width: 100%
 
-/* Breadcrumb */
+/* Breadcrumb alinhado à esquerda ignorando o padding do container */
 .breadcrumb
+  margin-left: -101.37px   // “puxa” para esquerda o mesmo valor do padding
   display: flex
   flex-wrap: wrap
-  align-items: baseline       // alinha Home, categorias e título do breadcrumb
+  align-items: baseline
   font-size: 0.9rem
   line-height: 1.2
   opacity: 0.6
   gap: 0.3rem
-  margin: 0
-  width: auto                 // respeita o padding do container
+  width: auto
 
   a, span
     display: inline-flex
@@ -344,7 +344,7 @@ h2, small, p
 
   .separator
     margin: 0 0.2rem
-
+    
 /* Título do post destacado */
 .article-title
   font-size: 1.75em
