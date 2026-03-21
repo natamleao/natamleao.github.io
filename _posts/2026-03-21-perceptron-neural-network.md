@@ -42,11 +42,11 @@ $$ y=\mathrm{sign}(w^Tx + b), \quad w_{t+1}=w_t + \eta, y, x $$
 
 ## Funcionalidades
 
-* ✅ Geração de datasets clássicos: AND, OR, XOR, bidimensionais
-* ✅ Treinamento supervisionado com cálculo de acurácia
-* ✅ Visualização da fronteira de decisão
-* ✅ Testes unitários automatizados
-* ✅ Aplicação em dados geográficos (ex: Norte/Sul)
+* Geração de datasets clássicos: AND, OR, XOR, bidimensionais
+* Treinamento supervisionado com cálculo de acurácia
+* Visualização da fronteira de decisão
+* Testes unitários automatizados
+* Aplicação em dados geográficos (ex: Norte/Sul)
 
 ---
 
