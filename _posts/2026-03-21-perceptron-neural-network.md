@@ -49,7 +49,7 @@ $$
 
 ### Função degrau bipolar
 
-![Função degrau bipolar](assets/images/post-images/funcao-degrau-bipolar.png)
+![Função degrau bipolar](/assets/images/post-images/funcao-degrau-bipolar.png)
 
 Durante o treinamento, os pesos são atualizados por:
 
