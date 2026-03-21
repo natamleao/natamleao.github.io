@@ -40,6 +40,14 @@ Este projeto apresenta uma implementação do perceptron em Python, incluindo um
 
 Antes de falarmos sobre o modelo matémático do Perceptron, quero falar sobre o neurônio artificial. O neurônio artificial foi proposto por McCulloch & Pitts (1943), é ilustrado abaixo:
 
+<div style="text-align: center;">
+  <img src="/assets/images/post-images/neuronio-artificial.png"
+       alt="Neurônio artificial"
+       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Neurônio artificial
+  </p>
+</div>
 
 
 O perceptron calcula a saída de acordo com a função degrau bipolar, que é a usada nesta implementação:
@@ -64,7 +72,7 @@ $$
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/funcao-degrau-bipolar.png"
-       alt="Função degrau bipolar"
+       alt="Gráfico da função de ativação degrau bipolar"
        style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Gráfico da função de ativação degrau bipolar
