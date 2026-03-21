@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Perceptron Neural Network"
-date: 2026-03-20
+date: 2026-03-22
 categories: portfolio
 tags: [Python, Neural Networks, Machine Learning]
 image: /assets/images/perceptron-thumbnail.png
