@@ -19,7 +19,7 @@ excerpt: "Implementação de um Perceptron em Python com pipeline de dados, trei
 
 ## Visão geral
 
-O **Perceptron**, proposto por Frank Rosenblatt em 1958, é um dos primeiros modelos de neurônio artificial e serve como base para redes neurais.
+O **Perceptron**, proposto por Frank Rosenblatt em 1958, é um dos primeiros modelos de neurônio artificial e serve como base para redes neurais. Este modelo tem arquitetura feedforward de camada simples, ou seja, os sinais de entrada percorrem até a saída, sendo alterados pleos pesos sinápticos e bias, sem nenhum tipo de realimentação. Vale lembrar que as redes Perceptron admitem um vários neurônios de entrada, mas apenas um de saída.
 
 Este projeto apresenta uma implementação do perceptron em Python, incluindo um pipeline simples de aprendizado supervisionado: geração de dados, pré-processamento, treinamento, avaliação e visualização.
 
@@ -38,6 +38,10 @@ Este projeto apresenta uma implementação do perceptron em Python, incluindo um
 
 ## Modelo matemático
 
+Antes de falarmos sobre o modelo matémático do Perceptron, quero falar sobre o neurônio artificial. O neurônio artificial foi proposto por McCulloch & Pitts (1943), é ilustrado abaixo:
+
+
+
 O perceptron calcula a saída de acordo com a função degrau bipolar, que é a usada nesta implementação:
 
 $$
@@ -52,7 +56,7 @@ $$
 A função de ativação degrau bipolar é definida como:
 
 $$
-y = \begin{cases}
+f(x) = \begin{cases}
    1, & \text{se } x \ge 0\\
   -1, & \text{caso contrário}
 \end{cases}
@@ -67,12 +71,20 @@ $$
   </p>
 </div>
 
-Durante o treinamento, os pesos são atualizados por:
 
-$$ w_{t+1} = w_t + \eta \, y \, x $$
+O algoritmo empregado para o treinamento neste tipo de RNA é o algoritmo da Regra de Hebb, é um algoritmo de treimamento supervisionado on-line, supervisionado porque já se tem categorias ou classes conhecidas de cada amostra e on-line porque os pesos sinápticos e bias são atualizados a cada época ou iteração, ou seja, a cada amostra do conjunto de amostras que produziu um erro. No algoritmo da Regra de Hebb a saída é comparada com a saíde desejada (targets) e então é ajusto os pesos sinápticos e bias ou não.
+
+Durante o treinamento, os pesos sinápticos e o bias são atualizados por:
+
+$$
+\begin{cases}
+v_i^{\text{novo}} = v_i^{\text{antigo}} + \alpha (t^{(k)} - y^{(k)}) x^{(k)} \\
+b^{\text{novo}} = b^{\text{antigo}} + \alpha (t^{(k)} - y^{(k)})
+\end{cases}
+$$
 
 <ul>
-  <li>$x$ — vetor de entrada</li>
+  <li>$v_i$ — </li>
   <li>$w$ — pesos</li>
   <li>$b$ — bias</li>
   <li>$\eta$ — taxa de aprendizado</li>
