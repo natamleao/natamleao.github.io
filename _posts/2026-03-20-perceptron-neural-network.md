@@ -3,7 +3,7 @@ layout: post
 title: "Perceptron Neural Network"
 date: 2026-03-20
 categories: portfolio
-tags: [Python, Machine Learning, AI, Neural Networks]
+tags: [Python, Neural Networks, Machine Learning]
 image: /assets/images/perceptron-thumbnail.png
 github: https://github.com/natamleao/Perceptron-Neural-Network
 excerpt: "Implementação de um Perceptron em Python com pipeline completo: geração de dados, treinamento, avaliação e visualização da fronteira de decisão."
