@@ -6,7 +6,7 @@ categories: portfolio
 mathjax: true
 tags: [Python, Neural Networks, Machine Learning, AI]
 image: /assets/images/perceptron-thumbnail.png
-github: [https://github.com/natamleao/Perceptron-Neural-Network](https://github.com/natamleao/Perceptron-Neural-Network)
+github: https://github.com/natamleao/Perceptron-Neural-Network
 excerpt: "Implementação completa de um Perceptron em Python com pipeline de dados, treinamento, visualização de fronteira de decisão e testes automatizados — um case de Machine Learning do zero."
 ---
 
