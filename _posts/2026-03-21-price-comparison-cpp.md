@@ -3,7 +3,7 @@ layout: post
 title: "Price Comparison CPP"
 date: 2026-03-20
 categories: portfolio
-tags: [C++, Data Structures, Algorithms, OOP, Makefile]
+tags: [C++, Algorithms, Data Structures]
 image: /assets/images/price-comparison-cpp-thumbnail.png
 github: https://github.com/natamleao/Price-Comparison-CPP
 excerpt: "Sistema em C++ para comparação de preços de ovos de Páscoa, com lista encadeada, modularização do código e automação da compilação com Makefile."
