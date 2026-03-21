@@ -79,11 +79,13 @@ Durante o treinamento, os pesos são ajustados pela regra:
 
 $$ w_{t+1} = w_t + \eta , y , x $$
 
-$x$: vetor de entrada
-$w$: pesos
-$b$: bias
-$\eta$: taxa de aprendizado
-$y$: rótulo verdadeiro
+<ul>
+  <li>$x$ — vetor de entrada</li>
+  <li>$w$ — pesos</li>
+  <li>$b$ — bias</li>
+  <li>$\eta$ — taxa de aprendizado</li>
+  <li>$y$ — rótulo verdadeiro</li>
+</ul>
 
 > Cada atualização aproxima o modelo da fronteira ideal entre classes.
 
