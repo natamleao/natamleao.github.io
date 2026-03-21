@@ -79,6 +79,8 @@ Durante o treinamento, os pesos são ajustados pela regra:
 
 $$ w_{t+1} = w_t + \eta , y , x $$
 
+$(x)=\mathrm{vetor de entrada}$
+
 * $(x)=\mathrm{vetor de entrada}$
 * $(w)=\mathrm{pesos}$
 * $(b)=\mathrm{bias}$
