@@ -72,18 +72,18 @@ Treinamento do Perceptron e fronteira de decisão em tempo real:
 
 O Perceptron calcula a saída como:
 
-$$ \mathrm{y} = \mathrm{sign}(w^T x + b) $$
+$$ y = \mathrm{sign}(w^T x + b) $$
 
 Durante o treinamento, os pesos são ajustados pela regra:
 
 
 $$ w_{t+1} = w_t + \eta , y , x $$
 
-* (x) = vetor de entrada
-* (w) = pesos
-* (b) = bias
-* (\eta) = taxa de aprendizado
-* (y) = rótulo verdadeiro
+* ($x$) = vetor de entrada
+* ($w$) = pesos
+* ($b$) = bias
+* ($\eta$) = taxa de aprendizado
+* ($y$) = rótulo verdadeiro
 
 > ⚡ Cada atualização aproxima o modelo da fronteira ideal entre classes.
 
