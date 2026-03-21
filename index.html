@@ -51,16 +51,16 @@ title: ""
         <h3>{{ post.title }}</h3>
         <small>{{ post.date | date: "%d %b %Y" }}</small>
         <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-
-        <!-- TAGS -->
-        {% if post.tags %}
-          <div class="post-tags">
-            {% for tag in post.tags %}
-              <a href="/tags#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
-            {% endfor %}
-          </div>
-        {% endif %}
       </a>
+    
+      <!-- TAGS -->
+      {% if post.tags %}
+        <div class="post-tags">
+          {% for tag in post.tags %}
+            <a href="/tags#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   {% endfor %}
 </div>
