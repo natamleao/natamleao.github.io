@@ -58,18 +58,14 @@ y = \begin{cases}
 \end{cases}
 $$
 
-<br>
-
 <div style="text-align: center;">
   <img src="/assets/images/post-images/funcao-degrau-bipolar.png"
        alt="Função degrau bipolar"
        style="display: block; margin: 0 auto; max-width: 100%; width: 500px;">
-  <p style="font-size: 0.9em; color: gray;">
-    Função de ativação degrau bipolar
+  <p style="text-align: center; style="font-size: 0.9em; color: gray;">
+    Gráfico da função de ativação degrau bipolar
   </p>
 </div>
-
-<br>
 
 Durante o treinamento, os pesos são atualizados por:
 
