@@ -40,7 +40,13 @@ Este projeto apresenta uma implementação do perceptron em Python, incluindo um
 
 O perceptron calcula a saída como:
 
-$$ y = \mathrm{sign}(w^T x + b) $$
+$$ 
+f(x) =
+\begin{cases}
+    \text{expressão 1}, & \text{se } \text{condição 1} \\
+    \text{expressão 2}, & \text{se } \text{condição 2}
+\end{cases}
+ $$
 
 Durante o treinamento, os pesos são atualizados por:
 
