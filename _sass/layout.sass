@@ -469,7 +469,6 @@ h2, small, p
     color: $white-opacity-75
     margin-bottom: 0
 
-
 /*============================== TAG PAGE ==============================*/
 .tags-page
   hr
@@ -477,6 +476,17 @@ h2, small, p
     
   h2
     margin: 1rem 0
+    padding: 0.3rem 0
+    transition: all 0.3s ease
+    border-left: 3px solid transparent
+    background: none
+
+    &:target
+      background: rgba(255,255,255,0.1)   // destaque suave
+      border-left-color: #fff             // barra colorida
+      padding-left: 0.7rem
+      color: #fff
+      border-radius: 4px
 
   .section-list
     margin: 0rem
