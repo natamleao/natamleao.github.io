@@ -431,6 +431,7 @@ h2, small, p
     gap: 6px
     position: relative
     z-index: 20
+    text-decoration: none   // remove o sublinhado
     
     .tag
       font-size: 0.75rem
@@ -440,10 +441,12 @@ h2, small, p
       color: $white-opacity-85
       border: 1px solid $white-opacity-15
       transition: all $transition-speed
+      cursor: pointer
 
       &:hover
         background: $white-opacity-15
         color: $white
+        text-decoration: none   // remove o sublinhado
       
   .post-link-overlay
     position: absolute
