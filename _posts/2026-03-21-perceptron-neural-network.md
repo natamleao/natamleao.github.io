@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: "Perceptron Neural Network — Case Study"
 date: 2026-03-21
