@@ -148,8 +148,8 @@ Isso ocorre porque o modelo só representa fronteiras de decisão lineares.
 
 Treinamento do perceptron e evolução da fronteira de decisão:
 
-<div style="max-width: 480px; margin: 0 auto;">
-  
+<div style="width: 100%;">
+
   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
     <iframe 
       src="https://www.youtube.com/embed/Pk5vEqu2-FY" 
@@ -162,6 +162,9 @@ Treinamento do perceptron e evolução da fronteira de decisão:
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Treinamento do perceptron e evolução da fronteira de decisão
   </p>
+
+</div>
+
 
 ---
 
