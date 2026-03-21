@@ -42,10 +42,14 @@ O perceptron calcula a saída de acordo com a função degrau bipolar, que é a 
 
 $$
 y = \begin{cases}
-  1, & \text{se } \sum v_i x_i + b \ge \text{limiar}\\
+   1, & \text{se } \sum v_i x_i + b \ge \text{limiar}\\
   -1, & \text{caso contrário}
 \end{cases}
 $$
+
+### Função degrau bipolar
+
+![Função degrau bipolar](assets/images/post-images/funcao-degrau-bipolar.png)
 
 Durante o treinamento, os pesos são atualizados por:
 
