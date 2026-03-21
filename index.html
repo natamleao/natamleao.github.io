@@ -26,9 +26,10 @@ title: ""
   </p>
 </section>
 
+<h2>Destaque</h2>
+
 <!-- DESTAQUE -->
 <section class="home-highlight">
-  <h2>Destaque</h2>
   <div class="highlight-card">
     <h3>Em andamento</h3>
     <p>
@@ -38,10 +39,11 @@ title: ""
   </div>
 </section>
 
+<h2>Posts recentes</h2>
+
 <!-- POSTS -->
 <div class="section-list">
-  <h2>Posts recentes</h2>
-
+  
   {% for post in site.posts limit:4 %}
     <div class="post-card">
       <a href="{{ post.url | relative_url }}" class="home-card">
