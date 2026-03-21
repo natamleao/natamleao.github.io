@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Price Comparison C"
-date: 2026-03-21
+date: 2026-03-18
 categories: portfolio
 mathjax: false
 tags: [C, Data Structures, Algorithms]
