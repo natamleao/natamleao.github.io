@@ -43,7 +43,7 @@ O perceptron calcula a saída de acordo com a função degrau bipolar, que é a 
 $$
 y = \begin{cases}
   1, & \text{se } \sum v_i x_i + b \ge \text{limiar}\\
-  0, & \text{se } \sum v_i x_i + b \ge \text{limiar}
+  0, \text{caso contrário}
 \end{cases}
 $$
 
