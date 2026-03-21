@@ -77,13 +77,14 @@ Simula a reprodução da playlist em um ciclo circular, repetindo conforme solic
 
 ### Como fica o arquivo `Musics.txt`
 
+```text
 Nome da Música, Artista, Duração (s)
 Bohemian Rhapsody, Queen, 354
 Imagine, John Lennon, 183
 Stairway to Heaven, Led Zeppelin, 482
 Smells Like Teen Spirit, Nirvana, 301
 Hotel California, Eagles, 391
-
+```
 ---
 
 ## Estrutura do projeto
