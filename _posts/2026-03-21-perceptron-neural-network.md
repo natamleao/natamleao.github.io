@@ -32,7 +32,7 @@ Este projeto implementa um **pipeline completo de classificação binária**: ge
 * **Arquitetura Modular:** `data/`, `scripts/`, `src/`, `tests/`
 * **Regra do Perceptron:**
 
-$$ \mathrm{y}=\mathrm{sign}(\mathrm{w^T}\mathrm{x} + \mathrm{b}), \quad \mathrm{w_{t+1}} = \mathrm{w_t} + \eta, \mathrm{y}, \mathrm{x} $$
+$$ y=\mathrm{sign}(w^Tx + b), \quad w_{t+1}=w_t + \eta, y, x $$
   
 * **Pipeline Completo:** geração de dados, divisão treino/teste, normalização, avaliação de acurácia
 * **Visualização:** gráficos da fronteira de decisão 2D
