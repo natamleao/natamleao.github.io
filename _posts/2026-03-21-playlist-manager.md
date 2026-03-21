@@ -75,6 +75,15 @@ Calcula diversas métricas úteis sobre a playlist inteira, como duração total
 🛠️ **Execução / Simulação**
 Simula a reprodução da playlist em um ciclo circular, repetindo conforme solicitado. 
 
+### Como fica o arquivo `Musics.txt`
+
+Nome da Música, Artista, Duração (s)
+Bohemian Rhapsody, Queen, 354
+Imagine, John Lennon, 183
+Stairway to Heaven, Led Zeppelin, 482
+Smells Like Teen Spirit, Nirvana, 301
+Hotel California, Eagles, 391
+
 ---
 
 ## Estrutura do projeto
