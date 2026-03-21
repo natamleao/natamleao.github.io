@@ -85,6 +85,16 @@ $$ w_{t+1} = w_t + \eta , y , x $$
 * $\eta$: taxa de aprendizado
 * $y$: rótulo verdadeiro
 
+\[
+\begin{aligned}
+x &\text{ — vetor de entrada} \\
+w &\text{ — pesos} \\
+b &\text{ — bias} \\
+\eta &\text{ — taxa de aprendizado} \\
+y &\text{ — rótulo verdadeiro}
+\end{aligned}
+\]
+
 > ⚡ Cada atualização aproxima o modelo da fronteira ideal entre classes.
 
 ---
