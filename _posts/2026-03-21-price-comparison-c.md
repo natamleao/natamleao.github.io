@@ -73,6 +73,15 @@ O programa permite:
 
 ---
 
+### Exemplo de itens cadastrados
+
+```text
+ID | Preço
+1  | R$ 14,00
+2  | R$ 20,00
+3  | R$ 25,00
+```
+
 ## Como executar
 
 Clone o repositório e compile com Make:
