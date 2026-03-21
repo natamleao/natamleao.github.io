@@ -441,11 +441,12 @@ h2, small, p
       border: 1px solid $white-opacity-15
       transition: all $transition-speed
       cursor: pointer
-
+      text-decoration: none          // remove sempre o underline
+  
       &:hover
         background: $white-opacity-15
         color: $white
-        text-decoration: none !important   // remove sublinhado
+        text-decoration: none       // garante que continua sem underline
       
   .post-link-overlay
     position: absolute
