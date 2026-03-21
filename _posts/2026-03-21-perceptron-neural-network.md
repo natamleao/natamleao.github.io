@@ -19,7 +19,7 @@ excerpt: "Implementação de um Perceptron em Python com pipeline de dados, trei
 
 ## Visão geral
 
-O **Perceptron**, proposto por Frank Rosenblatt em 1958, é um dos primeiros modelos de neurônio artificial e serve como base para redes neurais. Este modelo tem arquitetura feedforward de camada simples, ou seja, os sinais de entrada percorrem até a saída, sendo alterados pleos pesos sinápticos e bias, sem nenhum tipo de realimentação. Vale lembrar que as redes Perceptron admitem um vários neurônios de entrada, mas apenas um de saída.
+O **Perceptron**, proposto por Frank Rosenblatt em 1958, é um dos primeiros modelos de neurônio artificial e serve como base para redes neurais. Este modelo tem arquitetura feedforward de camada simples, ou seja, os sinais de entrada percorrem até a saída, sendo alterados pelos pesos sinápticos e bias, sem nenhum tipo de realimentação. O perceptron pode receber múltiplas entradas, mas produz apenas uma saída.
 
 Este projeto apresenta uma implementação do perceptron em Python, incluindo um pipeline simples de aprendizado supervisionado: geração de dados, pré-processamento, treinamento, avaliação e visualização.
 
@@ -63,7 +63,7 @@ Assim como no neurônio biológico, a relevância da informação processada é 
   <li>$y$ — sinal de saída</li>
 </ol>
 
-Vamos voltar agora para está implementação.Aqui perceptron calcula a saída de acordo com a função degrau bipolar, que é a usada nesta implementação:
+Vamos voltar agora para esta implementação.Aqui perceptron calcula a saída de acordo com a função degrau bipolar, que é a usada nesta implementação:
 
 $$
 y = \begin{cases}
@@ -94,7 +94,7 @@ $$
   </p>
 </div>
 
-O algoritmo empregado para o treinamento neste tipo de RNA é o algoritmo da Regra de Hebb, é um algoritmo de treimamento supervisionado on-line, supervisionado porque já se tem categorias ou classes conhecidas de cada amostra e on-line porque os pesos sinápticos e bias são atualizados a cada época ou iteração, ou seja, a cada amostra do conjunto de amostras que produziu um erro. No algoritmo da Regra de Hebb a saída é comparada com a saíde desejada (targets) e então é ajusto os pesos sinápticos e bias ou não.
+O algoritmo empregado para o treinamento neste tipo de RNA é o algoritmo da Regra de Hebb, é um algoritmo de treinamento supervisionado on-line, supervisionado porque já se tem categorias ou classes conhecidas de cada amostra e on-line porque os pesos sinápticos e bias são atualizados a cada época ou iteração, ou seja, a cada amostra do conjunto de amostras que produziu um erro. No algoritmo da Regra de Hebb a saída é comparada com a saída desejada (targets) e então é ajusto os pesos sinápticos e bias ou não.
 
 Durante o treinamento, os pesos sinápticos e o bias são atualizados por:
 
@@ -105,7 +105,7 @@ b^{\text{novo}} = b^{\text{antigo}} + \alpha (t^{(k)} - y^{(k)})
 \end{cases}
 $$
 
-Componetes na equação de atulização de pesos sinápticos:
+Componentes na equação de atualização de pesos sinápticos:
 
 <ul>
   <li>$v_i^{\text{novo}}$ — o novo valor do peso sináptico i</li>
@@ -116,7 +116,7 @@ Componetes na equação de atulização de pesos sinápticos:
   <li>$x^{(k)}$ — a entrada da amostra k</li>
 </ul>
 
-Componetes na equação de atulização do bias (limiar de ativação):
+Componentes na equação de atualização do bias (limiar de ativação):
 
 <ul>
   <li>$b^{\text{novo}}$ — o novo valor do bias</li>
@@ -140,7 +140,7 @@ No entanto, não consegue aprender:
 
 - XOR  
 
-Isso ocorre porque o modelo só representa fronteiras de decisão lineares.
+Isso ocorre porque o modelo só representa fronteiras de decisão lineares. Esse limite motivou o desenvolvimento das redes multicamadas (MLPs), que superam essa limitação ao introduzir não-linearidade.
 
 ---
 
@@ -211,7 +211,7 @@ Perceptron-Neural-Network/
 
 ## Conclusão
 
-Este projeto mostra, de forma direta, como o perceptron funciona e quais são suas limitações. Ele serve como base para entender modelos mais complexos de aprendizado de máquina.
+Apesar de simples, o perceptron marca o início das redes neurais modernas. Entender suas limitações é essencial para compreender por que arquiteturas mais profundas foram desenvolvidas.
 
 ---
 
