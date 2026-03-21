@@ -43,14 +43,27 @@ Antes de falarmos sobre o modelo matémático do Perceptron, quero falar sobre o
 <div style="text-align: center;">
   <img src="/assets/images/post-images/neuronio-artificial.png"
        alt="Neurônio artificial"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Neurônio artificial
   </p>
 </div>
 
+Análogo ao cérebro biológico, possui terminações sinápticas, um somatório que associa-se ao núcleo, e unidade de saída lembrando o papel dos dentritos. Nesse modelo, os sinais de entrada $x_1$, $x_2$, ..., $x_n$ são análogos aos impulsos elétricos do meio externo. As ponderações exercidas pelas terminações sinápticas do modelo biológico, são representadas no neurônio artificial pelos pesos sinápticos $v_1$, $v_2$, ..., $v_n$.
 
-O perceptron calcula a saída de acordo com a função degrau bipolar, que é a usada nesta implementação:
+Assim como no neurônio biológico, a relevância da informação processada é dada pela multiplicação de $x_i$ por $v_i$. Assim a saída artificial do neurônio é a soma ponderada de suas entradas. O neurônio artificial é composto por sete elementos básicos:
+
+<ol>
+  <li>$\{x_1, x_2, ..., x_n\}$ — neurônios de entrada</li>
+  <li>$\{v_1, v_2, ..., v_n\}$ — pesos sinápticos</li>
+  <li>$\sum$ — combinação linear</li>
+  <li>$b$ — limiar de ativação </li>
+  <li>$y_{in}$ — potencial de ativação</li>
+  <li>$f$ — função de ativação</li>
+  <li>$y$ — sinal de saída</li>
+</ol>
+
+Vamos voltar agora para está implementação.Aqui perceptron calcula a saída de acordo com a função degrau bipolar, que é a usada nesta implementação:
 
 $$
 y = \begin{cases}
@@ -58,6 +71,8 @@ y = \begin{cases}
   -1, & \text{caso contrário}
 \end{cases}
 $$
+
+Obs: o limiar é ponto de decisão da função de ativação.
 
 ### Função degrau bipolar
 
@@ -91,12 +106,25 @@ b^{\text{novo}} = b^{\text{antigo}} + \alpha (t^{(k)} - y^{(k)})
 \end{cases}
 $$
 
+Componetes na equação de atulização de pesos sinápticos:
+
 <ul>
-  <li>$v_i$ — </li>
-  <li>$w$ — pesos</li>
-  <li>$b$ — bias</li>
-  <li>$\eta$ — taxa de aprendizado</li>
-  <li>$y$ — rótulo verdadeiro</li>
+  <li>$v_i^{\text{novo}}$ — o novo valor do peso sináptico i</li>
+  <li>$v_i^{\text{antigo}}$ — o antigo valor do peso sináptico i</li>
+  <li>$\alpha$ — a taxa de aprendizado</li>
+  <li>$t^{(k)}$ — o valor esperado (target) para a saída da amostra k</li>
+  <li>$y^{(k)}$ — a saída da amostra k</li>
+  <li>$x^{(k)}$ — a entrada da amostra k</li>
+</ul>
+
+Componetes na equação de atulização do bias (limiar de ativação):
+
+<ul>
+  <li>$b^{\text{novo}}$ — o novo valor do bias</li>
+  <li>$b^{\text{antigo}}$ — o antigo valor do bias</li>
+  <li>$\alpha$ — a taxa de aprendizado</li>
+  <li>$t^{(k)}$ — o valor esperado (target) para a saída da amostra k</li>
+  <li>$y^{(k)}$ — a saída da amostra k</li>
 </ul>
 
 ---
@@ -126,7 +154,7 @@ Treinamento do perceptron e evolução da fronteira de decisão:
     src="https://www.youtube.com/embed/Pk5vEqu2-FY" 
     frameborder="0" 
     allowfullscreen
-    style="position: absolute; top:0; left:0; width:100%; height:100%;">
+    style="position: absolute; top:0; left:0; width:500px; height:100%;">
   </iframe>
 </div>
 
