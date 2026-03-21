@@ -106,3 +106,5 @@ Projeto focado no fundamental: clareza, organização e boas práticas. Demonstr
 ## GitHub
 
 [https://github.com/natamleao/Price-Comparison-CPP](https://github.com/natamleao/Price-Comparison-CPP)
+
+---
