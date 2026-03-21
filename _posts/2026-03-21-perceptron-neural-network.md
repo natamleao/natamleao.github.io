@@ -85,21 +85,13 @@ f(x) = \begin{cases}
 \end{cases}
 $$
 
-<div style="max-width: 480px; margin: 0 auto;">
-  
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-    <iframe 
-      src="https://www.youtube.com/embed/Pk5vEqu2-FY" 
-      frameborder="0" 
-      allowfullscreen
-      style="position: absolute; top:0; left:0; width:100%; height:100%;">
-    </iframe>
-  </div>
-
+<div style="text-align: center;">
+  <img src="/assets/images/post-images/funcao-degrau-bipolar.png"
+       alt="Gráfico da função de ativação degrau bipolar"
+       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Treinamento do perceptron e evolução da fronteira de decisão
+    Gráfico da função de ativação degrau bipolar
   </p>
-
 </div>
 
 O algoritmo empregado para o treinamento neste tipo de RNA é o algoritmo da Regra de Hebb, é um algoritmo de treimamento supervisionado on-line, supervisionado porque já se tem categorias ou classes conhecidas de cada amostra e on-line porque os pesos sinápticos e bias são atualizados a cada época ou iteração, ou seja, a cada amostra do conjunto de amostras que produziu um erro. No algoritmo da Regra de Hebb a saída é comparada com a saíde desejada (targets) e então é ajusto os pesos sinápticos e bias ou não.
@@ -156,16 +148,20 @@ Isso ocorre porque o modelo só representa fronteiras de decisão lineares.
 
 Treinamento do perceptron e evolução da fronteira de decisão:
 
-<div style="width: 480px; margin: 0 auto;">
-  <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+<div style="max-width: 480px; margin: 0 auto;">
+  
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
     <iframe 
-      src="https://www.youtube.com/embed/Pk5vEqu2-FY"
-      frameborder="0"
+      src="https://www.youtube.com/embed/Pk5vEqu2-FY" 
+      frameborder="0" 
       allowfullscreen
       style="position: absolute; top:0; left:0; width:100%; height:100%;">
     </iframe>
   </div>
-</div>
+
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Treinamento do perceptron e evolução da fronteira de decisão
+  </p>
 
 ---
 
