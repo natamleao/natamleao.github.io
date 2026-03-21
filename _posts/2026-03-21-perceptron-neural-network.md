@@ -49,12 +49,21 @@ $$
 
 ### Função degrau bipolar
 
+A função de ativação degrau bipolar é definida como:
+
+$$
+y = \begin{cases}
+   1, & \text{se } x \ge 0\\
+  -1, & \text{caso contrário}
+\end{cases}
+$$
+
 <p align="center">
   <img src="/assets/images/post-images/funcao-degrau-bipolar.png" 
        alt="Função degrau bipolar"
-       style="max-width: 100%; width: 500px;">
+       style="max-width: 100%; width: 250px;">
   <br>
-  <em>Função de ativação degrau bipolar</em>
+  <em>Gráfico da função de ativação degrau bipolar</em>
 </p>
 
 Durante o treinamento, os pesos são atualizados por:
