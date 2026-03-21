@@ -4,7 +4,7 @@ title: "Perceptron Neural Network — Case Study"
 date: 2026-03-21
 categories: portfolio
 mathjax: true
-tags: [Python, Neural Networks, Machine Learning, AI]
+tags: [Python, Neural Networks, Machine Learning]
 image: /assets/images/perceptron-thumbnail.png
 github: https://github.com/natamleao/Perceptron-Neural-Network
 excerpt: "Implementação completa de um Perceptron em Python com pipeline de dados, treinamento, visualização de fronteira de decisão e testes automatizados — um case de Machine Learning do zero."
