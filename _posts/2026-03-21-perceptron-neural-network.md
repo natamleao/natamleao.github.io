@@ -17,30 +17,30 @@ excerpt: "Implementação completa de um Perceptron em Python com pipeline de da
 
 ---
 
-## ⚡ Visão Geral
+## Visão geral
 
 O **Perceptron**, criado por **Frank Rosenblatt (1958)**, é a base das redes neurais. Resolve problemas **linearmente separáveis** (AND, OR) e evidencia limitações em problemas não lineares (XOR), mostrando a necessidade de redes multicamadas.
 
 Este projeto implementa um **pipeline completo de classificação binária**: geração de datasets, pré-processamento, treinamento supervisionado, visualização da fronteira de decisão e testes automatizados.
 
-> 💡 Construir um Perceptron do zero é fundamental para dominar Machine Learning.
+> Construir um Perceptron do zero é fundamental para dominar Machine Learning.
 
 ---
 
-## 🛠️ Destaques Técnicos
+## Destaques técnicos
 
-* **Arquitetura Modular:** `data/`, `scripts/`, `src/`, `tests/`
+* **Arquitetura modular:** `data/`, `scripts/`, `src/`, `tests/`
 * **Regra do Perceptron:**
 
 $$ y=\mathrm{sign}(w^Tx + b), \quad w_{t+1}=w_t + \eta, y, x $$
   
-* **Pipeline Completo:** geração de dados, divisão treino/teste, normalização, avaliação de acurácia
+* **Pipeline completo:** geração de dados, divisão treino/teste, normalização, avaliação de acurácia
 * **Visualização:** gráficos da fronteira de decisão 2D
-* **Testes Automatizados:** Pytest cobrindo todas as etapas do pipeline
+* **Testes automatizados:** Pytest cobrindo todas as etapas do pipeline
 
 ---
 
-## 📊 Funcionalidades
+## Funcionalidades
 
 * ✅ Geração de datasets clássicos: AND, OR, XOR, bidimensionais
 * ✅ Treinamento supervisionado com cálculo de acurácia
@@ -50,7 +50,7 @@ $$ y=\mathrm{sign}(w^Tx + b), \quad w_{t+1}=w_t + \eta, y, x $$
 
 ---
 
-## 🎬 Demonstração
+## Demonstração
 
 Treinamento do Perceptron e fronteira de decisão em tempo real:
 
@@ -64,11 +64,11 @@ Treinamento do Perceptron e fronteira de decisão em tempo real:
   </iframe>
 </div>
 
-> ⚡ A visualização mostra claramente como o perceptron separa as classes no espaço 2D.
+> A visualização mostra claramente como o perceptron separa as classes no espaço 2D.
 
 ---
 
-## 📐 Modelo Matemático
+## Modelo matemático
 
 O Perceptron calcula a saída como:
 
@@ -79,17 +79,17 @@ Durante o treinamento, os pesos são ajustados pela regra:
 
 $$ w_{t+1} = w_t + \eta , y , x $$
 
-* $x$: vetor de entrada
-* $w$: pesos
-* $b$: bias
-* $\eta$: taxa de aprendizado
-* $y$: rótulo verdadeiro
+$x$: vetor de entrada
+$w$: pesos
+$b$: bias
+$\eta$: taxa de aprendizado
+$y$: rótulo verdadeiro
 
-> ⚡ Cada atualização aproxima o modelo da fronteira ideal entre classes.
+> Cada atualização aproxima o modelo da fronteira ideal entre classes.
 
 ---
 
-## 💻 Estrutura do Projeto
+## Estrutura do projeto
 
 ```text
 Perceptron-Neural-Network/
@@ -113,7 +113,7 @@ Perceptron-Neural-Network/
 
 ---
 
-## 🔍 Conclusão
+## Conclusão
 
 Construir um **Perceptron do zero**:
 
@@ -121,8 +121,8 @@ Construir um **Perceptron do zero**:
 * Evidencia limites de modelos lineares (XOR)
 * Cria base para redes multicamadas e Deep Learning
 
-> 🚀 Um case completo de **Python, ML, visualização e testes automatizados**, perfeito para portfólio técnico profissional.
+---
 
-[🔗 Veja o projeto completo no GitHub](https://github.com/natamleao/Perceptron-Neural-Network)
+[Veja o projeto completo no GitHub](https://github.com/natamleao/Perceptron-Neural-Network)
 
 ---
