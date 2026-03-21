@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Perceptron Neural Network — Case Study"
+title: "Perceptron Neural Network"
 date: 2026-03-21
 categories: portfolio
 mathjax: true
 tags: [Python, Neural Networks, Machine Learning]
 image: /assets/images/perceptron-thumbnail.png
 github: https://github.com/natamleao/Perceptron-Neural-Network
-excerpt: "Implementação completa de um Perceptron em Python com pipeline de dados, treinamento, visualização de fronteira de decisão e testes automatizados — um case de Machine Learning do zero."
+excerpt: "Implementação de um Perceptron em Python com pipeline de dados, treinamento, visualização da fronteira de decisão e testes automatizados."
 ---
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
@@ -19,65 +19,32 @@ excerpt: "Implementação completa de um Perceptron em Python com pipeline de da
 
 ## Visão geral
 
-O **Perceptron**, criado por **Frank Rosenblatt (1958)**, é a base das redes neurais. Resolve problemas **linearmente separáveis** (AND, OR) e evidencia limitações em problemas não lineares (XOR), mostrando a necessidade de redes multicamadas.
+O **Perceptron**, proposto por Frank Rosenblatt em 1958, é um dos primeiros modelos de neurônio artificial e serve como base para redes neurais.
 
-Este projeto implementa um **pipeline completo de classificação binária**: geração de datasets, pré-processamento, treinamento supervisionado, visualização da fronteira de decisão e testes automatizados.
-
-> Construir um Perceptron do zero é fundamental para dominar Machine Learning.
+Este projeto apresenta uma implementação do perceptron em Python, incluindo um pipeline simples de aprendizado supervisionado: geração de dados, pré-processamento, treinamento, avaliação e visualização.
 
 ---
 
-## Destaques técnicos
+## O que foi implementado
 
-* **Arquitetura modular:** `data/`, `scripts/`, `src/`, `tests/`
-* **Regra do Perceptron:**
-
-$$ y=\mathrm{sign}(w^Tx + b), \quad w_{t+1}=w_t + \eta, y, x $$
-  
-* **Pipeline completo:** geração de dados, divisão treino/teste, normalização, avaliação de acurácia
-* **Visualização:** gráficos da fronteira de decisão 2D
-* **Testes automatizados:** Pytest cobrindo todas as etapas do pipeline
-
----
-
-## Funcionalidades
-
-* Geração de datasets clássicos: AND, OR, XOR, bidimensionais
-* Treinamento supervisionado com cálculo de acurácia
-* Visualização da fronteira de decisão
-* Testes unitários automatizados
-* Aplicação em dados geográficos (ex: Norte/Sul)
-
----
-
-## Demonstração
-
-Treinamento do Perceptron e fronteira de decisão em tempo real:
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-  <iframe 
-    src="https://www.youtube.com/embed/Pk5vEqu2-FY" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen
-    style="position: absolute; top:0; left:0; width:100%; height:100%;">
-  </iframe>
-</div>
-
-> A visualização mostra claramente como o perceptron separa as classes no espaço 2D.
+- Geração de datasets sintéticos (AND, OR, XOR e bidimensionais)
+- Pré-processamento com normalização
+- Treinamento supervisionado do perceptron
+- Avaliação por acurácia
+- Visualização da fronteira de decisão
+- Testes automatizados com Pytest
 
 ---
 
 ## Modelo matemático
 
-O Perceptron calcula a saída como:
+O perceptron calcula a saída como:
 
 $$ y = \mathrm{sign}(w^T x + b) $$
 
-Durante o treinamento, os pesos são ajustados pela regra:
+Durante o treinamento, os pesos são atualizados por:
 
-
-$$ w_{t+1} = w_t + \eta , y , x $$
+$$ w_{t+1} = w_t + \eta \, y \, x $$
 
 <ul>
   <li>$x$ — vetor de entrada</li>
@@ -87,7 +54,58 @@ $$ w_{t+1} = w_t + \eta , y , x $$
   <li>$y$ — rótulo verdadeiro</li>
 </ul>
 
-> Cada atualização aproxima o modelo da fronteira ideal entre classes.
+---
+
+## Comportamento do modelo
+
+O perceptron consegue aprender corretamente:
+
+- AND  
+- OR  
+- conjuntos de dados linearmente separáveis  
+
+No entanto, não consegue aprender:
+
+- XOR  
+
+Isso ocorre porque o modelo só representa fronteiras de decisão lineares.
+
+---
+
+## Demonstração
+
+Treinamento do perceptron e evolução da fronteira de decisão:
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+  <iframe 
+    src="https://www.youtube.com/embed/Pk5vEqu2-FY" 
+    frameborder="0" 
+    allowfullscreen
+    style="position: absolute; top:0; left:0; width:100%; height:100%;">
+  </iframe>
+</div>
+
+---
+
+## Pipeline de treinamento
+
+O fluxo do projeto segue:
+
+1. Geração de dados  
+2. Divisão treino/teste  
+3. Normalização (StandardScaler)  
+4. Treinamento do modelo  
+5. Avaliação  
+
+---
+
+## Resultados esperados
+
+| Dataset | Resultado |
+|--------|----------|
+| AND | Acurácia próxima de 100% |
+| OR | Acurácia próxima de 100% |
+| XOR | Acurácia inferior a 100% |
 
 ---
 
@@ -96,32 +114,23 @@ $$ w_{t+1} = w_t + \eta , y , x $$
 ```text
 Perceptron-Neural-Network/
 │
-├── data/             # datasets gerados e de teste
-├── scripts/          # scripts de execução
-├── src/              # código-fonte principal
-│   ├── config/       # configurações
-│   ├── datasets/     # geração/manipulação de datasets
-│   ├── helpers/      # funções auxiliares
-│   ├── models/       # implementação do perceptron
-│   ├── prediction/   # lógica de predição
-│   ├── preprocessing/# normalização/preparação
-│   ├── training/     # pipeline de treinamento
-│   └── visualization/# gráficos da fronteira de decisão
-├── tests/            # Pytest
-├── requirements.txt  # dependências
-├── README.md         # documentação
-└── LICENSE           # MIT
-```
+├── data/
+├── scripts/
+├── src/
+│   ├── models/
+│   ├── training/
+│   ├── preprocessing/
+│   └── visualization/
+├── tests/
+├── requirements.txt
+└── README.md
+````
 
 ---
 
 ## Conclusão
 
-Construir um **Perceptron do zero**:
-
-* Ensina conceitos fundamentais de Machine Learning
-* Evidencia limites de modelos lineares (XOR)
-* Cria base para redes multicamadas e Deep Learning
+Este projeto mostra, de forma direta, como o perceptron funciona e quais são suas limitações. Ele serve como base para entender modelos mais complexos de aprendizado de máquina.
 
 ---
 
