@@ -42,8 +42,8 @@ title: ""
 <section class="home-posts-section">
   <h2>Posts recentes</h2>
 
-  <div class="post-card">
-    {% for post in site.posts limit:4 %}
+  {% for post in site.posts limit:4 %}
+    <div class="post-card">
       <a href="{{ post.url | relative_url }}" class="home-card">
         <h3>{{ post.title }}</h3>
         <small>{{ post.date | date: "%d %b %Y" }}</small>
@@ -58,6 +58,6 @@ title: ""
           </div>
         {% endif %}
       </a>
-    {% endfor %}
-  </div>
+    </div>
+  {% endfor %}
 </section>
