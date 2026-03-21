@@ -38,7 +38,7 @@ Este projeto apresenta uma implementação do perceptron em Python, incluindo um
 
 ## Modelo matemático
 
-Antes de falarmos sobre o modelo matémático do Perceptron, quero falar sobre o neurônio artificial. O neurônio artificial foi proposto por McCulloch & Pitts (1943), é ilustrado abaixo:
+Antes de falarmos sobre o modelo matémático do Perceptron, quero falar sobre o neurônio artificial. O neurônio artificial foi proposto por McCulloch & Pitts (1943), e é ilustrado abaixo:
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/neuronio-artificial.png"
@@ -149,13 +149,15 @@ Isso ocorre porque o modelo só representa fronteiras de decisão lineares.
 
 Treinamento do perceptron e evolução da fronteira de decisão:
 
-<div style="text-align: center; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-  <iframe 
-    src="https://www.youtube.com/embed/Pk5vEqu2-FY" 
-    frameborder="0" 
-    allowfullscreen
-    style="position: absolute; top:0; left:0; width:480px; height:100%;">
-  </iframe>
+<div style="width: 480px; margin: 0 auto;">
+  <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+    <iframe 
+      src="https://www.youtube.com/embed/Pk5vEqu2-FY"
+      frameborder="0"
+      allowfullscreen
+      style="position: absolute; top:0; left:0; width:100%; height:100%;">
+    </iframe>
+  </div>
 </div>
 
 ---
