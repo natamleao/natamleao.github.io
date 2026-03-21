@@ -38,15 +38,14 @@ Este projeto apresenta uma implementação do perceptron em Python, incluindo um
 
 ## Modelo matemático
 
-O perceptron calcula a saída como:
+O perceptron calcula a saída de acordo com a função degrau bipolar, que é a usada nesta implementação:
 
-$$ 
-f(x) =
-\begin{cases}
-    \text{expressão 1}, & \text{se } \text{condição 1} \\
-    \text{expressão 2}, & \text{se } \text{condição 2}
+$$
+y = \begin{cases}
+  1, & \text{se } \sum v_i x_i + b \ge 0 \text{limiar}\\
+  0, & \text{se } \sum v_i x_i + b \ge 0 \text{limiar}
 \end{cases}
- $$
+$$
 
 Durante o treinamento, os pesos são atualizados por:
 
