@@ -1,25 +1,36 @@
 ---
 layout: page
-title: Tags
+title: "Tags"
 ---
 
-<h2>Tags</h2>
+<div class="section-intro">
+  <p>Escolha uma tag para ver todos os posts relacionados:</p>
+</div>
 
-<ul>
-{% assign all_tags = site.posts | map: "tags" | flatten | uniq | sort %}
-{% for tag in all_tags %}
-  <li><a href="#{{ tag | slugify }}">{{ tag }}</a></li>
-{% endfor %}
-</ul>
+<div class="section-list">
+  {% assign all_tags = site.posts | map: "tags" | flatten | uniq | sort %}
+  {% for tag in all_tags %}
+    <article class="post-card tag-card">
+      <a href="#{{ tag | slugify }}" class="post-link-overlay"></a>
+      <h3>#{{ tag }}</h3>
+      <p>Clique para ver todos os posts desta tag.</p>
+    </article>
+  {% endfor %}
+</div>
 
 <hr>
 
 {% for tag in all_tags %}
-  <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
-  <ul>
+  <h2 id="{{ tag | slugify }}">#{{ tag }}</h2>
+  <div class="section-list">
     {% assign tagged_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
     {% for post in tagged_posts %}
-      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-link-overlay"></a>
+        <h3>{{ post.title }}</h3>
+        <small>{{ post.date | date: "%d %b %Y" }}</small>
+        <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+      </article>
     {% endfor %}
-  </ul>
+  </div>
 {% endfor %}
