@@ -5,6 +5,12 @@ layout: default
 <div class="header-container">
   <nav class="breadcrumb">
     <a href="{{ '/' | relative_url }}">Home</a>
+  
+    {% if page.parent %}
+      <span class="separator">›</span>
+      <a href="{{ page.parent.url | relative_url }}">{{ page.parent.title }}</a>
+    {% endif %}
+  
     <span class="separator">›</span>
     <span>{{ page.title }}</span>
   </nav>
