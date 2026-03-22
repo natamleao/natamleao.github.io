@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Tags"
+title: "Portifolio Tags"
 parent:
   title: "Portfolio"
   url: "/portfolio/"
