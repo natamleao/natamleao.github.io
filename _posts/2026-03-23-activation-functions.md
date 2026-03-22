@@ -4,6 +4,6 @@ title: "Activation Functions"
 date: 2026-03-22
 categories: notes
 mathjax: true
-tags: [Neural Networks]
+tags: [Neural Networks, Machine Learning]
 excerpt: "Funções de ativação"
 ---
