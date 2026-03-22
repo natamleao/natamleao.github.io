@@ -3,7 +3,7 @@ layout: page
 title: "Tags"
 parent:
   title: "Portfolio"
-  url: "/Portfolio/"
+  url: "/portfolio/"
 ---
 
 <div class="tags-page">
