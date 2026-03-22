@@ -16,7 +16,8 @@ title: Notes
 <!-- LISTA -->
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'notes'" %}
 
-<div class="section-list">
+<div class="section-list-post">
+  <div class="section-list">
     {% for post in posts %}
       <article class="post-card">
         <a href="{{ post.url | relative_url }}" class="post-link-overlay"></a>
@@ -36,3 +37,4 @@ title: Notes
       </article>
     {% endfor %}
   </div>
+</div>
