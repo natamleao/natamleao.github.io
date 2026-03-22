@@ -8,9 +8,9 @@ tags: [Neural Networks, Machine Learning]
 excerpt: "Neurônio artificial"
 ---
 
-## Modelo matemático
+## O modelo de neurônio artificial
 
-Antes de falarmos sobre o modelo matémático do Perceptron, quero falar sobre o neurônio artificial. O neurônio artificial foi proposto por McCulloch & Pitts (1943), e é ilustrado abaixo:
+Inspirado no neurônio biológico, em 1943, [Warren Sturgis McCulloch](https://en.wikipedia.org/wiki/Warren_Sturgis_McCulloch) e [Walter Harry Pitts Jr.](https://en.wikipedia.org/wiki/Walter_Pitts) propuseram o neurônio artificial, que é ilustrado abaixo:
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/neuronio-artificial.png"
