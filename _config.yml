@@ -23,7 +23,7 @@ navigation: # accepts {file, title, url, icon, sidebaricon}
   - {title: "About Me", url: "/about/", sidebaricon: user}
   - {title: "Portfolio", url: "/portfolio/", sidebaricon: code}
   - {title: "Notes", url: "/notes/", sidebaricon: book}
-  - {title: "CV", url: "/CV.pdf", sidebaricon: file-alt}
+  - {title: "Curriculum", url: "/Curriculum.pdf", sidebaricon: file-alt}
 
 external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Mail, icon: envelope, url: "mailto:natamleaoferreira@gmail.com"}
