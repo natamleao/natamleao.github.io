@@ -1,6 +1,9 @@
 ---
 layout: page
 title: "Tags"
+parent:
+  title: "Portfolio"
+  url: "/Portfolio/"
 ---
 
 <div class="tags-page">
