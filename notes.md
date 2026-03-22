@@ -17,18 +17,22 @@ title: Notes
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'notes'" %}
 
 <div class="section-list">
-  {% for post in posts %}
-    <article class="post-card">
-      <a href="{{ post.url | relative_url }}" class="post-link-overlay"></a>
-
-      <h3>{{ post.title }}</h3>
-      <small>
-        {{ post.date | date: "%d %b %Y" }}
-        {% if post.categories %}
-          • {{ post.categories | join: ", " }}
+    {% for post in posts %}
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-link-overlay"></a>
+        <h3>{{ post.title }}</h3>
+        <small>{{ post.date | date: "%d %b %Y" }}</small>
+  
+        <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+  
+        <!-- TAGS -->
+        {% if post.tags %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+              <a href="/tags#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+            {% endfor %}
+          </div>
         {% endif %}
-      </small>
-      <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-    </article>
-  {% endfor %}
-</div>
+      </article>
+    {% endfor %}
+  </div>
