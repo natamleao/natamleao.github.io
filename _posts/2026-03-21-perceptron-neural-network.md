@@ -54,7 +54,7 @@ Análogo ao cérebro biológico, possui terminações sinápticas, um somatório
 Assim como no neurônio biológico, a relevância da informação processada é dada pela multiplicação de $x_i$ por $v_i$. Assim a saída artificial do neurônio é a soma ponderada de suas entradas. O neurônio artificial é composto por sete elementos básicos:
 
 <ol>
-  <li>$\{x_1, x_2, ..., x_n\}$ — neurônios de entrada</li>
+  <li>$\{x_1, x_2, ..., x_n\}$ — sinais de entrada</li>
   <li>$\{v_1, v_2, ..., v_n\}$ — pesos sinápticos</li>
   <li>$\sum$ — combinação linear</li>
   <li>$b$ — limiar de ativação </li>
@@ -63,7 +63,7 @@ Assim como no neurônio biológico, a relevância da informação processada é 
   <li>$y$ — sinal de saída</li>
 </ol>
 
-Vamos voltar agora para esta implementação.Aqui perceptron calcula a saída de acordo com a função degrau bipolar, que é a usada nesta implementação:
+Vamos voltar agora para esta implementação. Aqui perceptron calcula a saída de acordo com a função degrau bipolar, que é a usada nesta implementação:
 
 $$
 y = \begin{cases}
