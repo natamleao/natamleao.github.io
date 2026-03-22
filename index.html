@@ -43,9 +43,10 @@ title: ""
 <h2>Posts recentes</h2>
 
 <!-- POSTS -->
+
+<!-- PORTFOLIO -->
+<h2>Portfolio</h2>
 <div class="section-list">
-  <!-- PORTFOLIO -->
-  <h2>Portfolio</h2>
   {% for post in site.categories.portfolio limit:3 %}
     <div class="post-card">
       <a href="{{ post.url | relative_url }}" class="home-card">
@@ -63,9 +64,11 @@ title: ""
       {% endif %}
     </div>
   {% endfor %}
+</div>
 
-  <!-- NOTES -->
-  <h2>Notes</h2>
+<!-- NOTES -->
+<h2>Notes</h2>
+<div class="section-list">
   {% for post in site.categories.notes limit:3 %}
     <div class="post-card">
       <a href="{{ post.url | relative_url }}" class="home-card">
