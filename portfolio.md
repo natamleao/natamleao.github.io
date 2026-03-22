@@ -16,7 +16,7 @@ title: Portfolio
 <!-- LISTA DE PROJETOS -->
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'portfolio'" %}
 
-<div class="portfolio">
+<div class="section-list-post">
   <div class="section-list">
     {% for post in posts %}
       <article class="post-card">
