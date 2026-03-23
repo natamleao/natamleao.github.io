@@ -1,12 +1,20 @@
 ---
 layout: post
 title: "Activation Functions"
-date: 2026-03-22
+date: 2026-03-23
 categories: notes
 mathjax: true
 tags: [Neural Networks, Machine Learning]
 excerpt: "Funções de ativação"
 ---
+
+## Funções de ativação: controlador de sinal
+
+O [neurônio artificial](https://natamleao.github.io/artificial-neuron/) processa o sinal de entrada, esse sinal de entrada é ponderado pelos pesos sinápticos e o bias, após isso, a função de ativação, limitará esse sinal ponderado a um intervalo controlado, indicando quanto dele passará para o(s) próximo(s) neurônio(s), a inibindo (limite inferior ou próximo dele do intervalo), a ativando (limite superior ou próximo dele do intervalo) ou a graduando (valor intermediário do intervalo). Dependendo da estratégia de treinamento, natureza dos dados, tipo de RNA, diferentes tipos de funções de ativação podem ser necessárias. Abaixo estão as mais clássicas.
+
+### Função degrau binária
+
+Está função tem uma alteração brusca nos valores de $y$ mudando sua saída para 0 ou 1, por isso o nome "binária".
 
 <div style="display: flex; flex-direction: column; align-items: center;">
 
@@ -35,6 +43,10 @@ excerpt: "Funções de ativação"
 
 </div>
 
+### Função degrau bipolar
+
+Nesta função, os valores de $y$ mudam para 1 ou -1, por isso nome "bipolar".
+
 <div style="display: flex; flex-direction: column; align-items: center;">
 
   <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
@@ -62,6 +74,10 @@ excerpt: "Funções de ativação"
 
 </div>
 
+### Função gaussiana
+
+Essa função tem uma aplicação específica nas redes neurais do tipo RBF (_Radial Basis Function_). Nesse tipo de rede, uma camada tem caráter de clusterização e para agrupamento dos dados faz use desse tipo de função de ativação.
+
 <div style="display: flex; flex-direction: column; align-items: center;">
 
   <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
@@ -86,6 +102,10 @@ excerpt: "Funções de ativação"
 
 </div>
 
+### Função logística
+
+A função logística é limitada ao intervalo $[0, 1]$. Devido ao termo exponencial no denominador, ela tem subida bastante suave quando valores de $x$ aumentam. O ajuste do coeficiente $\beta$, interfere na curvatura, tornado sua suavidade maior ou menor.
+
 <div style="display: flex; flex-direction: column; align-items: center;">
 
   <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
@@ -109,6 +129,10 @@ excerpt: "Funções de ativação"
   </p>
 
 </div>
+
+### Função rampa
+
+Está função possui três partes, em duas delas é constante, enquanto na terceira é linear.
 
 <div style="display: flex; flex-direction: column; align-items: center;">
 
@@ -138,6 +162,10 @@ excerpt: "Funções de ativação"
 
 </div>
 
+### Função relu
+
+Relu é a abreviação para “_Rectified linear unit_”. Para qualquer entrada negativa, a função retorna o valor 0 e para valores maiores ou iguais a 0, ela retonar o próprio valor. Essa função é muito empregada nas camadas intermediárias de redes densas do tipo _feedfoward_ como as redes MLP e Convolucionais, e também em camadas de convolução em redes Convolucionais.
+
 <div style="display: flex; flex-direction: column; align-items: center;">
 
   <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
@@ -164,6 +192,10 @@ excerpt: "Funções de ativação"
   </p>
 
 </div>
+
+### Função tagente hiperbólica
+
+A função tagente hiperbólica tem $y\in(-1, 1)$. Ela possui curvatura muito semelhante a função logística e sua curvatura também é influenciada pela escolha do coeficiente $\beta$.
 
 <div style="display: flex; flex-direction: column; align-items: center;">
 
@@ -193,3 +225,5 @@ excerpt: "Funções de ativação"
   </p>
 
 </div>
+
+---
