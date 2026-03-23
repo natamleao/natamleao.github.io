@@ -92,10 +92,13 @@ excerpt: "Funções de ativação"
     
     <div>
       $$
-      f(x) = \begin{cases}
-         1, & \text{se } x \ge 0\\
-        -1, & \text{caso contrário}
-      \end{cases}
+      f(x) = \frac{1 - e^{-\beta x}}{1 + e^{-\beta x}}
+      $$
+    </div>
+
+      <div>
+      $$
+      f(x) = \frac{2}{1 + e^{-\beta x}} - 1
       $$
     </div>
 
