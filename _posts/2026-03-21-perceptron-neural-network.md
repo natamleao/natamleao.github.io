@@ -38,7 +38,7 @@ Este projeto apresenta uma implementação do perceptron em Python, incluindo um
 
 ## Modelo matemático
 
-O modelo matemático do Perceptron, por ser uma RNA, segue a construção do [neurônio artificial](https://natamleao.github.io/artificial-neuron/), abaixo é apresentada a versão com a função de ativação degrau bipolar (para ver mais sobre funções de ativação, acesse: [Activation Function](https://natamleao.github.io/artificial-neuron/)):
+O modelo matemático do Perceptron, por ser uma RNA, segue a construção do [neurônio artificial](https://natamleao.github.io/artificial-neuron/), abaixo é apresentada a versão com a função de ativação degrau bipolar (para ver mais sobre funções de ativação, acesse: [Activation Functions](https://natamleao.github.io/activation-functions/):
 
 $$
 y = \begin{cases}
@@ -48,37 +48,6 @@ y = \begin{cases}
 $$
 
 Obs: o limiar é ponto de decisão da função de ativação.
-
-### Função degrau bipolar
-
-A função de ativação degrau bipolar é definida como:
-
-<div style="display: flex; flex-direction: column; align-items: center;">
-
-  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
-    
-    <div>
-      $$
-      f(x) = \begin{cases}
-         1, & \text{se } x \ge 0\\
-        -1, & \text{caso contrário}
-      \end{cases}
-      $$
-    </div>
-
-    <div>
-      <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-bipolar.png"
-           alt="Gráfico da função de ativação degrau bipolar"
-           style="max-width: 100%; width: 250px;">
-    </div>
-
-  </div>
-
-  <p style="font-size: 0.9em; color: gray; margin-top: 10px; text-align: center;">
-    Função de ativação degrau bipolar
-  </p>
-
-</div>
 
 O algoritmo empregado para o treinamento neste tipo de RNA é o algoritmo da Regra de Hebb, é um algoritmo de treinamento supervisionado on-line, supervisionado porque já se tem categorias ou classes conhecidas de cada amostra e on-line porque os pesos sinápticos e bias são atualizados a cada época ou iteração, ou seja, a cada amostra do conjunto de amostras que produziu um erro. No algoritmo da Regra de Hebb a saída é comparada com a saída desejada (targets) e então é ajusto os pesos sinápticos e bias ou não.
 
