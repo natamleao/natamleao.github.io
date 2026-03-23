@@ -68,7 +68,7 @@ excerpt: "Funções de ativação"
     
     <div>
       $$
-      f(x) = e^-\frac{(x - c)^2}{2\sigma^2}
+      f(x) = e^{-\frac{(x - c)^2}{2\sigma^2}}
       $$
     </div>
 
