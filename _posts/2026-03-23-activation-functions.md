@@ -201,9 +201,8 @@ A função tagente hiperbólica tem $y\in(-1, 1)$. Ela possui curvatura muito se
 
   <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
     
-    <div style="max-width: 100%; overflow-x: auto;">
+    <div style="font-size: 0.8em;">
       $$
-      \small
       \begin{aligned}
       f(x) &= \frac{1 - e^{-\beta x}}{1 + e^{-\beta x}} \\
            &\text{ou} \\
