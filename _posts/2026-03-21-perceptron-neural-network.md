@@ -53,20 +53,26 @@ Obs: o limiar é ponto de decisão da função de ativação.
 
 A função de ativação degrau bipolar é definida como:
 
-$$
-f(x) = \begin{cases}
-   1, & \text{se } x \ge 0\\
-  -1, & \text{caso contrário}
-\end{cases}
-$$
+<div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
 
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-bipolar.png"
-       alt="Gráfico da função de ativação degrau bipolar"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Gráfico da função de ativação degrau bipolar
-  </p>
+  <div>
+    $$
+    f(x) = \begin{cases}
+       1, & \text{se } x \ge 0\\
+      -1, & \text{caso contrário}
+    \end{cases}
+    $$
+  </div>
+
+  <div style="text-align: center;">
+    <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-bipolar.png"
+         alt="Gráfico da função de ativação degrau bipolar"
+         style="max-width: 100%; width: 250px;">
+    <p style="font-size: 0.9em; color: gray;">
+      Gráfico da função de ativação degrau bipolar
+    </p>
+  </div>
+
 </div>
 
 O algoritmo empregado para o treinamento neste tipo de RNA é o algoritmo da Regra de Hebb, é um algoritmo de treinamento supervisionado on-line, supervisionado porque já se tem categorias ou classes conhecidas de cada amostra e on-line porque os pesos sinápticos e bias são atualizados a cada época ou iteração, ou seja, a cada amostra do conjunto de amostras que produziu um erro. No algoritmo da Regra de Hebb a saída é comparada com a saída desejada (targets) e então é ajusto os pesos sinápticos e bias ou não.
