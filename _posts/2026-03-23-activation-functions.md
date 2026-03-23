@@ -8,65 +8,191 @@ tags: [Neural Networks, Machine Learning]
 excerpt: "Funções de ativação"
 ---
 
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-binaria.png"
-       alt="Gráfico da função de ativação degrau binária"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Gráfico da função de ativação degrau binária
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+    
+    <div>
+      $$
+      f(x) = \begin{cases}
+         1, & \text{se } x \ge 0\\
+         0, & \text{caso contrário}
+      \end{cases}
+      $$
+    </div>
+
+    <div>
+      <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-binaria.png"
+           alt="Gráfico da função de ativação degrau binária"
+           style="max-width: 100%; width: 250px;">
+    </div>
+
+  </div>
+
+  <p style="font-size: 0.9em; color: gray; margin-top: 10px; text-align: center;">
+    Função de ativação degrau binária
   </p>
+
 </div>
 
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-bipolar.png"
-       alt="Gráfico da função de ativação degrau bipolar"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Gráfico da função de ativação degrau bipolar
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+    
+    <div>
+      $$
+      f(x) = \begin{cases}
+         1, & \text{se } x \ge 0\\
+        -1, & \text{caso contrário}
+      \end{cases}
+      $$
+    </div>
+
+    <div>
+      <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-bipolar.png"
+           alt="Gráfico da função de ativação degrau bipolar"
+           style="max-width: 100%; width: 250px;">
+    </div>
+
+  </div>
+
+  <p style="font-size: 0.9em; color: gray; margin-top: 10px; text-align: center;">
+    Função de ativação degrau bipolar
   </p>
+
 </div>
 
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/funcoes-de-ativacao/gaussiana.png"
-       alt="Gráfico da função de ativação gaussiana"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Gráfico da função de ativação gaussiana
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+    
+    <div>
+      $$
+      f(x) = \begin{cases}
+         1, & \text{se } x \ge 0\\
+        -1, & \text{caso contrário}
+      \end{cases}
+      $$
+    </div>
+
+    <div>
+      <img src="/assets/images/post-images/funcoes-de-ativacao/gaussiana.png"
+           alt="Gráfico da função de ativação gaussiana"
+           style="max-width: 100%; width: 250px;">
+    </div>
+
+  </div>
+
+  <p style="font-size: 0.9em; color: gray; margin-top: 10px; text-align: center;">
+    Função de ativação gaussiana
   </p>
+
 </div>
 
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/funcoes-de-ativacao/logistica.png"
-       alt="Gráfico da função de ativação logística"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Gráfico da função de ativação logística
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+    
+    <div>
+      $$
+      f(x) = \begin{cases}
+         1, & \text{se } x \ge 0\\
+        -1, & \text{caso contrário}
+      \end{cases}
+      $$
+    </div>
+
+    <div>
+      <img src="/assets/images/post-images/funcoes-de-ativacao/logistica.png"
+           alt="Gráfico da função de ativação logística"
+           style="max-width: 100%; width: 250px;">
+    </div>
+
+  </div>
+
+  <p style="font-size: 0.9em; color: gray; margin-top: 10px; text-align: center;">
+    Função de ativação logística
   </p>
+
 </div>
 
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/funcoes-de-ativacao/rampa.png"
-       alt="Gráfico da função de ativação rampa"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Gráfico da função de ativação rampa
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+    
+    <div>
+      $$
+      f(x) = \begin{cases}
+         1, & \text{se } x \ge 0\\
+        -1, & \text{caso contrário}
+      \end{cases}
+      $$
+    </div>
+
+    <div>
+      <img src="/assets/images/post-images/funcoes-de-ativacao/rampa.png"
+           alt="Gráfico da função de ativação rampa"
+           style="max-width: 100%; width: 250px;">
+    </div>
+
+  </div>
+
+  <p style="font-size: 0.9em; color: gray; margin-top: 10px; text-align: center;">
+    Função de ativação rampa
   </p>
+
 </div>
 
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/funcoes-de-ativacao/relu.png"
-       alt="Gráfico da função de ativação relu"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Gráfico da função de ativação relu
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+    
+    <div>
+      $$
+      f(x) = \begin{cases}
+         1, & \text{se } x \ge 0\\
+        -1, & \text{caso contrário}
+      \end{cases}
+      $$
+    </div>
+
+    <div>
+      <img src="/assets/images/post-images/funcoes-de-ativacao/relu.png"
+           alt="Gráfico da função de ativação relu"
+           style="max-width: 100%; width: 250px;">
+    </div>
+
+  </div>
+
+  <p style="font-size: 0.9em; color: gray; margin-top: 10px; text-align: center;">
+    Função de ativação relu
   </p>
+
 </div>
 
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/funcoes-de-ativacao/tangente-hiperbolica.png"
-       alt="Gráfico da função de ativação tagente hiperbólica"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Gráfico da função de ativação tagente hiperbólica
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+    
+    <div>
+      $$
+      f(x) = \begin{cases}
+         1, & \text{se } x \ge 0\\
+        -1, & \text{caso contrário}
+      \end{cases}
+      $$
+    </div>
+
+    <div>
+      <img src="/assets/images/post-images/funcoes-de-ativacao/tangente-hiperbolica.png"
+           alt="Gráfico da função de ativação tagente hiperbólica"
+           style="max-width: 100%; width: 250px;">
+    </div>
+
+  </div>
+
+  <p style="font-size: 0.9em; color: gray; margin-top: 10px; text-align: center;">
+    Função de ativação tagente hiperbólica
   </p>
+
 </div>
