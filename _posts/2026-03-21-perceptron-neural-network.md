@@ -61,7 +61,7 @@ f(x) = \begin{cases}
 $$
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/funcao-degrau-bipolar.png"
+  <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-bipolar.png"
        alt="Gráfico da função de ativação degrau bipolar"
        style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
