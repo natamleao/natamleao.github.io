@@ -119,7 +119,7 @@ excerpt: "Funções de ativação"
       f(x) = \begin{cases}
          a, & \text{se } x \gt a\\
          x, & \text{se } -a \le x \le a \\
-        -a, & \text{se } x lt a
+        -a, & \text{se } x \lt a
       \end{cases}
       $$
     </div>
