@@ -203,11 +203,11 @@ A função tagente hiperbólica tem $y\in(-1, 1)$. Ela possui curvatura muito se
     
     <div style="font-size: 0.8em;">
       $$
-      \begin{aligned}
-      f(x) &= \frac{1 - e^{-\beta x}}{1 + e^{-\beta x}} \\
-           &\text{ou} \\
-           &= \frac{2}{1 + e^{-\beta x}} - 1
-      \end{aligned}
+      f(x) = \frac{1 - e^{-\beta x}}{1 + e^{-\beta x}}
+      $$
+      
+      $$
+      \text{ou } f(x) = \frac{2}{1 + e^{-\beta x}} - 1
       $$
     </div>
 
