@@ -10,7 +10,7 @@ excerpt: "Funções de ativação"
 
 ## Funções de ativação: controlador de sinal
 
-O [neurônio artificial](https://natamleao.github.io/artificial-neuron/) processa o sinal de entrada, esse sinal de entrada é ponderado pelos pesos sinápticos e o bias, após isso, a função de ativação, limitará esse sinal ponderado a um intervalo controlado, indicando quanto dele passará para o(s) próximo(s) neurônio(s), a inibindo (limite inferior ou próximo dele do intervalo), a ativando (limite superior ou próximo dele do intervalo) ou a graduando (valor intermediário do intervalo). Dependendo da estratégia de treinamento, natureza dos dados, tipo de RNA, diferentes tipos de funções de ativação podem ser necessárias. Abaixo estão as mais clássicas.
+O [neurônio artificial](https://natamleao.github.io/artificial-neuron/) processa o sinal de entrada, esse sinal de entrada é ponderado pelos pesos sinápticos e o bias, após isso, a função de ativação, limitará esse sinal ponderado a um intervalo controlado, indicando quanto dele passará para o(s) próximo(s) neurônio(s), o inibindo (limite inferior ou próximo dele do intervalo), o ativando (limite superior ou próximo dele do intervalo) ou o graduando (valor intermediário do intervalo). Dependendo da estratégia de treinamento, natureza dos dados, tipo de RNA, diferentes tipos de funções de ativação podem ser necessárias. Abaixo estão as mais clássicas.
 
 ### Função degrau binária
 
@@ -104,7 +104,7 @@ Essa função tem uma aplicação específica nas redes neurais do tipo RBF (_Ra
 
 ### Função logística
 
-A função logística é limitada ao intervalo $[0, 1]$. Devido ao termo exponencial no denominador, ela tem subida bastante suave quando valores de $x$ aumentam. O ajuste do coeficiente $\beta$, interfere na curvatura, tornado sua suavidade maior ou menor.
+A função logística tem $y$ limitado ao $(0, 1)$. Devido ao termo exponencial no denominador, ela tem subida bastante suave quando valores de $x$ aumentam. O ajuste do coeficiente $\beta$, interfere na curvatura, tornado sua suavidade maior ou menor.
 
 <div style="display: flex; flex-direction: column; align-items: center;">
 
