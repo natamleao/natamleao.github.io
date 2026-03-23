@@ -92,12 +92,7 @@ excerpt: "Funções de ativação"
     
     <div>
       $$
-      \small
-      \begin{aligned}
-      f(x) &= \frac{1 - e^{-\beta x}}{1 + e^{-\beta x}} \\
-           &\text{ou} \\
-           &= \frac{2}{1 + e^{-\beta x}} - 1
-      \end{aligned}
+      f(x) = -\frac{1}{1 + e^{-\beta x}}
       $$
     </div>
     
@@ -122,8 +117,9 @@ excerpt: "Funções de ativação"
     <div>
       $$
       f(x) = \begin{cases}
-         1, & \text{se } x \ge 0\\
-        -1, & \text{caso contrário}
+         a, & \text{se } x \gt a\\
+         x, & \text{se } -a \le x \le a \\
+        -a, & \text{se } x lt a
       \end{cases}
       $$
     </div>
@@ -149,8 +145,8 @@ excerpt: "Funções de ativação"
     <div>
       $$
       f(x) = \begin{cases}
-         1, & \text{se } x \ge 0\\
-        -1, & \text{caso contrário}
+         0, & \text{se } x \lt 0\\
+         x, & \text{caso contrário}
       \end{cases}
       $$
     </div>
@@ -175,10 +171,12 @@ excerpt: "Funções de ativação"
     
     <div>
       $$
-      f(x) = \begin{cases}
-         1, & \text{se } x \ge 0\\
-        -1, & \text{caso contrário}
-      \end{cases}
+      \small
+      \begin{aligned}
+      f(x) &= \frac{1 - e^{-\beta x}}{1 + e^{-\beta x}} \\
+           &\text{ou} \\
+           &= \frac{2}{1 + e^{-\beta x}} - 1
+      \end{aligned}
       $$
     </div>
 
