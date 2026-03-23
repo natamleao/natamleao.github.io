@@ -92,7 +92,7 @@ excerpt: "Funções de ativação"
     
     <div>
       $$
-      f(x) = -\frac{1}{1 + e^{-\beta x}}
+      f(x) = \frac{1}{1 + e^{-\beta x}}
       $$
     </div>
     
