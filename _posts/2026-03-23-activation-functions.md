@@ -11,7 +11,7 @@ excerpt: "Funções de ativação"
 <div style="text-align: center;">
   <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-binaria.png"
        alt="Gráfico da função de ativação degrau binária"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Gráfico da função de ativação degrau binária
   </p>
@@ -20,7 +20,7 @@ excerpt: "Funções de ativação"
 <div style="text-align: center;">
   <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-bipolar.png"
        alt="Gráfico da função de ativação degrau bipolar"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Gráfico da função de ativação degrau bipolar
   </p>
@@ -29,7 +29,7 @@ excerpt: "Funções de ativação"
 <div style="text-align: center;">
   <img src="/assets/images/post-images/funcoes-de-ativacao/gaussiana.png"
        alt="Gráfico da função de ativação gaussiana"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Gráfico da função de ativação gaussiana
   </p>
@@ -38,7 +38,7 @@ excerpt: "Funções de ativação"
 <div style="text-align: center;">
   <img src="/assets/images/post-images/funcoes-de-ativacao/logistica.png"
        alt="Gráfico da função de ativação logística"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Gráfico da função de ativação logística
   </p>
@@ -47,7 +47,7 @@ excerpt: "Funções de ativação"
 <div style="text-align: center;">
   <img src="/assets/images/post-images/funcoes-de-ativacao/rampa.png"
        alt="Gráfico da função de ativação rampa"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Gráfico da função de ativação rampa
   </p>
@@ -56,7 +56,7 @@ excerpt: "Funções de ativação"
 <div style="text-align: center;">
   <img src="/assets/images/post-images/funcoes-de-ativacao/relu.png"
        alt="Gráfico da função de ativação relu"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Gráfico da função de ativação relu
   </p>
@@ -65,7 +65,7 @@ excerpt: "Funções de ativação"
 <div style="text-align: center;">
   <img src="/assets/images/post-images/funcoes-de-ativacao/tangente-hiperbolica.png"
        alt="Gráfico da função de ativação tagente hiperbólica"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 250px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Gráfico da função de ativação tagente hiperbólica
   </p>
