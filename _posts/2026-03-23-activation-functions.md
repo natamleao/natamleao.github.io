@@ -94,14 +94,12 @@ excerpt: "Funções de ativação"
       $$
       f(x) = \frac{1 - e^{-\beta x}}{1 + e^{-\beta x}}
       $$
-    </div>
-
-      <div>
+      <p>ou</p>
       $$
       f(x) = \frac{2}{1 + e^{-\beta x}} - 1
       $$
     </div>
-
+    
     <div>
       <img src="/assets/images/post-images/funcoes-de-ativacao/logistica.png"
            alt="Gráfico da função de ativação logística"
