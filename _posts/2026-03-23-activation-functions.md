@@ -68,10 +68,7 @@ excerpt: "Funções de ativação"
     
     <div>
       $$
-      f(x) = \begin{cases}
-         1, & \text{se } x \ge 0\\
-        -1, & \text{caso contrário}
-      \end{cases}
+      f(x) = e^-\frac{(x - c)^2}{2\sigma^2}
       $$
     </div>
 
