@@ -132,7 +132,7 @@ A função logística tem $y$ limitado ao $(0, 1)$. Devido ao termo exponencial 
 
 ### Função rampa
 
-Está função possui três partes, em duas delas é constante, enquanto na terceira é linear.
+Está função possui três partes, em duas delas, é constante, enquanto na terceira, é linear.
 
 <div style="display: flex; flex-direction: column; align-items: center;">
 
@@ -201,7 +201,7 @@ A função tagente hiperbólica tem $y\in(-1, 1)$. Ela possui curvatura muito se
 
   <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
     
-    <div>
+    <div style="max-width: 100%; overflow-x: auto;">
       $$
       \small
       \begin{aligned}
