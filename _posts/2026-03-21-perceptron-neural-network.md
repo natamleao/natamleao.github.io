@@ -69,6 +69,7 @@ A função de ativação degrau bipolar é definida como:
          alt="Gráfico da função de ativação degrau bipolar"
          style="max-width: 100%; width: 250px;">
   </div>
+  <br>
   <div style="text-align: center;">
       <p style="font-size: 0.9em; color: gray;">Função de ativação degrau bipolar</p>
    </div>
