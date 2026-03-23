@@ -92,6 +92,7 @@ excerpt: "Funções de ativação"
     
     <div>
       $$
+      \small
       \begin{aligned}
       f(x) &= \frac{1 - e^{-\beta x}}{1 + e^{-\beta x}} \\
            &\text{ou} \\
