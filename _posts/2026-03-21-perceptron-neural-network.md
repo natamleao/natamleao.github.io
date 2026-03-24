@@ -49,7 +49,7 @@ $$
 
 Obs: o limiar é ponto de decisão da função de ativação.
 
-O algoritmo empregado para o treinamento neste tipo de RNA é o algoritmo da Regra de Hebb, é um algoritmo de treinamento supervisionado on-line, supervisionado porque já se tem categorias ou classes conhecidas de cada amostra e on-line porque os pesos sinápticos e bias são atualizados a cada época ou iteração, ou seja, a cada amostra do conjunto de amostras que produziu um erro. No algoritmo da Regra de Hebb a saída é comparada com a saída desejada (targets) e então é ajusto os pesos sinápticos e bias ou não.
+O algoritmo empregado para o treinamento neste tipo de RNA é o algoritmo da Regra de Hebb, é um algoritmo de treinamento supervisionado on-line, supervisionado porque já se tem categorias ou classes conhecidas de cada amostra e on-line porque os pesos sinápticos e bias são atualizados a cada época ou iteração, ou seja, a cada amostra do conjunto de amostras que produziu um erro. No algoritmo da Regra de Hebb a saída é comparada com a saída desejada (targets) e então é ajustado os pesos sinápticos e bias ou não.
 
 Durante o treinamento, os pesos sinápticos e o bias são atualizados por:
 
