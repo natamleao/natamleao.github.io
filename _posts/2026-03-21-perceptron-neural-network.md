@@ -38,7 +38,7 @@ Este projeto apresenta uma implementação do perceptron em Python, incluindo um
 
 ## Modelo matemático
 
-O modelo matemático do Perceptron segue a construção do [neurônio artificial](https://natamleao.github.io/artificial-neuron/), abaixo é apresentada a versão com a função de ativação degrau bipolar (para ver mais sobre funções de ativação, acesse: [Activation Functions](https://natamleao.github.io/activation-functions/):
+O modelo matemático do Perceptron segue a construção do [neurônio artificial](https://natamleao.github.io/artificial-neuron/), abaixo é apresentada a versão com a função de ativação degrau bipolar (para ver mais sobre a função de ativação degrau bipolar, acesse: [Activation Functions](https://natamleao.github.io/activation-functions/):
 
 $$
 y = \begin{cases}
