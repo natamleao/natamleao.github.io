@@ -108,7 +108,7 @@ Este projeto reforça conceitos essenciais de programação em C:
 ## Estrutura do projeto
 
 ```text
-Student-Management-C/
+Student-Management-System/
 │
 ├── app/            # Aplicação principal
 ├── src/            # Implementação
