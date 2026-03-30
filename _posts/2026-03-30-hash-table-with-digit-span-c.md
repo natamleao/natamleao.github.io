@@ -194,9 +194,7 @@ Em outras palavras: é uma abordagem **experimental e exploratória**, não uma 
 
 ## Conclusão
 
-Este projeto vai além de uma implementação clássica ao explorar uma ideia simples:
-
-> **usar características dos dados para influenciar o hashing**
+O projeto explora uma alternativa simples para o problema de distribuição em tabelas hash, utilizando informações do próprio conjunto de dados.
 
 ---
 
