@@ -94,7 +94,7 @@ A ideia aqui foi:
 - a simulação de execução depende da natureza circular da estrutura  
 
 ---
-
+ 
 ## Código
 
 O projeto completo está disponível [aqui](https://github.com/natamleao/Playlist-Manager).
