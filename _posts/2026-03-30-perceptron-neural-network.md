@@ -41,23 +41,22 @@ A decisão do perceptron é baseada em uma combinação linear das entradas:
 
 $$
 y = \begin{cases}
-1, & \text{se } \sum v_i x_i + b \ge 0 \\
+1\;, & \text{se } \sum v_i x_i + b \ge 0 \\
 -1, & \text{caso contrário}
 \end{cases}
 $$
 
 Esse modelo deriva diretamente da ideia de neurônio artificial, que descrevi [aqui](https://natamleao.github.io/artificial-neuron).  
 
-A função de ativação utilizada é um degrau simples. Também escrevi uma nota sobre isso [aqui](https://natamleao.github.io/activation-functions).
+A função de ativação utilizada é um degrau bipolar. Também escrevi uma nota sobre isso [aqui](https://natamleao.github.io/activation-functions).
 
 Durante o treinamento, os pesos são ajustados sempre que o modelo erra:
 
 $$
-v_i^{\text{novo}} = v_i^{\text{antigo}} + \alpha (t^{(k)} - y^{(k)}) x^{(k)}
-$$
-
-$$
+\begin{cases}
+v_i^{\text{novo}} = v_i^{\text{antigo}} + \alpha (t^{(k)} - y^{(k)}) x^{(k)} \\
 b^{\text{novo}} = b^{\text{antigo}} + \alpha (t^{(k)} - y^{(k)})
+\end{cases}
 $$
 
 Nada muito sofisticado — mas suficiente para aprender padrões simples.
