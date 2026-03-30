@@ -87,7 +87,7 @@ Esse tipo de projeto força mais atenção em:
 A ideia aqui foi:
 
 - trabalhar com dados além do tempo de execução  
-- entender melhor serialização manual  
+- entender melhor serialização manual   
 - aproximar o código de algo mais próximo de um sistema real  
 
 ---
