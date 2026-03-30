@@ -94,6 +94,6 @@ A ideia aqui foi:
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Student-Management-System)
+O projeto completo está disponível [aqui](https://github.com/natamleao/Student-Management-System).
 
 ---
