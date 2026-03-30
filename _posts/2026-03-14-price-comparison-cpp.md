@@ -89,6 +89,6 @@ A ideia aqui não era complexidade, e sim:
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Price-Comparison-CPP)
+O projeto completo está disponível [aqui](https://github.com/natamleao/Price-Comparison-CPP).
 
 ---
