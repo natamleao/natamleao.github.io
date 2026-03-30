@@ -30,7 +30,7 @@ title: Portfolio
         {% if post.tags %}
           <div class="post-tags">
             {% for tag in post.tags %}
-              <a href="/portfolio-tags#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+              <a href="/portfolio-tags#{{ tag | cgi_escape }}" class="tag">#{{ tag }}</a>
             {% endfor %}
           </div>
         {% endif %}
