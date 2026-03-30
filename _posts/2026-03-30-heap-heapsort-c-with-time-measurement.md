@@ -1,177 +1,113 @@
 ---
 layout: post
-title: "Heap e HeapSort em C com Medição de Tempo"
+title: "Heap, HeapSort e o que acontece quando você mede"
 date: 2026-03-30
 categories: portfolio
 mathjax: false
-tags: [C, Data Structures, Heap]
+tags: [C, Data Structures]
 image: /assets/images/umbrellan.png
 github: https://github.com/natamleao/Heap-HeapSort
-excerpt: "Implementação de Max-Heap e HeapSort em C com medição de tempo de execução utilizando clock_gettime."
+excerpt: "Implementação de heap e HeapSort em C com medição de tempo para observar o comportamento na prática."
 ---
 
-![C](https://img.shields.io/badge/language-C-blue)
-![C11](https://img.shields.io/badge/standard-C11-orange)
-![Makefile](https://img.shields.io/badge/build-Makefile-green)
-![Heap](https://img.shields.io/badge/data_structure-heap-yellow)
-![HeapSort](https://img.shields.io/badge/algorithm-heapsort-lightgrey)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+## Ideia
 
----
+Heap e HeapSort são clássicos.
 
-## Visão geral
+Mas implementar não é o mais interessante.
 
-Este projeto implementa uma **Heap (Max-Heap)** em C (C11), juntamente com o algoritmo de ordenação **HeapSort**.
-
-Também inclui um módulo para **medição de tempo de execução** baseado em `clock_gettime`, permitindo observar o comportamento do algoritmo na prática.
+> o interessante é ver como isso se comporta quando você mede de verdade
 
 ---
 
-## Funcionalidades
+## O que foi feito
 
-- Criação de heap a partir de um array  
-- Inserção de elementos  
-- Remoção do maior elemento  
-- Construção de heap (heapify)  
-- Ordenação com HeapSort  
-- Impressão da estrutura  
-- Medição de tempo de execução  
-- Liberação de memória  
+Implementei em C:
 
----
+- uma Max-Heap baseada em array  
+- operações principais (inserção, remoção, heapify)  
+- HeapSort in-place  
+- um módulo de medição de tempo com `clock_gettime`  
 
-## Estrutura da Heap
-
-A heap é representada como um array:
-
-```
-
-Índice:   0    1    2    3    4    5
-Valor:   [90, 70, 50, 30, 20, 10]
-
-```
-
-Relações entre os índices:
-
-```
-
-pai(i) = (i - 1) / 2
-esq(i) = 2*i + 1
-dir(i) = 2*i + 2
-
-````
+A ideia foi sair do “funciona” e ir pro “quanto custa”.
 
 ---
 
-## Estrutura principal
+## Estrutura
 
-```c
-struct _structureHeap{
-    float *_data;
-    int _size;
-    int _virtualSize;
-    int _capacity;
-};
-````
+A heap é representada como array, usando as relações clássicas:
 
-* `_data`: array que armazena os elementos
-* `_size`: número de elementos válidos
-* `_virtualSize`: usado no HeapSort para controlar a parte ativa
-* `_capacity`: capacidade máxima
+- pai → `(i - 1) / 2`  
+- filho esquerdo → `2*i + 1`  
+- filho direito → `2*i + 2`  
+
+Nada fora do padrão — o foco aqui não foi reinventar a estrutura.
 
 ---
 
 ## HeapSort
 
-```c
-void HeapSort(StructureHeap *heap);
-```
+O algoritmo segue o fluxo esperado:
 
-Etapas:
+1. construir a heap  
+2. trocar a raiz com o último elemento  
+3. reduzir a parte ativa  
+4. reorganizar com heapify  
 
-1. Construção da heap
-2. Troca da raiz com o último elemento
-3. Redução do tamanho virtual
-4. Reorganização com HeapifyDown
-
-Complexidade:
-
-* Tempo: `O(n log n)`
-* Espaço: `O(1)`
+Tudo feito **in-place**, sem memória extra relevante.
 
 ---
 
-## Medição de tempo
+## Medição
 
-O tempo de execução é medido com `clock_gettime` usando `CLOCK_MONOTONIC`.
+Usei `clock_gettime` com `CLOCK_MONOTONIC`.
+
+Isso evita interferência de ajustes no relógio do sistema e dá uma medição mais confiável.
+
+No código:
 
 ```c
 double executionTime = calculateTime(HeapSort, heap);
-calculateTimePrintTime(executionTime);
-```
-
-Exemplo de saída:
-
-```
-Tempo de execução: 0 H : 0 M : 0 S : 12 ms
-```
+````
 
 ---
 
-## Estrutura do projeto
+## Um detalhe importante
 
-```text
-Heap-HeapSort/
-│
-├── app/
-├── src/
-├── include/
-├── build/
-├── bin/
-├── lib/
-│
-├── Makefile
-├── README.md
-└── LICENSE
-```
+Medir muda a forma como você olha o algoritmo.
+
+Uma coisa é saber que HeapSort é `O(n log n)`.
+
+Outra é:
+
+* rodar com milhões de elementos
+* ver o tempo real
+* perceber custo de memória e alocação
 
 ---
 
-## Execução
+## Limitações
 
-```bash
-git clone https://github.com/natamleao/Heap-HeapSort.git
-cd Heap-HeapSort
-make
-make run
-```
+* medição baseada em uma execução
+* geração de dados aleatórios simples
+* uso de memória elevado para testes grandes
 
-Limpeza:
-
-```bash
-make clean
-make cleanapp
-```
-
-**Requisitos:** GCC ou Clang e GNU Make.
+Nada crítico — mas importante deixar claro.
 
 ---
 
-## Observações
+## Por que esse projeto
 
-* A implementação utiliza Max-Heap
-* O HeapSort é realizado in-place
-* A medição de tempo é baseada em uma única execução
-* O tamanho dos dados de teste pode exigir alto uso de memória
+A ideia aqui foi simples:
 
----
-
-## Conclusão
-
-O projeto implementa uma estrutura clássica e um algoritmo de ordenação eficiente, além de permitir observar seu desempenho em execução real.
+* implementar uma estrutura clássica
+* aplicar um algoritmo conhecido
+* observar o comportamento na prática
 
 ---
 
-[Veja o projeto no GitHub](https://github.com/natamleao/Heap-HeapSort)
+## Código
+
+O projeto completo está disponível [aqui](https://github.com/natamleao/Heap-HeapSort).
 
 ---
