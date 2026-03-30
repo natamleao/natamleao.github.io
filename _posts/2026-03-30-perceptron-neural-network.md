@@ -124,6 +124,6 @@ A ideia aqui foi:
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Perceptron-Neural-Network)
+O projeto completo está disponível [aqui](https://github.com/natamleao/Perceptron-Neural-Network).
 
 ---
