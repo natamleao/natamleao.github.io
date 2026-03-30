@@ -71,7 +71,7 @@ A ideia foi entender melhor a diferença prática entre:
 
 - resolver um problema com abstração (C++)  
 - resolver o mesmo problema com controle total (C)  
-
+ 
 ---
 
 ## Código
