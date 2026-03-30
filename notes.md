@@ -30,7 +30,7 @@ title: Notes
         {% if post.tags %}
           <div class="post-tags">
             {% for tag in post.tags %}
-              <a href="/notes-tags#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+              <a href="/notes-tags#{{ tag | cgi_escape }}" class="tag">#{{ tag }}</a>
             {% endfor %}
           </div>
         {% endif %}
