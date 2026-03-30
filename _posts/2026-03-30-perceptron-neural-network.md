@@ -41,7 +41,7 @@ A decisão do perceptron é baseada em uma combinação linear das entradas:
 
 $$
 y = \begin{cases}
-\;\;1, & \text{se } \sum v_i x_i + b \ge 0 \\
+\;\;\,1, & \text{se } \sum v_i x_i + b \ge 0 \\
 -1, & \text{caso contrário}
 \end{cases}
 $$
