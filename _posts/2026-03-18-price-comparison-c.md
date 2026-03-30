@@ -76,6 +76,6 @@ A ideia foi entender melhor a diferença prática entre:
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Price-Comparison-C)
+O projeto completo está disponível [aqui](https://github.com/natamleao/Price-Comparison-C).
 
 ---
