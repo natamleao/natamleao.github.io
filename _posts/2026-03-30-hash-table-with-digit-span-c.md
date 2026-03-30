@@ -7,7 +7,7 @@ mathjax: false
 tags: [C, Data Structures, Hash Table]
 image: /assets/images/umbrellan.png
 github: https://github.com/natamleao/Hash-Table
-excerpt: "Implementação de tabela hash em C com estratégia de distribuição baseada em análise de dígitos para redução de colisões."
+excerpt: "Implementação de tabela hash em C com estratégia adaptativa baseada em análise de dígitos para melhoria de distribuição."
 ---
 
 ![C](https://img.shields.io/badge/language-C-blue)
@@ -21,39 +21,50 @@ excerpt: "Implementação de tabela hash em C com estratégia de distribuição 
 
 ## Visão geral
 
-Este projeto implementa uma **tabela hash em C (C11)** utilizando **encadeamento (chaining)** para tratamento de colisões.
+Este projeto implementa uma **tabela hash em C (C11)** utilizando **encadeamento (chaining)** para resolução de colisões.
 
-O diferencial está na estratégia de hashing: em vez de aplicar uma função fixa, o sistema realiza uma **análise dos dígitos das chaves** para escolher a melhor forma de distribuição.
+O diferencial está na estratégia de hashing: ao invés de usar uma função fixa, o sistema realiza uma **análise dos dígitos das chaves** para selecionar dinamicamente a melhor forma de distribuição.
 
-A proposta é reduzir colisões utilizando uma abordagem baseada em **heurística e distribuição estatística simples**.
+A proposta é simples, mas poderosa: **usar informação estatística dos dados de entrada para influenciar o hashing**.
 
 ---
 
 ## O que foi implementado
 
-O sistema permite:
+O sistema oferece:
 
 - Criação de tabela hash com capacidade definida  
-- Inserção de elementos com distribuição otimizada  
+- Inserção baseada em análise global dos dados  
 - Tratamento de colisões via lista encadeada  
-- Impressão da estrutura completa  
-- Liberação correta de memória  
-
-Além disso, inclui um módulo para geração de dados de teste.
+- Impressão completa da estrutura  
+- Liberação segura de memória  
+- Geração de dados aleatórios sem repetição para testes  
 
 ---
 
-## Estratégia de hashing
+## Estratégia de hashing (núcleo do projeto)
 
-A construção do índice segue um pipeline:
+O índice não é calculado diretamente a partir da chave. Em vez disso, o sistema executa um pipeline:
 
-1. Decomposição dos números em dígitos  
-2. Construção de matriz de distribuição  
-3. Cálculo de desvio em relação a uma distribuição ideal  
-4. Seleção do dígito mais equilibrado  
-5. Cálculo do índice com base nesse dígito  
+1. **Decomposição em dígitos**  
+   Cada número é transformado em um vetor de dígitos  
 
-Essa abordagem busca melhorar a uniformidade da hash de forma adaptativa.
+2. **Matriz de distribuição**  
+   Conta a frequência de cada dígito (0–9) em cada posição  
+
+3. **Cálculo de desvio**  
+   Mede o quão distante cada posição está de uma distribuição ideal  
+
+4. **Seleção da melhor posição**  
+   Escolhe o dígito mais estável (menor desvio)  
+
+5. **Cálculo do índice**  
+
+```c
+   index = digit % capacity;
+````
+
+👉 Resultado: o hashing passa a ser **adaptativo ao conjunto de dados**, não fixo.
 
 ---
 
@@ -61,16 +72,14 @@ Essa abordagem busca melhorar a uniformidade da hash de forma adaptativa.
 
 ### Tabela hash com encadeamento
 
-Cada bucket da tabela aponta para uma lista encadeada:
+Cada bucket aponta para uma lista encadeada:
 
 ```
-
 [0] → (k,v) → (k,v)
 [1] → vazio
 [2] → (k,v)
 [3] → (k,v) → (k,v)
-
-````
+```
 
 ---
 
@@ -82,7 +91,11 @@ struct _node{
     int _value;
     struct _node *_next;
 };
-````
+```
+
+* `_index`: posição na tabela (bucket)
+* `_value`: valor original inserido
+* `_next`: próximo elemento da lista
 
 ---
 
@@ -100,7 +113,7 @@ struct _hashTable{
 
 ## Geração de dados
 
-O módulo `keyarray` permite gerar conjuntos de chaves únicas:
+O módulo `keyarray` gera conjuntos de teste:
 
 ```c
 KeyArrayCreate(qtd, min, max);
@@ -108,23 +121,23 @@ KeyArrayCreate(qtd, min, max);
 
 Características:
 
-* Sem repetição
-* Distribuição aleatória
-* Ideal para testes da hash
+* Valores únicos
+* Distribuição aleatória (Fisher-Yates shuffle)
+* Ideal para validar distribuição da hash
 
 ---
 
 ## Conceitos aplicados
 
-Este projeto reforça conceitos fundamentais de C:
+Esse projeto trabalha fundamentos importantes:
 
 * Alocação dinâmica (`malloc`, `calloc`, `free`)
-* Manipulação de ponteiros
-* Estruturas encadeadas
-* Modularização com `.h` e `.c`
-* Separação entre interface e implementação
+* Ponteiros e manipulação de memória
+* Listas encadeadas
+* Modularização em C (`.h` / `.c`)
+* Separação de responsabilidades
 * Análise de distribuição de dados
-* Uso de funções como ponteiros (callback)
+* Uso de função como parâmetro (callback)
 * Algoritmos de embaralhamento
 
 ---
@@ -157,22 +170,33 @@ make
 make run
 ```
 
-Para limpar:
+Limpeza:
 
 ```bash
 make clean
 make cleanapp
 ```
 
-**Requisitos:** GCC ou Clang e GNU Make em ambiente Linux/macOS.
+**Requisitos:** GCC ou Clang + GNU Make (Linux/macOS)
+
+---
+
+## Limitações e observações
+
+* O método depende da distribuição dos dados de entrada
+* Não há redimensionamento dinâmico da tabela
+* Não implementa busca ou remoção
+* O cálculo de desvio é heurístico, não probabilístico rigoroso
+
+Em outras palavras: é uma abordagem **experimental e exploratória**, não uma hash universal.
 
 ---
 
 ## Conclusão
 
-Este projeto vai além de uma implementação tradicional de tabela hash ao introduzir uma estratégia baseada em **análise de distribuição de dados**.
+Este projeto vai além de uma implementação clássica ao explorar uma ideia simples:
 
-Ele demonstra não apenas domínio de estruturas clássicas, mas também capacidade de explorar abordagens alternativas para melhorar eficiência.
+> **usar características dos dados para influenciar o hashing**
 
 ---
 
