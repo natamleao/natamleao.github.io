@@ -1,143 +1,94 @@
 ---
 layout: post
-title: "Price Comparison CPP"
+title: "Comparando preços e organizando dados em C++"
 date: 2026-03-14
 categories: portfolio
 mathjax: false
-tags: [C++, Data Structures, Algorithms]
+tags: [C++, Data Structures]
 image: /assets/images/price-comparison-cpp-thumbnail.png
 github: https://github.com/natamleao/Price-Comparison-CPP
-excerpt: "Sistema em C++ para comparação de preços utilizando lista encadeada, com encapsulamento, modularização e automação de build."
+excerpt: "Um pequeno sistema em C++ para organizar e comparar preços usando lista encadeada."
 ---
 
-![C++](https://img.shields.io/badge/Language-C++-blue)
-![C++20](https://img.shields.io/badge/Standard-C++20-orange)
-![Makefile](https://img.shields.io/badge/Build-Makefile-green)
-![Data Structures](https://img.shields.io/badge/Data_Structures-Linked_List-yellow)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+## Ideia
 
----
+Queria sair um pouco de implementações isoladas e montar algo mais próximo de um sistema, mesmo que simples.
 
-## Visão geral
+A ideia foi direta:  
+> cadastrar itens, manipular esses dados e tirar alguma conclusão útil deles.
 
-Este projeto implementa um sistema em **C++20** para **comparação de preços**, utilizando **lista encadeada** como estrutura de dados principal.
-
-A proposta é construir um sistema organizado e modular, explorando recursos da linguagem como **encapsulamento com classes**, ao mesmo tempo em que reforça fundamentos clássicos de estruturas de dados.
+No caso, comparar preços.
 
 ---
 
-## O que foi implementado
+## O que foi feito
 
-O sistema permite:
+Implementei um sistema em **C++** baseado em **lista encadeada**, onde é possível:
 
-- Inserir itens com identificador e preço  
-- Atualizar dados existentes  
-- Remover elementos da lista  
-- Exibir todos os itens cadastrados  
-- Avaliar os preços e indicar se vale a pena comprar  
+- inserir itens com identificador e preço  
+- atualizar informações  
+- remover elementos  
+- listar os dados  
+- avaliar se um preço compensa ou não  
 
-O projeto cobre o ciclo completo de manipulação de dados em um sistema simples de linha de comando.
-
----
-
-## Estrutura de dados
-
-### Lista encadeada
-
-Os dados são armazenados em uma **lista encadeada simples**, onde cada nó representa um item com:
-
-- Identificador  
-- Preço  
-- Ponteiro para o próximo elemento  
-
-Essa estrutura permite flexibilidade na manipulação dos dados, mantendo controle direto sobre a memória.
+Tudo rodando em linha de comando, sem abstrações além do necessário.
 
 ---
 
-## Modelagem em C++
+## Estrutura escolhida
 
-Diferente da versão em C, este projeto utiliza **classes** para representar os elementos da lista:
+Usei uma lista encadeada simples.
 
-- Encapsulamento dos dados  
-- Organização mais clara da lógica  
-- Separação de responsabilidades  
+Não é a estrutura mais performática para tudo, mas tem duas vantagens aqui:
 
-Essa abordagem aproxima o código de práticas modernas de engenharia de software.
+- controle direto da memória  
+- flexibilidade para inserção e remoção  
 
----
-
-## Pipeline do sistema
-
-O fluxo da aplicação segue:
-
-1. Entrada de dados (inserção)  
-2. Armazenamento em lista encadeada  
-3. Manipulação (atualização, remoção)  
-4. Processamento (análise de preços)  
-5. Saída (exibição dos resultados)  
+Para esse tipo de sistema pequeno, faz sentido.
 
 ---
 
-## Conceitos aplicados
+## Uso de C++
 
-Este projeto reforça conceitos importantes de C++:
+Diferente de implementações em C, aqui usei **classes** para organizar o código.
 
-- Encapsulamento com classes  
-- Manipulação de ponteiros  
-- Estruturas de dados encadeadas  
-- Separação entre interface e implementação  
-- Modularização do código  
-- Organização de projeto em múltiplos diretórios  
-- Automação de build com `Makefile`  
+Isso ajudou a:
 
----
+- agrupar dados e comportamento  
+- evitar funções soltas  
+- deixar a estrutura mais clara  
 
-## Estrutura do projeto
-
-```text
-Price-Comparison-CPP/
-│
-├── app/              # Aplicação principal
-├── bin/              # Executáveis
-├── include/          # Cabeçalhos (.h)
-├── obj/              # Arquivos objeto
-├── src/              # Código-fonte (.cpp)
-│
-├── Makefile          # Build
-├── README.md         # Documentação
-└── LICENSE           # Licença MIT
-````
+Sem exagerar — só o suficiente para melhorar a organização.
 
 ---
 
-## Como executar
+## Um detalhe interessante
 
-```bash
-git clone https://github.com/natamleao/Price-Comparison-CPP.git
-cd Price-Comparison-CPP
-make
-make run
-```
+Mesmo sendo um sistema simples, ele já tem um fluxo completo:
 
-Para limpar:
+- entrada de dados  
+- armazenamento  
+- manipulação  
+- processamento  
+- saída  
 
-```bash
-make clean
-make cleanapp
-```
-
-**Requisitos:** GCC ou Clang com suporte a C++20 e GNU Make em ambiente Linux/macOS.
+Isso muda a forma de pensar o código.  
+Não é mais só “fazer funcionar”, mas manter tudo coerente.
 
 ---
 
-## Conclusão
+## Por que esse projeto
 
-Este projeto demonstra a transição de C para C++, mantendo controle de baixo nível enquanto introduz conceitos de **abstração e organização orientada a objetos**.
+A ideia aqui não era complexidade, e sim:
 
-Ele reforça fundamentos essenciais e mostra capacidade de estruturar código de forma mais robusta — um passo importante rumo a sistemas mais complexos.
+- reforçar estruturas de dados em um contexto real  
+- praticar organização de código em C++  
+- sair do padrão “função isolada” e pensar em fluxo  
 
 ---
 
-[Veja o projeto completo no GitHub](https://github.com/natamleao/Price-Comparison-CPP)
+## Código
+
+O projeto completo está disponível [aqui](https://github.com/natamleao/Price-Comparison-CPP)
 
 ---
