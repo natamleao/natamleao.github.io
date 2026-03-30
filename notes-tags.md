@@ -17,7 +17,7 @@ parent:
   <div class="section-list">
     {% for tag in all_tags %}
       <article class="post-card tag-card">
-        <a href="#{{ tag | slugify }}" class="post-link-overlay"></a>
+        <a href="#{{ tag | cgi_escape }}" class="post-link-overlay"></a>
         <h3>#{{ tag }}</h3>
         <p>Clique para ver todos os posts desta tag.</p>
       </article>
@@ -27,7 +27,7 @@ parent:
   <hr>
   
   {% for tag in all_tags %}
-    <h2 id="{{ tag | slugify }}">#{{ tag }}</h2>
+    <h2 id="{{ tag | cgi_escape }}">#{{ tag }}</h2>
     <div class="section-list">
       {% assign tagged_posts = posts | where_exp: "post", "post.tags contains tag" %}
       {% for post in tagged_posts %}
