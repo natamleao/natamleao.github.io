@@ -1,150 +1,81 @@
 ---
 layout: post
-title: "Price Comparison C"
+title: "Comparando preços com controle manual em C"
 date: 2026-03-18
 categories: portfolio
 mathjax: false
-tags: [C, Data Structures, Algorithms]
+tags: [C, Data Structures]
 image: /assets/images/price-comparison-c-thumbnail.png
 github: https://github.com/natamleao/Price-Comparison-C
-excerpt: "Sistema em C para comparação de preços utilizando lista encadeada, com manipulação manual de memória e organização modular."
+excerpt: "Sistema em C para manipulação e análise de preços com controle manual de memória."
 ---
 
-![C](https://img.shields.io/badge/Language-C-blue)
-![C11](https://img.shields.io/badge/Standard-C11-orange)
-![Makefile](https://img.shields.io/badge/Build-Makefile-green)
-![Data Structures](https://img.shields.io/badge/Data_Structures-Linked_List-yellow)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+## Ideia
 
----
+Depois de implementar a versão em C++ (clique [aqui](https://natamleao.github.io/price-comparison-cpp/) para vê-la), quis voltar um passo e fazer o mesmo tipo de sistema em **C puro**.
 
-## Visão geral
-
-Este projeto implementa um sistema em **C (padrão C11)** para **comparação de preços**, utilizando **lista encadeada** como estrutura de dados principal.
-
-A proposta é simples, mas direta: construir um sistema organizado e modular capaz de **armazenar, manipular e analisar dados**, reforçando fundamentos essenciais da linguagem C.
+Sem classes, sem abstrações — só ponteiros, structs e controle manual.
 
 ---
 
-## O que foi implementado
+## O que foi feito
 
-O sistema permite:
+Um sistema simples para:
 
-- Inserir itens com identificador e preço  
-- Atualizar identificador e/ou preço  
-- Remover itens da lista  
-- Exibir todos os dados cadastrados  
-- Avaliar os preços e indicar se vale a pena comprar  
+- inserir itens com identificador e preço  
+- atualizar e remover dados  
+- listar os elementos  
+- avaliar os preços  
 
-Mesmo sendo um sistema enxuto, ele cobre as principais operações de um **mini banco de dados em linha de comando**.
-
----
-
-## Estrutura de dados
-
-### Lista encadeada
-
-Os dados são armazenados em uma **lista encadeada simples**, onde cada nó contém:
-
-- Identificador  
-- Preço  
-- Ponteiro para o próximo elemento  
-
-Essa estrutura permite inserções e remoções eficientes, além de manter o controle manual da memória.
+Tudo baseado em uma **lista encadeada**.
 
 ---
 
-## Modelo de análise
+## Diferença principal
 
-Após o cadastro dos itens, o sistema realiza uma análise simples dos preços e fornece um feedback indicando se a compra é vantajosa.
+Aqui não tem encapsulamento.
 
-Essa etapa adiciona uma camada de **lógica de decisão**, indo além de um CRUD básico.
+Isso muda bastante coisa:
 
----
+- os dados ficam expostos  
+- a responsabilidade de organização é maior  
+- o controle de memória precisa ser explícito  
 
-## Conceitos aplicados
-
-Este projeto reforça fundamentos importantes de C:
-
-- Alocação dinâmica de memória (`malloc`, `free`)  
-- Manipulação de ponteiros  
-- Estruturas encadeadas  
-- Separação entre interface (`.h`) e implementação (`.c`)  
-- Modularização do código  
-- Organização de projeto em múltiplos diretórios  
-- Automação de build com `Makefile`  
+Cada `malloc` e `free` importa.
 
 ---
 
-## Exemplo de dados
+## Estrutura
 
-```text
-ID | Preço
-1  | R$ 14,00
-2  | R$ 20,00
-3  | R$ 25,00
-````
+Usei uma lista encadeada simples.
+
+Ela resolve bem o problema e mantém o código direto, sem estruturas auxiliares.
 
 ---
 
-## Pipeline do sistema
+## Um ponto importante
 
-O fluxo da aplicação segue:
+Comparado com a versão em C++, esse código exige mais cuidado:
 
-1. Entrada de dados (inserção)
-2. Armazenamento em lista encadeada
-3. Manipulação (atualização, remoção, busca)
-4. Processamento (análise de preços)
-5. Saída (exibição dos resultados)
+- não há proteção contra uso incorreto  
+- erros de memória aparecem fácil  
+- a organização depende mais de disciplina do que da linguagem  
 
----
-
-## Estrutura do projeto
-
-```text
-Price-Comparison-C/
-│
-├── app/              # Aplicação principal
-├── bin/              # Executáveis
-├── include/          # Cabeçalhos (.h)
-├── obj/              # Arquivos objeto
-├── src/              # Código-fonte
-│
-├── Makefile          # Build
-├── README.md         # Documentação
-└── LICENSE           # Licença MIT
-```
+Por outro lado, dá uma visão mais clara de como tudo funciona por baixo.
 
 ---
 
-## Como executar
+## Por que esse projeto
 
-```bash
-git clone https://github.com/natamleao/Price-Comparison-C.git
-cd Price-Comparison-C
-make
-make run
-```
+A ideia foi entender melhor a diferença prática entre:
 
-Para limpar:
-
-```bash
-make clean
-make cleanapp
-```
-
-**Requisitos:** GCC ou Clang (C11) e GNU Make em ambiente Linux/macOS.
+- resolver um problema com abstração (C++)  
+- resolver o mesmo problema com controle total (C)  
 
 ---
 
-## Conclusão
+## Código
 
-Este projeto demonstra domínio dos fundamentos essenciais de C, especialmente no uso de **ponteiros, memória dinâmica e estruturas de dados clássicas**.
-
-Embora simples, ele evidencia a capacidade de construir sistemas organizados, modulares e com lógica aplicada — uma base sólida para projetos mais complexos.
-
----
-
-[Veja o projeto completo no GitHub](https://github.com/natamleao/Price-Comparison-C)
+O projeto completo está disponível [aqui](https://github.com/natamleao/Price-Comparison-C)
 
 ---
