@@ -4,7 +4,7 @@ title: "Hash Table com Análise de Dígitos em C"
 date: 2026-03-30
 categories: portfolio
 mathjax: false
-tags: [C, Data Structures, Hash Table, Algorithms]
+tags: [C, Data Structures, Hash Table]
 image: /assets/images/hash-table-thumbnail.png
 github: https://github.com/natamleao/Hash-Table
 excerpt: "Implementação de tabela hash em C com estratégia de distribuição baseada em análise de dígitos para redução de colisões."
