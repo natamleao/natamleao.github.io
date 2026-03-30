@@ -39,15 +39,15 @@ O array é encapsulado na estrutura:
 
 ```c
 struct _structureArray{
-    float *data;
-    int size;
-    int capacity;
+    float *_data;
+    int _size;
+    int _capacity;
 };
 ````
 
-* `data` → armazena os elementos
-* `size` → quantidade de elementos válidos
-* `capacity` → capacidade máxima
+* `_data` → armazena os elementos
+* `_size` → quantidade de elementos válidos
+* `_capacity` → capacidade máxima
 
 Nada complexo, mas suficiente para testar o algoritmo com flexibilidade.
 
@@ -68,8 +68,8 @@ O algoritmo percorre o array e insere cada elemento na posição correta da part
 Usei `clock()` do C padrão:
 
 ```c
-double executionTime = calculateTimeExecutionTime(insertionSorte, structure);
-calculateTimePrintExecutionTime(executionTime);
+double executionTime = executionTimeCalculate(insertionSorte, array);
+executionTimePrint(executionTime);
 ```
 
 Isso permite observar o tempo real de execução, especialmente em arrays grandes.
