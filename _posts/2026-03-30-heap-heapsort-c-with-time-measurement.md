@@ -67,7 +67,8 @@ Isso evita interferência de ajustes no relógio do sistema e dá uma medição 
 No código:
 
 ```c
-double executionTime = calculateTime(HeapSort, heap);
+double executionTime = executionTimeCalculate(heapSort, heap);
+executionTimePrint(executionTime);
 ````
 
 ---
