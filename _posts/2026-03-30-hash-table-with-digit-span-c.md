@@ -5,7 +5,7 @@ date: 2026-03-30
 categories: portfolio
 mathjax: false
 tags: [C, Data Structures, Hash Table]
-image: /assets/images/hash-table-thumbnail.png
+image: /assets/images/umbrellan.png
 github: https://github.com/natamleao/Hash-Table
 excerpt: "Implementação de tabela hash em C com estratégia de distribuição baseada em análise de dígitos para redução de colisões."
 ---
@@ -172,7 +172,7 @@ make cleanapp
 
 Este projeto vai além de uma implementação tradicional de tabela hash ao introduzir uma estratégia baseada em **análise de distribuição de dados**.
 
-Ele demonstra não apenas domínio de estruturas clássicas, mas também capacidade de explorar abordagens alternativas para melhorar eficiência — um passo importante na direção de projetos mais avançados em algoritmos e sistemas.
+Ele demonstra não apenas domínio de estruturas clássicas, mas também capacidade de explorar abordagens alternativas para melhorar eficiência.
 
 ---
 
