@@ -3,7 +3,7 @@ layout: post
 title: "Comparando HeapSort e Insertion Sort: tempo real"
 date: 2026-03-30
 categories: portfolio
-mathjax: false
+mathjax: true
 tags: [C, Algorithms, Data Structures]
 image: "/assets/images/heap-vs-insertion.png"
 github: "https://github.com/natamleao/Heap-HeapSort"
@@ -12,7 +12,7 @@ excerpt: "Comparação prática entre HeapSort e Insertion Sort em C com mediç�
 
 ## Ideia
 
-Sempre quis ver **HeapSort e Insertion Sort** lado a lado.
+Ver **HeapSort e Insertion Sort** lado a lado é um contraste bem interessante.
 
 > Implementar é fácil. Medir e comparar é quando a realidade aparece.
 
@@ -49,9 +49,9 @@ struct _structureHeap{
 
 ```c
 struct _structureArray{
-    float *data;
-    int size;
-    int capacity;
+    float *_data;
+    int _size;
+    int _capacity;
 };
 ```
 
@@ -68,18 +68,18 @@ Cada estrutura encapsula os dados e mantém o algoritmo isolado para medir com p
 3. Redução do tamanho ativo
 4. HeapifyDown
 
-*Complexidade:* `O(n log n)` in-place, escalável para milhões de elementos.
+*Complexidade:* $O(nlog\,n)$ _in-place_, escalável para milhões de elementos.
 
 ---
 
 ### Insertion Sort
 
-Percorre o array, inserindo cada elemento na posição correta da parte já ordenada.
+Percorre o _array_, inserindo cada elemento na posição correta da parte já ordenada.
 
 *Complexidade:*
 
-* Melhor caso → `O(n)`
-* Médio/pior caso → `O(n²)`
+* Melhor caso $\to O(n)$
+* Médio/pior caso $\to O(n²)$
 
 ---
 
@@ -111,7 +111,7 @@ Isso permite comparar **tempo real para o mesmo array**.
 
 Medir lado a lado foi revelador:
 
-* HeapSort domina com arrays grandes
+* HeapSort domina com _arrays_ grandes
 * Insertion Sort “explode” rapidamente conforme o tamanho cresce
 * Mesmo conhecendo a complexidade, **ver os números reais é chocante**
 * Dá pra perceber o custo da memória, cache, e operações de movimentação
