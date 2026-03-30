@@ -97,6 +97,6 @@ A ideia aqui foi:
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Playlist-Manager)
+O projeto completo está disponível [aqui](https://github.com/natamleao/Playlist-Manager).
 
 ---
