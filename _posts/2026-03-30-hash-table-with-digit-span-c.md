@@ -1,203 +1,93 @@
 ---
 layout: post
-title: "Hash Table com Análise de Dígitos em C"
+title: "Hash adaptativa baseada nos dados (em C)"
 date: 2026-03-30
 categories: portfolio
 mathjax: false
-tags: [C, Data Structures, Hash Table]
+tags: [C, Data Structures]
 image: /assets/images/umbrellan.png
 github: https://github.com/natamleao/Hash-Table
-excerpt: "Implementação de tabela hash em C com estratégia adaptativa baseada em análise de dígitos para melhoria de distribuição."
+excerpt: "Uma variação de tabela hash que escolhe o índice com base na distribuição dos próprios dados."
 ---
 
-![C](https://img.shields.io/badge/language-C-blue)
-![C11](https://img.shields.io/badge/standard-C11-orange)
-![Makefile](https://img.shields.io/badge/build-Makefile-green)
-![Hash Table](https://img.shields.io/badge/data_structure-hash_table-yellow)
-![Chaining](https://img.shields.io/badge/collision-chaining-lightgrey)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+## Ideia
 
----
+Em uma tabela hash tradicional, você define uma função e torce pra distribuição ser boa.
 
-## Visão geral
+Aqui a tentativa foi inverter isso:
 
-Este projeto implementa uma **tabela hash em C (C11)** utilizando **encadeamento (chaining)** para resolução de colisões.
-
-O diferencial está na estratégia de hashing: ao invés de usar uma função fixa, o sistema realiza uma **análise dos dígitos das chaves** para selecionar dinamicamente a melhor forma de distribuição.
-
-A proposta é simples, mas poderosa: **usar informação estatística dos dados de entrada para influenciar o hashing**.
+> deixar os próprios dados influenciarem a função de hashing
 
 ---
 
-## O que foi implementado
+## O que foi feito
 
-O sistema oferece:
+Implementei uma tabela hash em C com:
 
-- Criação de tabela hash com capacidade definida  
-- Inserção baseada em análise global dos dados  
-- Tratamento de colisões via lista encadeada  
-- Impressão completa da estrutura  
-- Liberação segura de memória  
-- Geração de dados aleatórios sem repetição para testes  
+- encadeamento para colisões  
+- análise prévia das chaves  
+- escolha dinâmica de como gerar o índice  
+
+Além disso, inclui um gerador de dados para testar o comportamento da distribuição.
 
 ---
 
-## Estratégia de hashing (núcleo do projeto)
+## Como funciona
 
-O índice não é calculado diretamente a partir da chave. Em vez disso, o sistema executa um pipeline:
+Antes de inserir os valores, o sistema olha para o conjunto de dados.
 
-1. **Decomposição em dígitos**  
-   Cada número é transformado em um vetor de dígitos  
+O processo é:
 
-2. **Matriz de distribuição**  
-   Conta a frequência de cada dígito (0–9) em cada posição  
+- quebrar os números em dígitos  
+- observar como esses dígitos se distribuem por posição  
+- medir qual posição é mais “equilibrada”  
+- usar esse dígito como base do índice  
 
-3. **Cálculo de desvio**  
-   Mede o quão distante cada posição está de uma distribuição ideal  
-
-4. **Seleção da melhor posição**  
-   Escolhe o dígito mais estável (menor desvio)  
-
-5. **Cálculo do índice**  
+No fim, o índice ainda é simples:
 
 ```c
-   index = digit % capacity;
+index = digit % capacity;
 ````
 
-👉 Resultado: o hashing passa a ser **adaptativo ao conjunto de dados**, não fixo.
+Mas o dígito escolhido não é fixo — depende dos dados.
 
 ---
 
-## Estrutura de dados
+## O ponto interessante
 
-### Tabela hash com encadeamento
+A função de hash deixa de ser totalmente fixa.
 
-Cada bucket aponta para uma lista encadeada:
+Ela passa a ser, de certa forma, **adaptativa ao conjunto de entrada**.
 
-```
-[0] → (k,v) → (k,v)
-[1] → vazio
-[2] → (k,v)
-[3] → (k,v) → (k,v)
-```
+Isso não garante distribuição perfeita, mas em alguns casos pode reduzir colisões sem aumentar muito a complexidade.
 
 ---
 
-### Estrutura do nó
+## Limitações
 
-```c
-struct _node{
-    int _index;
-    int _value;
-    struct _node *_next;
-};
-```
+Essa abordagem tem algumas restrições claras:
 
-* `_index`: posição na tabela (bucket)
-* `_value`: valor original inserido
-* `_next`: próximo elemento da lista
+* depende da qualidade dos dados
+* não se adapta depois da construção inicial
+* não há redimensionamento da tabela
+* o critério de “melhor dígito” é heurístico
+
+Ou seja: funciona mais como experimento do que solução geral.
 
 ---
 
-### Estrutura da tabela
+## Por que esse projeto
 
-```c
-struct _hashTable{
-    Node **buckets;
-    int size;
-    int capacity;
-};
-```
+A ideia aqui foi explorar uma pergunta simples:
+
+> dá pra melhorar hashing usando informação dos próprios dados?
+
+Sem complicar demais a implementação.
 
 ---
 
-## Geração de dados
+## Código
 
-O módulo `keyarray` gera conjuntos de teste:
-
-```c
-KeyArrayCreate(qtd, min, max);
-```
-
-Características:
-
-* Valores únicos
-* Distribuição aleatória (Fisher-Yates shuffle)
-* Ideal para validar distribuição da hash
-
----
-
-## Conceitos aplicados
-
-Esse projeto trabalha fundamentos importantes:
-
-* Alocação dinâmica (`malloc`, `calloc`, `free`)
-* Ponteiros e manipulação de memória
-* Listas encadeadas
-* Modularização em C (`.h` / `.c`)
-* Separação de responsabilidades
-* Análise de distribuição de dados
-* Uso de função como parâmetro (callback)
-* Algoritmos de embaralhamento
-
----
-
-## Estrutura do projeto
-
-```text
-Hash-Table/
-│
-├── app/             # Aplicação principal (main)
-├── bin/             # Executáveis
-├── include/         # Headers (.h)
-├── build/           # Arquivos objeto (.o)
-├── src/             # Código-fonte (.c)
-├── lib/             # Biblioteca estática
-│
-├── Makefile         # Regras de compilação
-├── README.md        # Documentação do projeto
-└── LICENSE          # Licença do projeto
-```
-
----
-
-## Como executar
-
-```bash
-git clone https://github.com/natamleao/Hash-Table.git
-cd Hash-Table
-make
-make run
-```
-
-Limpeza:
-
-```bash
-make clean
-make cleanapp
-```
-
-**Requisitos:** GCC ou Clang + GNU Make (Linux/macOS)
-
----
-
-## Limitações e observações
-
-* O método depende da distribuição dos dados de entrada
-* Não há redimensionamento dinâmico da tabela
-* Não implementa busca ou remoção
-* O cálculo de desvio é heurístico, não probabilístico rigoroso
-
-Em outras palavras: é uma abordagem **experimental e exploratória**, não uma hash universal.
-
----
-
-## Conclusão
-
-O projeto explora uma alternativa simples para o problema de distribuição em tabelas hash, utilizando informações do próprio conjunto de dados.
-
----
-
-[Veja o projeto completo no GitHub](https://github.com/natamleao/Hash-Table)
+O projeto completo está disponível [aqui](https://github.com/natamleao/Hash-Table)
 
 ---
