@@ -88,6 +88,6 @@ Sem complicar demais a implementação.
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Hash-Table)
+O projeto completo está disponível [aqui](https://github.com/natamleao/Hash-Table).
 
 ---
