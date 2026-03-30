@@ -65,7 +65,9 @@ O algoritmo percorre o array e insere cada elemento na posição correta da part
 
 ## Medição
 
-Usei `clock()` do C padrão:
+Usei `clock_gettime` com `CLOCK_MONOTONIC` para evitar interferências de ajustes no relógio do sistema e dar uma medição mais confiável.
+
+No código:
 
 ```c
 double executionTime = executionTimeCalculate(insertionSorte, array);
