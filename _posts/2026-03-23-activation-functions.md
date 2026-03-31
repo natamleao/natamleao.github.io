@@ -30,7 +30,7 @@ Está função tem uma alteração brusca nos valores de $y$ mudando sua saída 
     </div>
 
     <div>
-      <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-binaria.png"
+      <img src="/assets/images/post-images/activation-functions/degrau-binaria.png"
            alt="Gráfico da função de ativação degrau binária"
            style="max-width: 100%; width: 250px;">
     </div>
@@ -61,7 +61,7 @@ Nesta função, os valores de $y$ mudam para 1 ou -1, por isso nome "bipolar".
     </div>
 
     <div>
-      <img src="/assets/images/post-images/funcoes-de-ativacao/degrau-bipolar.png"
+      <img src="/assets/images/post-images/activation-functions/degrau-bipolar.png"
            alt="Gráfico da função de ativação degrau bipolar"
            style="max-width: 100%; width: 250px;">
     </div>
@@ -89,7 +89,7 @@ Essa função tem uma aplicação específica nas redes neurais do tipo RBF (_Ra
     </div>
 
     <div>
-      <img src="/assets/images/post-images/funcoes-de-ativacao/gaussiana.png"
+      <img src="/assets/images/post-images/activation-functions/gaussiana.png"
            alt="Gráfico da função de ativação gaussiana"
            style="max-width: 100%; width: 250px;">
     </div>
@@ -117,7 +117,7 @@ A função logística tem $y$ limitado ao $(0, 1)$. Devido ao termo exponencial 
     </div>
     
     <div>
-      <img src="/assets/images/post-images/funcoes-de-ativacao/logistica.png"
+      <img src="/assets/images/post-images/activation-functions/logistica.png"
            alt="Gráfico da função de ativação logística"
            style="max-width: 100%; width: 250px;">
     </div>
@@ -149,7 +149,7 @@ Está função possui três partes, em duas delas, é constante, enquanto na ter
     </div>
 
     <div>
-      <img src="/assets/images/post-images/funcoes-de-ativacao/rampa.png"
+      <img src="/assets/images/post-images/activation-functions/rampa.png"
            alt="Gráfico da função de ativação rampa"
            style="max-width: 100%; width: 250px;">
     </div>
@@ -180,7 +180,7 @@ Relu é a abreviação para “_Rectified linear unit_”. Para qualquer entrada
     </div>
 
     <div>
-      <img src="/assets/images/post-images/funcoes-de-ativacao/relu.png"
+      <img src="/assets/images/post-images/activation-functions/relu.png"
            alt="Gráfico da função de ativação relu"
            style="max-width: 100%; width: 250px;">
     </div>
@@ -212,7 +212,7 @@ A função tagente hiperbólica tem $y\in(-1, 1)$. Ela possui curvatura muito se
     </div>
 
     <div>
-      <img src="/assets/images/post-images/funcoes-de-ativacao/tangente-hiperbolica.png"
+      <img src="/assets/images/post-images/activation-functions/tangente-hiperbolica.png"
            alt="Gráfico da função de ativação tagente hiperbólica"
            style="max-width: 100%; width: 250px;">
     </div>
