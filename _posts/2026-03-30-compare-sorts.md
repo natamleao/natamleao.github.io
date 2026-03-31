@@ -99,6 +99,24 @@ Isso permite comparar **tempo real para o mesmo _array_**.
 
 ---
 
+## Ambiente de execução
+
+Os testes foram executados no meu notebook:
+
+- CPU: AMD Ryzen 7 5825U (8 cores / 16 threads)
+- RAM: 7.2 GiB
+- Sistema: Debian GNU/Linux 12 (Bookworm)
+- Arquitetura: x86-64
+- Armazenamento: SSD
+- Compilador: GCC
+- Flags de compilação: `-O2 -Wall -Werror`
+
+Isso importa porque tempo de execução não é absoluto — depende diretamente do hardware e da forma como o código é compilado.
+
+A ideia aqui não é obter números universais, mas observar o comportamento real dos algoritmos no mesmo ambiente.
+
+---
+
 ## Gráficos de comparação
 
 * **Gráfico 1:** Heap Sort — crescimento do tempo de execução
