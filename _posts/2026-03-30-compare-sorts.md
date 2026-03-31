@@ -68,7 +68,7 @@ Cada estrutura encapsula os dados e mantém o algoritmo isolado para medir com p
 3. Redução do tamanho ativo
 4. HeapifyDown
 
-*Complexidade:* $O(nlog\,n)$ _in-place_, escalável para milhões de elementos.
+**Complexidade:** $O(nlog\,n)$ _in-place_, escalável para milhões de elementos.
 
 ---
 
@@ -76,7 +76,7 @@ Cada estrutura encapsula os dados e mantém o algoritmo isolado para medir com p
 
 Percorre o _array_, inserindo cada elemento na posição correta da parte já ordenada.
 
-*Complexidade:*
+**Complexidade:**
 
 * Melhor caso $\to O(n)$
 * Médio/pior caso $\to O(n²)$
