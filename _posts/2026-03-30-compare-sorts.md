@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparando HeapSort e Insertion Sort: tempo real"
+title: "Comparando Heap Sort e Insertion Sort: tempo real"
 date: 2026-03-30
 categories: portfolio
 mathjax: true
@@ -12,7 +12,7 @@ excerpt: "Comparação prática entre HeapSort e Insertion Sort em C com mediç�
 
 ## Ideia
 
-Ver **HeapSort e Insertion Sort** lado a lado é um contraste bem interessante.
+Ver **Heap Sort e Insertion Sort** lado a lado é um contraste bem interessante.
 
 > implementar é fácil. medir e comparar mostra a diferença de verdade.
 
@@ -23,7 +23,7 @@ Ver **HeapSort e Insertion Sort** lado a lado é um contraste bem interessante.
 Criei um programa em C que:
 
 * Inicializa **mesmos dados** para os dois algoritmos
-* HeapSort com **Max-Heap**
+* Heap Sort com **Max-Heap**
 * Insertion Sort com **_array_ dinâmico**
 * Medição de tempo precisa com `clock_gettime` e `CLOCK_MONOTONIC`
 * Compara **tempo de execução real**
@@ -34,7 +34,7 @@ Queria sair do “funciona” e ir direto para “quanto custa na prática”.
 
 ## Estruturas usadas
 
-### Heap para HeapSort
+### Heap para Heap Sort
 
 ```c
 struct _structureHeap{
@@ -61,7 +61,7 @@ Cada estrutura encapsula os dados e mantém o algoritmo isolado para medir com p
 
 ## Algoritmos
 
-### HeapSort
+### Heap Sort
 
 1. Construção da heap
 2. Troca da raiz com o último elemento
@@ -101,36 +101,36 @@ Isso permite comparar **tempo real para o mesmo _array_**.
 
 ## Gráficos de comparação
 
-* **Gráfico 1:** HeapSort — crescimento do tempo de execução
+* **Gráfico 1:** Heap Sort — crescimento do tempo de execução
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/HeapSort — tempo de execução vs tamanho da entrada.svg"
+  <img src="/assets/images/post-images/graphics/Gráfico - Heap Sort.svg"
        alt="Gráfico HeapSort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    HeapSort — crescimento do tempo de execução (escala log)
+    Heap Sort — crescimento do tempo de execução (escala log)
   </p>
 </div>
 
-* **Gráfico 2:** InsertionSort — crescimento do tempo de execução
+* **Gráfico 2:** Insertion Sort — crescimento do tempo de execução
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/InsertionSort — crescimento do tempo de execução.svg"
+  <img src="/assets/images/post-images/graphics/Gráfico - Insertion Sort.svg"
        alt="Gráfico InsertionSort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    InsertionSort — crescimento acelerado do tempo (escala log)
+    Insertion Sort — crescimento acelerado do tempo (escala log)
   </p>
 </div>
 
-* **Gráfico 3:** HeapSort vs InsertionSort — comparação de tempo
+* **Gráfico 3:** Heap Sort vs Insertion Sort — comparação de tempo
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/HeapSort vs InsertionSort — comparação de tempo.svg"
+  <img src="/assets/images/post-images/graphics/Gráfico - Heap Sort vs Insertion Sort.svg"
        alt="Comparação HeapSort vs InsertionSort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    HeapSort vs InsertionSort — diferença de crescimento (escala log)
+    Heap Sort vs Insertion Sort — diferença de crescimento (escala log)
   </p>
 </div>
 
@@ -144,7 +144,7 @@ Isso permite comparar **tempo real para o mesmo _array_**.
 
 Medir lado a lado foi revelador:
 
-* HeapSort domina com _arrays_ grandes
+* Heap Sort domina com _arrays_ grandes
 * Insertion Sort “explode” rapidamente conforme o tamanho cresce
 * Mesmo conhecendo a complexidade, **ver os números reais é incrível**
 * Dá pra perceber o custo da memória, cache, e operações de movimentação
