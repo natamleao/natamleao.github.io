@@ -106,7 +106,7 @@ Isso permite comparar **tempo real para o mesmo array**.
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/Tempo - HeapSort.svg"
        alt="Neurônio artificial"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 500px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Tempo real - HeapSort
   </p>
@@ -117,7 +117,7 @@ Isso permite comparar **tempo real para o mesmo array**.
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/Tempo - InsertionSort.svg"
        alt="Neurônio artificial"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 500px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Tempo real - Insertion Sort
   </p>
@@ -128,14 +128,14 @@ Isso permite comparar **tempo real para o mesmo array**.
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/Comparação - HeapSort vs InsertionSort.svg"
        alt="Neurônio artificial"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 300px;">
+       style="display: block; margin: 0 auto; max-width: 100%; width: 500px;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Tempo real - Comparação - HeapSort vs Insertion Sort
   </p>
 </div>
 
-> Tentei escalar o experimento para 50 milhões de elementos depois de horas de execução, ficou evidente: o algoritmo se torna inviável antes mesmo de completar.
-> Isso já era sabido, dado que no médio/pior caso ele $\to O(n²)$, ou seja, $(50.000.000)² = 2,5x10^{15}$ de operações.
+> Tentei escalar o experimento para 50 milhões de elementos, depois de horas de execução, ficou evidente: o algoritmo se torna inviável antes mesmo de completar.
+> Isso já era sabido, dado que no médio/pior caso ele é $O(n²)$, ou seja, $(50.000.000)² = 2,5x10^{15}$ de operações.
 
 ---
 
