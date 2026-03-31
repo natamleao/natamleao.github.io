@@ -106,7 +106,7 @@ Isso permite comparar **tempo real para o mesmo array**.
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/Tempo - HeapSort.svg"
        alt="Neurônio artificial"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 500px;">
+       style="display: block; margin: 0 auto; max-width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Tempo real - HeapSort
   </p>
@@ -117,7 +117,7 @@ Isso permite comparar **tempo real para o mesmo array**.
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/Tempo - InsertionSort.svg"
        alt="Neurônio artificial"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 500px;">
+       style="display: block; margin: 0 auto; max-width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Tempo real - Insertion Sort
   </p>
@@ -128,7 +128,7 @@ Isso permite comparar **tempo real para o mesmo array**.
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/Comparação - HeapSort vs InsertionSort.svg"
        alt="Neurônio artificial"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 500px;">
+       style="display: block; margin: 0 auto; max-width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
     Tempo real - Comparação - HeapSort vs Insertion Sort
   </p>
