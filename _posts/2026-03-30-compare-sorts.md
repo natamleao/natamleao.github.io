@@ -111,7 +111,7 @@ Os testes foram executados no meu notebook:
 - Compilador: GCC
 - Flags de compilação: `-O2 -Wall -Werror`
 
-Isso importa porque tempo de execução não é absoluto — depende diretamente do hardware e da forma como o código é compilado.
+Isso importa porque tempo de execução não é absoluto — depende diretamente do _hardware_ e da forma como o código é compilado.
 
 A ideia aqui não é obter números universais, mas observar o comportamento real dos algoritmos no mesmo ambiente.
 
