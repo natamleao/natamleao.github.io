@@ -12,23 +12,23 @@ excerpt: "Uma variação de tabela hash que escolhe o índice com base na distri
 
 ## Ideia
 
-Em uma tabela hash tradicional, você define uma função e torce pra distribuição ser boa.
+Em uma *tabela hash* tradicional, você define uma função e torce pra distribuição ser boa.
 
 Aqui a tentativa foi inverter isso:
 
-> deixar os próprios dados influenciarem a função de hashing
+> deixar os próprios dados influenciarem a função de *hashing*
 
 ---
 
 ## O que foi feito
 
-Implementei uma tabela hash em C com:
+Implementei uma *tabela hash* em C com:
 
-- encadeamento para colisões  
+- *encadeamento* (*chaining*) para colisões  
 - análise prévia das chaves  
 - escolha dinâmica de como gerar o índice  
 
-Além disso, inclui um gerador de dados para testar o comportamento da distribuição.
+Além disso, incluí um gerador de dados para testar o comportamento da distribuição.
 
 ---
 
@@ -55,7 +55,7 @@ Mas o dígito escolhido não é fixo — depende dos dados.
 
 ## O ponto interessante
 
-A função de hash deixa de ser totalmente fixa.
+A função de *hash* deixa de ser totalmente fixa.
 
 Ela passa a ser, de certa forma, **adaptativa ao conjunto de entrada**.
 
@@ -80,7 +80,7 @@ Ou seja: funciona mais como experimento do que solução geral.
 
 A ideia aqui foi explorar uma pergunta simples:
 
-> dá pra melhorar hashing usando informação dos próprios dados?
+> dá pra melhorar *hashing* usando informação dos próprios dados?
 
 Sem complicar demais a implementação.
 
