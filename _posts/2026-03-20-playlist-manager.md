@@ -14,7 +14,7 @@ excerpt: "Gerenciador de playlists em C utilizando lista encadeada circular e ma
 
 Queria construir algo um pouco mais próximo de um uso real.
 
-Uma playlist é um bom exemplo:  
+Uma *playlist* é um bom exemplo:  
 - tem sequência  
 - pode crescer e diminuir  
 - e, principalmente, não “termina” — ela volta pro início  
@@ -25,7 +25,7 @@ Isso encaixa bem com uma **lista encadeada circular**.
 
 ## O que foi feito
 
-Implementei um gerenciador de playlists em C que permite:
+Implementei um gerenciador de *playlists* em C que permite:
 
 - adicionar músicas  
 - remover e buscar  
@@ -44,7 +44,7 @@ Usei uma lista encadeada circular.
 
 A principal vantagem aqui é simples:
 
-> não existe “fim” da playlist
+> não existe “fim” da *playlist*
 
 Quando chega no último elemento, ela naturalmente volta para o primeiro.  
 Isso deixa a simulação de reprodução muito mais direta.
@@ -58,7 +58,7 @@ A escolha da estrutura muda completamente a forma de percorrer os dados.
 Em uma lista comum, você precisa tratar fim da lista.  
 Aqui, o cuidado é outro:
 
-- evitar loops infinitos  
+- evitar *loops* infinitos  
 - definir bem o ponto de parada  
 
 Parece detalhe pequeno, mas muda a lógica.
