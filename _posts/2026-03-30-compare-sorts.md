@@ -39,8 +39,7 @@ Queria sair do “funciona” e ir direto para “quanto custa na prática”.
 ```c
 struct _structureHeap{
     float *_data;
-    int _size;
-    int _virtualSize;
+    int _size, _virtualSize;
 };
 ````
 
