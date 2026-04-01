@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "*Insertion Sort* e o que acontece quando você mede"
+title: "Insertion Sort e o que acontece quando você mede"
 date: 2026-03-30
 categories: portfolio
 mathjax: false
 tags: [C, Algorithms]
 image: /assets/images/insertion-sort.png
 github: https://github.com/natamleao/Insertion-Sort
-excerpt: "Implementação de *Insertion Sort* em C com medição de tempo para observar o comportamento na prática."
+excerpt: "Implementação de Insertion Sort em C com medição de tempo para observar o comportamento na prática."
 ---
 
 ## Ideia
