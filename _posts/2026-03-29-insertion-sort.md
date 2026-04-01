@@ -41,13 +41,11 @@ O *array* é encapsulado na estrutura:
 struct _structureArray{
     float *_data;
     int _size;
-    int _capacity;
 };
 ````
 
 * `_data` → armazena os elementos
 * `_size` → quantidade de elementos válidos
-* `_capacity` → capacidade máxima
 
 Nada complexo, mas suficiente para testar o algoritmo com flexibilidade.
 
