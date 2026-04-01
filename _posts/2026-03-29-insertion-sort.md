@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "Insertion Sort e o que acontece quando você mede"
+title: "*Insertion Sort* e o que acontece quando você mede"
 date: 2026-03-30
 categories: portfolio
 mathjax: false
 tags: [C, Algorithms]
 image: /assets/images/insertion-sort.png
 github: https://github.com/natamleao/Insertion-Sort
-excerpt: "Implementação de Insertion Sort em C com medição de tempo para observar o comportamento na prática."
+excerpt: "Implementação de *Insertion Sort* em C com medição de tempo para observar o comportamento na prática."
 ---
 
 ## Ideia
 
-Insertion Sort é um clássico do ensino de algoritmos.
+*Insertion Sort* é um clássico do ensino de algoritmos.
 
 Mas o interessante não é só implementar.
 
@@ -24,10 +24,10 @@ Mas o interessante não é só implementar.
 
 Implementei em C:
 
-- uma estrutura de array dinâmica  
-- inserção de valores e impressão do array  
-- Insertion Sort completo  
-- um módulo de medição de tempo usando `clock()`  
+- uma estrutura de *array* dinâmica  
+- inserção de valores e impressão do *array*  
+- *Insertion Sort* completo  
+- um módulo de medição de tempo usando `clock_gettime`  
 
 O objetivo foi sair do “funciona” e ir pro “quanto custa em tempo real”.
 
@@ -35,7 +35,7 @@ O objetivo foi sair do “funciona” e ir pro “quanto custa em tempo real”.
 
 ## Estrutura
 
-O array é encapsulado na estrutura:
+O *array* é encapsulado na estrutura:
 
 ```c
 struct _structureArray{
@@ -53,28 +53,28 @@ Nada complexo, mas suficiente para testar o algoritmo com flexibilidade.
 
 ---
 
-## Insertion Sort
+## *Insertion Sort*
 
-O algoritmo percorre o array e insere cada elemento na posição correta da parte já ordenada.
+O algoritmo percorre o *array* e insere cada elemento na posição correta da parte já ordenada.
 
-* melhor caso → array quase ordenado → `O(n)`
+* melhor caso → *array* quase ordenado → `O(n)`
 * caso médio → `O(n²)`
-* pior caso → array inversamente ordenado → `O(n²)`
+* pior caso → *array* inversamente ordenado → `O(n²)`
 
 ---
 
 ## Medição
 
-Usei `clock_gettime` com `CLOCK_MONOTONIC` para evitar interferências de ajustes no relógio do sistema e dar uma medição mais confiável.
+Usei `clock_gettime` com `CLOCK_MONOTONIC` para evitar interferências do sistema e obter uma medição mais confiável.
 
 No código:
 
 ```c
-double executionTime = executionTimeCalculate(insertionSorte, array);
+double executionTime = executionTimeCalculate(insertionSortWrapper, array);
 executionTimePrint(executionTime);
 ```
 
-Isso permite observar o tempo real de execução, especialmente em arrays grandes.
+Isso permite observar o tempo real de execução, especialmente em *arrays* grandes.
 
 ---
 
@@ -94,7 +94,7 @@ Você pode saber a complexidade teórica, mas só ao rodar com centenas de milha
 
 * medição baseada em uma execução
 * geração de dados aleatórios simples
-* alto uso de memória para arrays grandes
+* alto uso de memória para *arrays* grandes
 
 Não compromete o aprendizado, mas é bom ter em mente.
 
