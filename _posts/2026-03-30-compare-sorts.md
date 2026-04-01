@@ -41,7 +41,6 @@ struct _structureHeap{
     float *_data;
     int _size;
     int _virtualSize;
-    int _capacity;
 };
 ````
 
@@ -51,7 +50,6 @@ struct _structureHeap{
 struct _structureArray{
     float *_data;
     int _size;
-    int _capacity;
 };
 ```
 
