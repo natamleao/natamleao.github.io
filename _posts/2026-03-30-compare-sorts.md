@@ -86,10 +86,10 @@ Percorre o *array*, inserindo cada elemento na posição correta da parte já or
 Usei `clock_gettime` com `CLOCK_MONOTONIC` para capturar **tempo real de execução**, evitando interferência do sistema:
 
 ```c
-double executionTimeHeapSort = executionTimeCalculate(heapSortWrapper, arrayHeapSort);
+double executionTimeHeapSort = executionTimeCalculate(heapSortWrapper, arrayHeap);
 executionTimePrint(executionTimeHeapSort);
 
-double executionTimeInsertionSort = executionTimeCalculate(insertionSortWrapper, arrayInsertionSort);
+double executionTimeInsertionSort = executionTimeCalculate(insertionSortWrapper, arrayInsertion);
 executionTimePrint(executionTimeInsertionSort);
 ```
 
