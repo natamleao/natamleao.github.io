@@ -10,7 +10,7 @@ github: https://github.com/natamleao/Playlist-Manager
 excerpt: "Gerenciador de playlists em C utilizando lista encadeada circular e manipulação manual de memória."
 ---
 
-## Por que uma playlist?
+## Por que uma *playlist*?
 
 Esse projeto começou com uma ideia simples: pegar algo cotidiano — uma *playlist* — e modelar isso direito em C.
 
