@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparando preços e organizando dados (em C++)"
+title: "Comparando preços e organizando dados"
 date: 2026-03-14
 categories: portfolio
 mathjax: false
