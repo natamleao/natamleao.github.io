@@ -4,7 +4,7 @@ title: "Hash adaptativa baseada nos dados"
 date: 2026-03-30
 categories: portfolio
 mathjax: false
-tags: [C, Data Structures]
+tags: [C, Data Structures, Hashing]
 image: /assets/images/umbrellan.png
 github: https://github.com/natamleao/Hash-Table
 excerpt: "Uma variação de tabela hash que escolhe o índice com base na distribuição dos próprios dados."
