@@ -56,7 +56,7 @@ Em vez de usar, por exemplo, sempre o último dígito, deixar os dados indicarem
 
 A função final continua simples:
 
-```c id="p3kx8n"
+```c
 index = digit % capacity;
 ```
 
