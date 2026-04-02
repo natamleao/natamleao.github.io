@@ -10,89 +10,94 @@ github: https://github.com/natamleao/Playlist-Manager
 excerpt: "Gerenciador de playlists em C utilizando lista encadeada circular e manipulação manual de memória."
 ---
 
-## Ideia
+## Um problema simples, tratado com a estrutura certa
 
-A proposta foi construir algo mais próximo de um uso real.
+Esse projeto nasce de uma ideia direta: representar uma *playlist* de forma fiel ao seu comportamento.
 
-Uma *playlist* é um ótimo exemplo:
+Não como uma lista estática de elementos, mas como algo que **continua indefinidamente**. Uma sequência que não tem “último” no sentido prático — apenas um ponto de retorno.
 
-- possui uma sequência de elementos  
-- cresce e diminui dinamicamente  
-- e, principalmente, não possui um fim — ela retorna ao início  
-
-Esse comportamento encaixa perfeitamente com uma **lista encadeada circular**.
+Isso levou naturalmente à escolha de uma **lista encadeada circular**.
 
 ---
 
-## Funcionalidades
+## Modelar comportamento, não só armazenar dados
 
-O sistema implementado permite:
+A estrutura resolve bem mais do que armazenamento.
 
-- adicionar músicas (*input manual* ou via arquivo)
-- remover e buscar músicas
-- ordenar por duração
-- salvar e carregar dados em arquivos `.txt`
-- calcular estatísticas
-- simular reprodução contínua (*loop*)
+Ela define como a *playlist* se comporta:
 
-Tudo isso em ambiente de linha de comando, com **controle manual de memória**.
+* a navegação nunca termina
+* não existe estado “fora da lista”
+* a transição entre músicas é contínua
 
----
-
-## Estrutura de dados
-
-A estrutura central do projeto é uma **lista encadeada circular**.
-
-A principal vantagem é direta:
-
-> não existe “fim” da *playlist*
-
-Ao chegar no último elemento, a execução retorna automaticamente ao primeiro, o que simplifica bastante a lógica de reprodução contínua.
-
-Por outro lado, isso traz novos cuidados:
-
-- evitar *loops* infinitos
-- definir corretamente o ponto de parada nas iterações
-
-Esse detalhe muda completamente a forma de percorrer os dados em relação a listas lineares.
+Isso evita tratamentos artificiais, como verificar fim de lista a todo momento. O próprio modelo elimina essa preocupação.
 
 ---
 
-## Entrada e saída
+## Decisões que importam
 
-O sistema suporta leitura e escrita em arquivos `.txt`, utilizando um formato simples:
+Trabalhar com lista circular não é complicado — mas exige consistência.
 
-```text
-Artista;Musica;Duracao
-````
+Operações simples em outras estruturas passam a ter mais impacto aqui:
 
-Exemplo:
+* remoção precisa preservar o ciclo
+* inserção precisa manter a integridade da referência inicial
+* percorrer a lista exige critério claro de parada
 
-```text
-Eminem;Lose Yourself;326
-Coldplay;Viva La Vida;242
-Adele;Rolling in the Deep;228
-```
-
-Isso permite testar o sistema com volumes maiores de dados sem depender de entrada manual.
+Nada disso é “difícil”, mas tudo exige atenção. Pequenos descuidos quebram a estrutura de forma silenciosa.
 
 ---
 
-## Objetivo
+## Organização acima de tudo
 
-O foco do projeto foi:
+Um ponto importante desse projeto foi manter o código bem separado:
 
-* aplicar estruturas de dados em um contexto mais realista
-* trabalhar com **memória dinâmica e arquivos simultaneamente**
-* lidar com fluxo contínuo de dados usando uma estrutura circular
+* interface em `.h`
+* implementação em `.c`
+* responsabilidades bem definidas
+
+Isso permite que a estrutura de dados não fique misturada.
+
+Na prática, a *playlist* vira um módulo reutilizável, não só um bloco de código acoplado ao `main`.
 
 ---
 
-## Observações técnicas
+## Funcionalidade como consequência
 
-* toda a memória é gerenciada manualmente (`malloc` / `free`)
-* a ordenação é feita diretamente sobre a lista encadeada
-* a simulação de execução explora a natureza circular da estrutura
+As funcionalidades surgem quase naturalmente a partir da base:
+
+* inserção e remoção de músicas
+* ordenação por duração
+* busca
+* cálculo de estatísticas
+* leitura e escrita em arquivos
+* simulação de execução da playlist
+
+Nada disso exige soluções exóticas — o ponto é que tudo se apoia na mesma estrutura consistente.
+
+---
+
+## O que vale destacar aqui
+
+Esse não é um projeto sobre “fazer muitas coisas”.
+
+É sobre fazer uma escolha estrutural adequada e deixar o resto se organizar em cima disso.
+
+A lista encadeada circular não foi usada por ser “diferente”, mas porque encaixa bem no problema.
+
+E quando a estrutura encaixa, o código tende a ficar mais direto, sem tratamentos desnecessários.
+
+---
+
+## Fechamento
+
+No fim, esse projeto é menos sobre playlists e mais sobre representação.
+
+Sobre escolher uma estrutura que respeite o comportamento do problema desde o início — e evitar remendos depois.
+
+É um exercício simples na superfície, mas que reforça uma ideia que aparece o tempo todo:
+
+> boas decisões estruturais economizam complexidade lá na frente.
 
 ---
 
