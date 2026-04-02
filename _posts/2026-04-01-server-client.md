@@ -130,6 +130,6 @@ E isso já é o começo de pensar em sistemas distribuídos.
 
 ## Código
 
-Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Server-Client).
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Client-Server).
 
 ---
