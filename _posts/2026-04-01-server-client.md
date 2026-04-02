@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Servidor de comunicação e o problema de lidar com múltiplos clientes"
-date: 2026-03-22
+date: 2026-04-01
 categories: portfolio
 mathjax: false
 tags: [Python, Networking, Systems]
