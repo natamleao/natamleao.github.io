@@ -4,7 +4,7 @@ title: "Gerenciando alunos e persistindo dados"
 date: 2026-03-24
 categories: portfolio
 mathjax: false
-tags: [C, Data Structures]
+tags: [C, Data Structures, Persistence]
 image: /assets/images/student-management-c-thumbnail.png
 github: https://github.com/natamleao/Student-Management-System
 excerpt: "Sistema em C com lista duplamente encadeada e persistência em arquivo binário."
