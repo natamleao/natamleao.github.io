@@ -6,93 +6,47 @@ categories: portfolio
 mathjax: true
 tags: [C, Algorithms, Data Structures]
 image: "/assets/images/heap-vs-insertion.png"
-github: "https://github.com/natamleao/Compare-Sorts"
+github: https://github.com/natamleao/Compare-Sorts
 excerpt: "Comparação prática entre Heap Sort e Insertion Sort em C com medição de tempo, mostrando o custo real de cada algoritmo."
 ---
 
-## Ideia
+## A comparação que todo mundo já viu — mas que muda quando você mede
 
-Ver **Heap Sort e Insertion Sort** lado a lado é um contraste bem interessante.
+*Heap Sort* e *Insertion Sort* aparecem juntos em qualquer curso básico.
 
-> implementar é fácil. medir e comparar mostra a diferença de verdade.
+Um é eficiente, outro é simples.
+$O(nlog\,n)\; \text{vs}\; O(n²)$.
 
----
+Beleza. Isso é o esperado.
 
-## O que fiz
+Mas esse tipo de comparação costuma parar na teoria.
+Aqui a ideia foi empurrar um pouco além:
 
-Criei um programa em C que:
-
-* Inicializa **mesmos dados** para os dois algoritmos  
-* *Heap Sort* com **Max-Heap**  
-* *Insertion Sort* com **_array_ dinâmico**  
-* Medição de tempo precisa com `clock_gettime` e `CLOCK_MONOTONIC`  
-* Compara **tempo de execução real**  
-
-Queria sair do “funciona” e ir direto para “quanto custa na prática”.
+> colocar os dois sob as mesmas condições e observar o que acontece de verdade
 
 ---
 
-## Estruturas usadas
+## Como montei o experimento
 
-### Heap para *Heap Sort*
+Nada muito elaborado — mas com cuidado suficiente pra não enviesar o resultado:
 
-```c
-struct _structureHeap{
-    float *_data;
-    int _size, _virtualSize;
-};
-````
+* os dois algoritmos recebem **exatamente os mesmos dados**
+* cada um roda isoladamente
+* medição com `clock_gettime` usando `CLOCK_MONOTONIC`
+* foco direto em tempo de execução
 
-### *Array* para *Insertion Sort*
-
-```c
-struct _structureArray{
-    float *_data;
-    int _size;
-};
-```
-
-Cada estrutura encapsula os dados e mantém o algoritmo isolado para medir com precisão.
+A intenção não foi fazer *benchmark* acadêmico, mas também não deixar solto.
 
 ---
 
-## Algoritmos
+## Estruturas
 
-### *Heap Sort*
+Cada algoritmo roda na sua própria estrutura, bem direta:
 
-1. Construção da *heap*
-2. Troca da raiz com o último elemento
-3. Redução do tamanho ativo
-4. *HeapifyDown*
+* *Heap Sort* com *heap* em *array*
+* *Insertion Sort* com array dinâmico
 
-**Complexidade:** $O(n \log n)$ *in-place*, escalável para milhões de elementos.
-
----
-
-### *Insertion Sort*
-
-Percorre o *array*, inserindo cada elemento na posição correta da parte já ordenada.
-
-**Complexidade:**
-
-* Melhor caso $\to O(n)$
-* Médio/pior caso $\to O(n²)$
-
----
-
-## Medição de tempo
-
-Usei `clock_gettime` com `CLOCK_MONOTONIC` para capturar **tempo real de execução**, evitando interferência do sistema:
-
-```c
-double executionTimeHeapSort = executionTimeCalculate(heapSortWrapper, arrayHeap);
-executionTimePrint(executionTimeHeapSort);
-
-double executionTimeInsertionSort = executionTimeCalculate(insertionSortWrapper, arrayInsertion);
-executionTimePrint(executionTimeInsertionSort);
-```
-
-Isso permite comparar **tempo real para o mesmo *array***.
+Isso evita interferência entre implementações e mantém a comparação limpa.
 
 ---
 
@@ -106,11 +60,22 @@ Os testes foram executados no meu notebook:
 * Arquitetura: x86-64
 * Armazenamento: SSD
 * Compilador: GCC
-* Flags de compilação: `-O2 -Wall -Werror`
+* Flags: `-O2 -Wall -Werror`
 
-Isso importa porque tempo de execução não é absoluto — depende diretamente do *hardware* e da forma como o código é compilado.
+Isso importa mais do que parece.
+Tempo de execução não é absoluto — ele depende diretamente de onde você roda.
 
-A ideia aqui não é obter números universais, mas observar o comportamento real dos algoritmos no mesmo ambiente.
+---
+
+## O que aparece quando você começa a escalar
+
+Com entradas pequenas, os dois algoritmos convivem bem.
+
+O *Insertion Sort* até se mantém competitivo — o que faz sentido, já que ele tem baixo overhead.
+
+Mas conforme o tamanho cresce, a diferença deixa de ser sutil.
+
+Ela começa a ficar estrutural.
 
 ---
 
@@ -127,6 +92,11 @@ A ideia aqui não é obter números universais, mas observar o comportamento rea
   </p>
 </div>
 
+O crescimento é consistente.
+Nada surpreendente — mas também nada fora de controle.
+
+---
+
 * **Gráfico 2:** *Insertion Sort* — crescimento do tempo de execução
 
 <div style="text-align: center;">
@@ -138,7 +108,14 @@ A ideia aqui não é obter números universais, mas observar o comportamento rea
   </p>
 </div>
 
-* **Gráfico 3:** *Heap Sort* vs *Insertion Sort* — comparação de tempo
+Aqui a coisa muda.
+
+O crescimento começa aceitável, mas rapidamente perde controle.
+O comportamento quadrático aparece sem disfarce.
+
+---
+
+* **Gráfico 3:** *Heap Sort* vs *Insertion Sort* — comparação direta
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/Gráfico - Heap Sort vs Insertion Sort.svg"
@@ -149,47 +126,57 @@ A ideia aqui não é obter números universais, mas observar o comportamento rea
   </p>
 </div>
 
-> Tentei escalar o experimento para 50 milhões de elementos. Depois de horas rodando, ficou claro: o algoritmo simplesmente deixa de ser viável.
-> Isso já era esperado, já que no médio/pior caso ele é $O(n²)$, ou seja, $(5 \times 10^7)^2 = 2.5 \times 10^{15}$ operações.
-> Mesmo assumindo poucos nanossegundos por operação, isso facilmente escala para meses — possivelmente anos.
+Colocados lado a lado, não é mais uma questão de “qual é melhor”.
+
+É uma questão de **qual continua sendo viável**.
 
 ---
 
-## Observações pessoais
+## O ponto em que a teoria vira limite real
 
-Medir lado a lado foi revelador:
+Teve um momento no experimento que deixou isso bem claro.
 
-* *Heap Sort* domina com *arrays* grandes
-* *Insertion Sort* “explode” rapidamente conforme o tamanho cresce
-* Mesmo conhecendo a complexidade, **ver os números reais é outro nível**
-* Dá pra perceber custo de memória, cache e movimentação de dados
+Ao tentar escalar para 50 milhões de elementos, o *Insertion Sort* simplesmente deixou de ser uma opção prática.
 
-> Teoria te dá o mapa. Medição te mostra o terreno de verdade.
+Não por detalhe de implementação, mas por natureza do algoritmo.
 
----
+A conta é direta: $(5 \times 10^7)^2 = 2.5 \times 10^{15}$
 
-## Limitações
+Mesmo com operações rápidas, isso escala para tempos absurdos.
 
-* Medição baseada em uma execução
-* Dados gerados aleatoriamente simples
-* *arrays* grandes exigem muita memória
-
-Ainda assim, suficiente para comparar de verdade os algoritmos.
+É aqui que $O(n²)$ deixa de ser só uma notação e vira uma barreira concreta.
 
 ---
 
-## Por que esse projeto
+## O que ficou mais evidente
 
-Quis criar algo que fosse mais que código funcional:
+Algumas coisas que já eram conhecidas ficam bem mais claras quando você mede:
 
-* coloquei dois algoritmos clássicos lado a lado
-* medi o comportamento real
-* vi na prática onde cada um quebra
+* *Heap Sort* mantém crescimento controlado
+* *Insertion Sort* degrada rápido com escala
+* a diferença não é só teórica — é operacional
+* viabilidade depende diretamente da complexidade
+
+E talvez o mais importante:
+
+> existe um ponto onde o algoritmo deixa de ser “lento” e passa a ser simplesmente inviável
+
+---
+
+## Fechamento
+
+Esse projeto não tenta reinventar nada.
+
+Ele só coloca dois algoritmos clássicos no mesmo cenário e observa o comportamento com dados reais.
+
+E quando você faz isso, a diferença entre eles deixa de ser um detalhe acadêmico.
+
+Vira uma decisão prática.
 
 ---
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Compare-Sorts).
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Compare-Sorts).
 
 ---
