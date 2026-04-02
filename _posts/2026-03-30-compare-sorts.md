@@ -4,7 +4,7 @@ title: "Comparando Heap Sort e Insertion Sort: tempo real"
 date: 2026-03-30
 categories: portfolio
 mathjax: true
-tags: [C, Algorithms, Data Structures]
+tags: [C, Algorithms, Sorting]
 image: "/assets/images/heap-vs-insertion.png"
 github: https://github.com/natamleao/Compare-Sorts
 excerpt: "Comparação prática entre Heap Sort e Insertion Sort em C com medição de tempo, mostrando o custo real de cada algoritmo."
