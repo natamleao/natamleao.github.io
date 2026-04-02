@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hash adaptativa baseada nos dados (em C)"
+title: "Hash adaptativa baseada nos dados"
 date: 2026-03-30
 categories: portfolio
 mathjax: false
