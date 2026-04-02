@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparando preços e organizando dados em C++"
+title: "Comparando preços e organizando dados (em C++)"
 date: 2026-03-14
 categories: portfolio
 mathjax: false
@@ -10,85 +10,117 @@ github: https://github.com/natamleao/Price-Comparison-CPP
 excerpt: "Um pequeno sistema em C++ para organizar e comparar preços usando lista encadeada."
 ---
 
-## Ideia
+## A ideia por trás
 
-Queria sair um pouco de implementações isoladas e montar algo mais próximo de um sistema, mesmo que simples.
+Esse projeto surgiu como uma tentativa de sair do padrão “estrutura isolada” e montar algo mais próximo de um sistema completo — mesmo que simples.
 
-A ideia foi direta:  
-> cadastrar itens, manipular esses dados e tirar alguma conclusão útil deles.
+A proposta foi direta:
 
-No caso, comparar preços.
+> registrar dados, organizar esses dados e extrair alguma decisão deles
 
----
-
-## O que foi feito
-
-Implementei um sistema em **C++** baseado em **lista encadeada**, onde é possível:
-
-- inserir itens com identificador e preço  
-- atualizar informações  
-- remover elementos  
-- listar os dados  
-- avaliar se um preço compensa ou não  
-
-Tudo rodando em linha de comando, sem abstrações além do necessário.
+No caso, preços.
 
 ---
 
-## Estrutura escolhida
+## Mais do que só armazenar
 
-Usei uma lista encadeada simples.
+A estrutura em si não tem nada de especial: uma **lista encadeada**.
 
-Não é a estrutura mais performática para tudo, mas tem duas vantagens aqui:
+Mas aqui ela deixa de ser só exercício e passa a fazer parte de um fluxo:
 
-- controle direto da memória  
-- flexibilidade para inserção e remoção  
+* entrada de dados
+* armazenamento
+* manipulação
+* avaliação
+* saída
 
-Para esse tipo de sistema pequeno, faz sentido.
+Isso muda o tipo de problema.
+
+Você não está mais só implementando uma estrutura — está mantendo coerência ao longo de um ciclo completo.
 
 ---
 
-## Uso de C++
+## Onde o C++ entra de verdade
 
-Diferente de implementações em C, aqui usei **classes** para organizar o código.
+A principal diferença aqui não está na estrutura, mas na forma de organizar o código.
 
-Isso ajudou a:
+Usei **classes** para encapsular os dados e o comportamento.
 
-- agrupar dados e comportamento  
-- evitar funções soltas  
-- deixar a estrutura mais clara  
+Isso resolve algumas coisas de forma natural:
 
-Sem exagerar — só o suficiente para melhorar a organização.
+* evita acesso direto desnecessário
+* agrupa responsabilidade
+* reduz o número de funções soltas
+
+Sem exagero — só o suficiente pra não virar bagunça.
+
+---
+
+## Um ponto que ficou claro
+
+Mesmo num sistema pequeno, organização começa a importar rápido.
+
+Quando você tem:
+
+* inserção
+* atualização
+* remoção
+* leitura
+* processamento
+
+…qualquer descuido começa a se propagar.
+
+E é aí que a diferença entre “funciona” e “está bem estruturado” aparece.
+
+---
+
+## Sobre a escolha da lista encadeada
+
+Não foi uma escolha por performance.
+
+Foi uma escolha por simplicidade e controle:
+
+* inserção e remoção diretas
+* estrutura fácil de manter
+* sem necessidade de redimensionamento
+
+Para o problema, ela resolve sem complicar.
 
 ---
 
 ## Um detalhe interessante
 
-Mesmo sendo um sistema simples, ele já tem um fluxo completo:
+A lógica de decisão (se vale a pena comprar ou não) é simples — e isso é intencional.
 
-- entrada de dados  
-- armazenamento  
-- manipulação  
-- processamento  
-- saída  
+Ela serve mais como um “uso” dos dados do que como foco do sistema.
 
-Isso muda a forma de pensar o código.  
-Não é mais só “fazer funcionar”, mas manter tudo coerente.
+O objetivo aqui não era modelar economia, mas fechar o ciclo:
+dados → processamento → resposta.
 
 ---
 
-## Por que esse projeto
+## O que esse projeto representa
 
-A ideia aqui não era complexidade, e sim:
+Esse projeto fica num ponto intermediário interessante:
 
-- reforçar estruturas de dados em um contexto real  
-- praticar organização de código em C++  
-- sair do padrão “função isolada” e pensar em fluxo  
+não é só estrutura de dados, mas também não é um sistema complexo.
+
+É um passo na direção de juntar organização, fluxo e manipulação de dados em um único lugar.
 
 ---
 
-## Código 
+## Fechamento
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Price-Comparison-CPP).
+No fim, o código não é complicado.
+
+Mas ele já exige um tipo diferente de cuidado — menos com o algoritmo isolado e mais com como tudo se conecta.
+
+E esse tipo de mudança, mesmo em projetos pequenos, já altera bastante a forma de pensar.
+
+---
+
+## Código
+
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Price-Comparison-CPP).
 
 ---
