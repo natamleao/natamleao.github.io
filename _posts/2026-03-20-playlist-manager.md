@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gerenciando playlists com lista encadeada circular em C"
+title: "Gerenciando playlists com lista encadeada circular (em C)"
 date: 2026-03-20
 categories: portfolio
 mathjax: false
