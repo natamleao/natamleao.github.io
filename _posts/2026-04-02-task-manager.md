@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gerenciando tarefas e organizando estado em uma aplicação web"
-date: 2026-03-18
+date: 2026-04-02
 categories: portfolio
 mathjax: false
 tags: [JavaScript, Web Development, Persistence]
