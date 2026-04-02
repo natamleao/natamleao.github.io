@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gerenciando alunos e persistindo dados (em C)"
+title: "Gerenciando alunos e persistindo dados"
 date: 2026-03-24
 categories: portfolio
 mathjax: false
