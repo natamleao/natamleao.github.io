@@ -10,56 +10,61 @@ github: https://github.com/natamleao/Insertion-Sort
 excerpt: "Implementação de Insertion Sort em C com medição de tempo para observar o comportamento na prática."
 ---
 
-## De onde veio a ideia
+## O ponto de partida
 
-*Insertion Sort* é um daqueles algoritmos que todo mundo vê cedo.
+*Insertion Sort* é um daqueles algoritmos que todo mundo conhece cedo.
 
-Simples, direto, fácil de implementar.
+Simples, direto, quase intuitivo.
+Você percorre o *array* e vai inserindo cada elemento na posição correta.
 
-Mas quase sempre ele fica só no nível conceitual: você aprende como funciona, entende a complexidade e segue em frente.
+Então a motivação aqui não foi “entender como funciona”.
 
-Aqui a ideia foi parar um pouco nisso e fazer algo mais concreto:
+Foi outra:
 
-> medir o comportamento real do algoritmo
-
----
-
-## O que foi feito
-
-Implementei em C:
-
-* uma estrutura de *array* dinâmica
-* o algoritmo completo de *Insertion Sort*
-* um módulo de medição de tempo com `clock_gettime`
-
-A proposta foi manter tudo simples e focar no comportamento do algoritmo, não na infraestrutura.
+> sair do nível teórico e observar o comportamento quando você mede de verdade
 
 ---
 
-## O algoritmo
+## Implementar é o básico
 
-O funcionamento é direto:
+A implementação segue o caminho esperado:
 
-* percorre o *array*
-* pega o elemento atual
-* insere na posição correta da parte já ordenada
+* *array* dinâmico para armazenar os dados
+* percurso sequencial
+* inserção na parte já ordenada
+* ordenação *in-place*
 
-Em termos de complexidade:
+Nada além do necessário.
 
-* melhor caso $\to O(n)$
-* médio/pior caso $\to O(n²)$
-
-Nada fora do esperado.
+E isso é intencional — quanto mais simples a base, mais claro fica o comportamento do algoritmo.
 
 ---
 
-## Medindo na prática
+## Onde começa a ficar interessante
 
-A medição usa `CLOCK_MONOTONIC`, evitando interferência externa e mantendo consistência nos resultados.
+A diferença aqui foi tratar a medição como parte central.
 
-Isso permite observar o tempo de execução conforme o tamanho do *array* cresce.
+Usei `clock_gettime` com `CLOCK_MONOTONIC` para capturar tempo de execução real.
 
-E é aí que o comportamento teórico começa a aparecer de forma concreta.
+Porque dizer que o algoritmo é $O(n^2)$ é fácil.
+
+> o que importa é ver o que isso significa quando você roda de fato
+
+---
+
+## O que muda quando você mede
+
+Com poucos elementos, o algoritmo é rápido.
+
+Direto, eficiente, sem overhead.
+
+Mas conforme o volume cresce, o comportamento começa a se acumular:
+
+* cada inserção passa a custar mais
+* mais elementos precisam ser deslocados
+* o tempo total cresce de forma agressiva
+
+Nada disso é surpresa — mas ver acontecendo é diferente.
 
 ---
 
@@ -70,55 +75,63 @@ E é aí que o comportamento teórico começa a aparecer de forma concreta.
        alt="Gráfico Insertion Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Insertion Sort — crescimento do tempo de execução (escala log)
+    Insertion Sort — crescimento acelerado do tempo (escala log)
   </p>
 </div>
 
-O gráfico deixa claro o padrão:
+O gráfico deixa isso bem claro.
 
-o crescimento começa controlado, mas rapidamente acelera.
+O crescimento começa controlado, mas rapidamente foge de escala.
 
-É o comportamento quadrático se acumulando conforme o tamanho aumenta.
+É o $n^2$ aparecendo sem suavização.
 
 ---
 
-## O que isso mostra
+## Um detalhe que chama atenção
 
-Enquanto o *array* é pequeno, o algoritmo funciona bem.
+O custo do algoritmo não está distribuído de forma uniforme.
 
-Mas à medida que cresce, cada inserção passa a custar mais — porque envolve deslocar uma parte maior dos elementos.
+Ele se acumula nas inserções.
 
-Esse custo se soma repetidamente, e o resultado aparece no tempo final.
+Quanto mais o *array* cresce, mais caro fica manter a ordenação incremental.
+
+E isso cria um efeito cascata que domina o tempo total.
 
 ---
 
 ## Limitações
 
-* medição baseada em uma execução
-* dados gerados de forma simples
-* uso de memória crescente com o tamanho do *array*
+A medição aqui não tenta ser rigorosa ao extremo:
 
-Nada que invalide o experimento, mas importante considerar.
+* uma execução por cenário
+* dados gerados de forma simples
+* sem análise estatística aprofundada
+
+Não é benchmark formal.
+
+Mas também não precisa ser pra mostrar o comportamento.
 
 ---
 
-## Por que explorar isso
+## Por que esse projeto existe
 
-A ideia aqui foi simples:
+Esse projeto não é sobre o algoritmo em si.
 
-> sair da complexidade teórica e observar o comportamento real
+É sobre observar o limite dele.
 
-Sem mudar o algoritmo, sem otimizações específicas — apenas medir.
+Porque enquanto o *Insertion Sort* funciona muito bem em cenários pequenos ou parcialmente ordenados, ele tem um ponto claro onde deixa de ser viável.
 
 ---
 
 ## Fechamento
 
-*Insertion Sort* continua sendo um algoritmo simples e útil em cenários específicos.
+*Insertion Sort* é simples — e essa simplicidade é exatamente o que o torna útil em certos contextos.
 
-Mas quando o problema cresce, o custo aparece rápido.
+Mas ela também impõe um limite.
 
-E medir isso na prática muda a forma como você enxerga algo que, na teoria, já parecia resolvido.
+Quando você mede, esse limite deixa de ser teórico e vira algo concreto.
+
+E isso muda completamente a forma como você enxerga o algoritmo.
 
 ---
 
