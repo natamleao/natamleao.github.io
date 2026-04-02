@@ -4,7 +4,7 @@ title: "Heap, Heap Sort e o que acontece quando você mede"
 date: 2026-03-30
 categories: portfolio
 mathjax: true
-tags: [C, Data Structures]
+tags: [C, Data Structures, Sorting]
 image: /assets/images/umbrellan.png
 github: https://github.com/natamleao/Heap-HeapSort
 excerpt: "Implementação de heap e Heap Sort em C com medição de tempo para observar o comportamento na prática."
