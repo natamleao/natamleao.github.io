@@ -10,99 +10,84 @@ github: https://github.com/natamleao/Playlist-Manager
 excerpt: "Gerenciador de playlists em C utilizando lista encadeada circular e manipulação manual de memória."
 ---
 
-## Um problema simples, tratado com a estrutura certa
+## Por que uma playlist?
 
-Esse projeto nasce de uma ideia direta: representar uma *playlist* de forma fiel ao seu comportamento.
+Esse projeto começou com uma ideia simples: pegar algo cotidiano — uma *playlist* — e modelar isso direito em C.
 
-Não como uma lista estática de elementos, mas como algo que **continua indefinidamente**. Uma sequência que não tem “último” no sentido prático — apenas um ponto de retorno.
+Não só armazenar músicas, mas representar o comportamento real. Aquele fluxo contínuo onde uma música leva à próxima, e a última naturalmente volta pra primeira, sem “fim” explícito.
 
-Isso levou naturalmente à escolha de uma **lista encadeada circular**.
-
----
-
-## Modelar comportamento, não só armazenar dados
-
-A estrutura resolve bem mais do que armazenamento.
-
-Ela define como a *playlist* se comporta:
-
-* a navegação nunca termina
-* não existe estado “fora da lista”
-* a transição entre músicas é contínua
-
-Isso evita tratamentos artificiais, como verificar fim de lista a todo momento. O próprio modelo elimina essa preocupação.
+Isso me interessou mais do que o problema em si.
 
 ---
 
-## Decisões que importam
+## A escolha da estrutura 
 
-Trabalhar com lista circular não é complicado — mas exige consistência.
+A decisão por uma **lista encadeada circular** veio quase como consequência.
 
-Operações simples em outras estruturas passam a ter mais impacto aqui:
+Não foi “vou usar isso porque é interessante”, mas sim:
+isso resolve o comportamento da forma mais direta possível.
 
-* remoção precisa preservar o ciclo
-* inserção precisa manter a integridade da referência inicial
-* percorrer a lista exige critério claro de parada
+Sem precisar ficar tratando exceções o tempo todo, tipo “chegou no final da lista”. Simplesmente não existe final — só continuidade.
 
-Nada disso é “difícil”, mas tudo exige atenção. Pequenos descuidos quebram a estrutura de forma silenciosa.
-
----
-
-## Organização acima de tudo
-
-Um ponto importante desse projeto foi manter o código bem separado:
-
-* interface em `.h`
-* implementação em `.c`
-* responsabilidades bem definidas
-
-Isso permite que a estrutura de dados não fique misturada.
-
-Na prática, a *playlist* vira um módulo reutilizável, não só um bloco de código acoplado ao `main`.
+Esse tipo de encaixe entre problema e estrutura é o tipo de coisa que eu acho elegante.
 
 ---
 
-## Funcionalidade como consequência
+## Onde o detalhe começa a importar
 
-As funcionalidades surgem quase naturalmente a partir da base:
+Claro, essa escolha traz algumas responsabilidades.
 
-* inserção e remoção de músicas
-* ordenação por duração
-* busca
-* cálculo de estatísticas
-* leitura e escrita em arquivos
-* simulação de execução da playlist
+Nada absurdo, mas o suficiente pra não dar pra escrever no automático:
 
-Nada disso exige soluções exóticas — o ponto é que tudo se apoia na mesma estrutura consistente.
+* remover um elemento muda dependendo do contexto da lista
+* o ponteiro inicial precisa ser tratado com cuidado
+* percorrer a lista exige saber exatamente quando parar
 
----
-
-## O que vale destacar aqui
-
-Esse não é um projeto sobre “fazer muitas coisas”.
-
-É sobre fazer uma escolha estrutural adequada e deixar o resto se organizar em cima disso.
-
-A lista encadeada circular não foi usada por ser “diferente”, mas porque encaixa bem no problema.
-
-E quando a estrutura encaixa, o código tende a ficar mais direto, sem tratamentos desnecessários.
+São aquelas situações em que o código não é complexo, mas também não tolera descuido.
 
 ---
 
-## Fechamento
+## Construindo em cima disso
 
-No fim, esse projeto é menos sobre playlists e mais sobre representação.
+Com a base bem definida, o resto do projeto foi se organizando sem muita fricção:
 
-Sobre escolher uma estrutura que respeite o comportamento do problema desde o início — e evitar remendos depois.
+* adicionar e remover músicas
+* ordenar por duração
+* buscar elementos
+* carregar e salvar em arquivo
+* calcular estatísticas
+* simular a execução da *playlist*
 
-É um exercício simples na superfície, mas que reforça uma ideia que aparece o tempo todo:
+Nada aqui é particularmente sofisticado isoladamente. O ponto é que tudo se apoia na mesma estrutura e segue a mesma lógica.
 
-> boas decisões estruturais economizam complexidade lá na frente.
+---
+
+## Um detalhe que eu valorizo
+
+Uma coisa que fiz questão foi manter o código organizado:
+
+separar interface de implementação, evitar misturar lógica de dados com entrada/saída, deixar o módulo da *playlist* relativamente independente.
+
+Não é nada revolucionário, mas é o tipo de cuidado que evita bagunça quando o projeto cresce.
+
+---
+
+## No fim
+
+Esse projeto não é sobre complexidade.
+
+É sobre pegar uma ideia simples e modelar direito, sem forçar solução.
+
+Pra mim, o mais interessante aqui foi justamente isso:
+quando a estrutura encaixa bem, o resto deixa de ser problema e vira consequência.
+
+E esse tipo de ajuste fino — entre problema e representação — é o tipo de coisa que eu gosto de perseguir.
+
 
 ---
 
 ## Código
 
-O projeto completo está disponível no [GitHub](https://github.com/natamleao/Playlist-Manager).
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Playlist-Manager).
 
 ---
