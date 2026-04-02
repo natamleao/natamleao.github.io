@@ -10,72 +10,111 @@ github: https://github.com/natamleao/Price-Comparison-C
 excerpt: "Sistema em C para manipulação e análise de preços com controle manual de memória."
 ---
 
-## Ideia
+## Voltando um nível abaixo
 
-Depois de implementar a versão em C++ (clique [aqui](https://natamleao.github.io/price-comparison-cpp/) para vê-la), quis voltar um passo e fazer o mesmo tipo de sistema em **C puro**.
+Depois de fazer a versão em C++ (clique [aqui](https://natamleao.github.io/price-comparison-cpp/) para vê-la), esse projeto foi quase um “desmonte”.
 
-Sem classes, sem abstrações — só ponteiros, structs e controle manual.
+Mesma ideia geral — comparar preços — mas tirando tudo que a linguagem resolve por você.
 
----
+Sem classes, sem abstração forte, sem proteção.
 
-## O que foi feito
-
-Um sistema simples para:
-
-- inserir itens com identificador e preço  
-- atualizar e remover dados  
-- listar os elementos  
-- avaliar os preços  
-
-Tudo baseado em uma **lista encadeada**.
+Só C direto.
 
 ---
 
-## Diferença principal
+## O problema em si 
 
-Aqui não tem encapsulamento.
+A ideia é simples: registrar preços e tomar uma decisão básica — vale a pena comprar ou não.
 
-Isso muda bastante coisa:
+Mas o interessante não está na regra de decisão.
 
-- os dados ficam expostos  
-- a responsabilidade de organização é maior  
-- o controle de memória precisa ser explícito  
+Está em como organizar isso sem apoio da linguagem.
 
-Cada `malloc` e `free` importa.
+* armazenar itens
+* atualizar dados
+* remover elementos
+* percorrer e analisar
 
----
-
-## Estrutura
-
-Usei uma lista encadeada simples.
-
-Ela resolve bem o problema e mantém o código direto, sem estruturas auxiliares.
+Tudo isso com controle explícito.
 
 ---
 
-## Um ponto importante
+## A estrutura escolhida
 
-Comparado com a versão em C++, esse código exige mais cuidado:
+Usei uma **lista encadeada simples**.
 
-- não há proteção contra uso incorreto  
-- erros de memória aparecem fácil  
-- a organização depende mais de disciplina do que da linguagem  
+Nada além do necessário.
 
-Por outro lado, dá uma visão mais clara de como tudo funciona por baixo.
+Ela resolve bem inserção e remoção, mantém o código enxuto e não força nenhuma complexidade artificial.
+
+É o tipo de escolha que não chama atenção — e isso é bom.
 
 ---
 
-## Por que esse projeto
+## Onde o C pesa mais
 
-A ideia foi entender melhor a diferença prática entre:
+Comparando com a versão em C++, a diferença não é só sintática.
 
-- resolver um problema com abstração (C++)  
-- resolver o mesmo problema com controle total (C)  
- 
+Ela aparece na responsabilidade:
+
+* não existe encapsulamento real protegendo os dados
+* qualquer função pode acessar e modificar tudo
+* memória precisa ser gerenciada manualmente
+
+Cada `malloc` precisa de um `free`.
+Cada ponteiro precisa estar correto o tempo todo.
+
+Não tem amortecedor.
+
+---
+
+## Um detalhe que eu quis manter
+
+Mesmo sendo C, a organização não ficou largada.
+
+Separei interface e implementação, modularizei o código e evitei misturar lógica de dados com entrada/saída.
+
+Não é algo que a linguagem impõe — é disciplina mesmo.
+
+E faz diferença.
+
+---
+
+## Sobre a “análise” de preços
+
+A parte de decisão é propositalmente simples.
+
+Ela não tenta ser realista nem precisa ser.
+
+Serve mais como uma camada em cima da estrutura, só pra dar sentido ao uso dos dados.
+
+E também deixa o programa menos seco.
+
+---
+
+## O que esse projeto representa
+
+Pra mim, ele é menos sobre comparação de preços e mais sobre contraste:
+
+* em C++, você descreve o que quer
+* em C, você precisa garantir que tudo funcione
+
+Mesma ideia, dois níveis diferentes de controle.
+
+---
+
+## Fechamento
+
+Esse tipo de projeto é direto, mas não trivial.
+
+Quando você tira as abstrações, fica mais claro onde estão os problemas de verdade.
+
+E, ao mesmo tempo, mais claro o quanto a organização do código passa a depender de você — não da linguagem.
+
 ---
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Price-Comparison-C).
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Price-Comparison-C).
 
 ---
