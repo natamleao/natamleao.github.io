@@ -44,7 +44,7 @@ A diferença aqui foi adicionar medição de tempo de execução usando `clock_g
 
 Não como detalhe, mas como parte central do projeto.
 
-Porque até então, *Heap Sort* é só mais um algoritmo com complexidade $O(nlog\,n)$.
+Porque até então, *Heap Sort* é só mais um algoritmo com complexidade $O(n \log n)$.
 
 Mas isso, sozinho, não diz muita coisa na prática.
 
@@ -64,6 +64,23 @@ Tem uma diferença grande entre saber e observar.
 
 ---
 
+## Gráfico: crescimento do tempo
+
+<div style="text-align: center;">
+  <img src="/assets/images/post-images/graphics/Gráfico - Heap Sort.svg"
+       alt="Gráfico Heap Sort"
+       style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Heap Sort — crescimento do tempo de execução (escala log)
+  </p>
+</div>
+
+O comportamento é bem estável.
+
+O tempo cresce, claro, mas de forma controlada — sem aquele salto abrupto que aparece em algoritmos quadráticos.
+
+---
+
 ## Um detalhe que chama atenção
 
 Uma coisa que fica clara é como o custo está concentrado.
@@ -71,11 +88,11 @@ Uma coisa que fica clara é como o custo está concentrado.
 A construção da *heap* é relativamente rápida.
 Mas o processo de extração + *heapify* repetido é onde o algoritmo realmente “paga o preço”.
 
-É ali que o $log\,n$ se manifesta várias vezes, acumulando.
+É ali que o $\log n$ aparece repetidamente, acumulando custo ao longo da execução.
 
 ---
 
-## Limitações 
+## Limitações
 
 A medição aqui não tenta ser rigorosa ao extremo:
 
