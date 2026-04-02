@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparando preços com controle manual (em C)"
+title: "Comparando preços com controle manual"
 date: 2026-03-18
 categories: portfolio
 mathjax: false
