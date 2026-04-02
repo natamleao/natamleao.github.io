@@ -75,7 +75,7 @@ Mas o processo de extração + *heapify* repetido é onde o algoritmo realmente 
 
 ---
 
-## Limitações (do jeito que tem que ser)
+## Limitações 
 
 A medição aqui não tenta ser rigorosa ao extremo:
 
