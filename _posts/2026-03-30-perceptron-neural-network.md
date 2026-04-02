@@ -10,28 +10,31 @@ github: https://github.com/natamleao/Perceptron-Neural-Network
 excerpt: "Implementação de um perceptron em Python para entender como modelos lineares aprendem — e onde falham."
 ---
 
-## Ideia
+## O ponto de partida
 
-O perceptron é um modelo simples, mas importante.
+O perceptron é um daqueles modelos que parecem simples demais à primeira vista.
 
-Ele resolve um problema básico:  
-> separar dados em duas classes usando uma fronteira linear
+Mas tem um detalhe importante:
 
-E ao mesmo tempo deixa claro onde isso deixa de funcionar.
+> ele já contém a ideia essencial de aprendizado
+
+Mesmo que de forma limitada.
 
 ---
 
-## O que foi feito
+## Mais do que um exercício
 
-Implementei um perceptron em Python com um fluxo completo:
+A implementação em si não tem mistério.
 
-- geração de dados (AND, OR, XOR e 2D)  
-- pré-processamento  
-- treinamento supervisionado  
-- avaliação  
-- visualização da fronteira de decisão  
+Um somatório, uma função de ativação, ajuste de pesos.
 
-Sem usar frameworks prontos — só o modelo na mão.
+Mas a intenção aqui não foi só implementar.
+
+Foi entender o comportamento:
+
+* o que ele aprende
+* como ele aprende
+* onde ele simplesmente não consegue ir
 
 ---
 
@@ -46,6 +49,10 @@ y = \begin{cases}
 \end{cases}
 $$
 
+Isso define uma fronteira de decisão — uma linha (ou hiperplano, em dimensões maiores).
+
+É só isso.
+
 Esse modelo deriva diretamente da ideia de neurônio artificial, que descrevi [aqui](https://natamleao.github.io/artificial-neuron).  
 
 A função de ativação utilizada é um degrau bipolar. Também escrevi uma nota sobre isso [aqui](https://natamleao.github.io/activation-functions).
@@ -59,26 +66,48 @@ b^{\text{novo}} = b^{\text{antigo}} + \alpha (t^{(k)} - y^{(k)})
 \end{cases}
 $$
 
-Nada muito sofisticado — mas suficiente para aprender padrões simples.
+Nada sofisticado — mas suficiente para capturar padrões simples.
 
 ---
 
-## O ponto central
+## Onde ele funciona
 
-O perceptron funciona bem quando os dados são **linearmente separáveis**.
+Quando os dados podem ser separados por uma linha, ele converge.
 
-Exemplos:
+Casos simples deixam isso claro:
 
-- AND  
-- OR  
+* AND
+* OR
 
-Mas falha em casos como:
+Aqui, o modelo aprende rápido e se ajusta sem dificuldade.
 
-- XOR  
+---
 
-Porque não existe uma linha que separe corretamente os dados.
+## Onde ele quebra
 
-Esse limite é importante — ele mostra por que modelos mais complexos surgiram.
+O problema aparece quando a separação deixa de ser linear.
+
+O exemplo clássico é o XOR.
+
+Não importa o quanto você treine:
+
+> o modelo não converge
+
+E isso não é falha da implementação — é limitação do próprio modelo.
+
+---
+
+## O que isso mostra
+
+Esse ponto é mais interessante do que parece.
+
+Porque ele revela algo fundamental:
+
+> o modelo não aprende “qualquer coisa” — ele aprende o que a sua forma permite
+
+No caso do perceptron, essa forma é linear.
+
+Se o problema exige algo além disso, ele simplesmente não consegue representar.
 
 ---
 
@@ -97,33 +126,35 @@ A parte mais interessante é ver a fronteira de decisão se ajustando ao longo d
   </div>
 </div>
 
----
+Ver isso acontecendo deixa o processo menos abstrato.
 
-## Um detalhe importante
-
-Esse projeto deixa evidente uma coisa:
-
-> aprender não significa entender qualquer padrão
-
-O modelo só aprende aquilo que cabe dentro da forma que ele consegue representar.
-
-No caso do perceptron: linhas.
+O modelo ajusta os pesos, move a fronteira e tenta corrigir erros — mas sempre dentro do que ele consegue representar.
 
 ---
 
 ## Por que esse projeto
 
-A ideia aqui foi:
+A ideia aqui foi bem direta:
 
-- entender o funcionamento básico de redes neurais  
-- implementar o treinamento manualmente  
-- visualizar como o modelo aprende  
-- observar onde ele falha  
+* sair da definição teórica
+* implementar o aprendizado passo a passo
+* visualizar o processo
+* entender o limite do modelo na prática
+
+---
+
+## Fechamento
+
+O perceptron é simples — e é justamente por isso que ele é útil.
+
+Ele mostra o começo.
+
+E também deixa claro onde esse começo deixa de ser suficiente.
 
 ---
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Perceptron-Neural-Network).
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Perceptron-Neural-Network).
 
 ---
