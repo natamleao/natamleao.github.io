@@ -3,112 +3,116 @@ layout: post
 title: "Heap, Heap Sort e o que acontece quando você mede"
 date: 2026-03-30
 categories: portfolio
-mathjax: false
+mathjax: true
 tags: [C, Data Structures]
 image: /assets/images/umbrellan.png
 github: https://github.com/natamleao/Heap-HeapSort
 excerpt: "Implementação de heap e Heap Sort em C com medição de tempo para observar o comportamento na prática."
 ---
 
-## Ideia
+## O ponto de partida
 
-*Heap* e *Heap Sort* são clássicos.
+*Heap* e *Heap Sort* não têm mistério. São estruturas e algoritmos bem estabelecidos, bem documentados e já explorados até o limite.
 
-Mas implementar não é o mais interessante.
+Então a motivação aqui não foi “entender como funciona”.
 
-> o interessante é ver como isso se comporta quando você mede de verdade
+Foi outra coisa:
 
----
-
-## O que foi feito
-
-Implementei em C:
-
-- uma *Max-Heap* baseada em *array*  
-- operações essenciais para o *Heap Sort* (*heapify* e construção da *heap*)  
-- *Heap Sort* *in-place*  
-- um módulo de medição de tempo com `clock_gettime`  
-
-A ideia foi sair do “funciona” e ir pro “quanto custa”.
+> sair do nível teórico e olhar o comportamento quando você mede de fato
 
 ---
 
-## Estrutura
+## Implementar é o básico
 
-A *heap* é representada como um *array*, usando as relações clássicas:
+A implementação seguiu o caminho padrão:
 
-- pai → `(i - 1) / 2`  
-- filho esquerdo → `2*i + 1`  
-- filho direito → `2*i + 2`  
+* *max-heap* baseada em *array*
+* relações clássicas entre pai e filhos
+* construção da *heap*
+* *heapify*
+* ordenação *in-place*
 
-Nada fora do padrão — o foco aqui não foi reinventar a estrutura.
+Nada fora do esperado.
 
----
-
-## Heap Sort
-
-O algoritmo segue o fluxo esperado:
-
-1. construir a *heap*  
-2. trocar a raiz com o último elemento  
-3. reduzir a parte ativa  
-4. reorganizar com *heapify*  
-
-Aqui implementei apenas o necessário para o processo de ordenação, sem operações completas de manipulação como inserção ou remoção genérica.
+E isso é proposital — quando a base é conhecida, fica mais fácil observar o que realmente interessa depois.
 
 ---
 
-## Medição
+## Onde começa a ficar interessante
 
-Usei `clock_gettime` com `CLOCK_MONOTONIC`.
+A diferença aqui foi adicionar medição de tempo de execução usando `clock_gettime`.
 
-Isso evita interferência de ajustes no relógio do sistema e dá uma medição mais confiável.
+Não como detalhe, mas como parte central do projeto.
 
-No código:
+Porque até então, *Heap Sort* é só mais um algoritmo com complexidade $O(nlog\,n)$.
 
-```c
-double executionTime = executionTimeCalculate(heapSort, heap);
-executionTimePrint(executionTime);
-````
+Mas isso, sozinho, não diz muita coisa na prática.
 
 ---
 
-## Um detalhe importante
+## O que muda quando você mede
 
-Medir muda a forma como você olha o algoritmo.
+Quando você roda o algoritmo com volumes maiores de dados, algumas coisas começam a ficar mais concretas:
 
-Uma coisa é saber que *Heap Sort* é `O(n log n)`.
+* o crescimento do tempo deixa de ser abstrato
+* o custo de reorganizar a *heap* aparece com mais clareza
+* o impacto de trabalhar *in-place* fica evidente
 
-Outra é:
+Nada disso contradiz a teoria — mas também não é algo que você “sente” só olhando pra notação assintótica.
 
-* rodar com milhões de elementos
-* ver o tempo real
-* perceber custo de memória e alocação
-
----
-
-## Limitações
-
-* medição baseada em uma execução
-* geração de dados aleatórios simples
-* uso de memória elevado para testes grandes
-
-Nada crítico — mas importante deixar claro.
+Tem uma diferença grande entre saber e observar.
 
 ---
 
-## Por que esse projeto
+## Um detalhe que chama atenção
 
-A ideia aqui foi simples:
+Uma coisa que fica clara é como o custo está concentrado.
 
-* implementei uma estrutura clássica
-* apliquei um algoritmo conhecido
-* observei o comportamento na prática
+A construção da *heap* é relativamente rápida.
+Mas o processo de extração + *heapify* repetido é onde o algoritmo realmente “paga o preço”.
+
+É ali que o $log\,n$ se manifesta várias vezes, acumulando.
+
+---
+
+## Limitações (do jeito que tem que ser)
+
+A medição aqui não tenta ser rigorosa ao extremo:
+
+* uma execução por cenário
+* dados gerados de forma simples
+* sem análise estatística aprofundada
+
+Não é benchmark científico.
+
+Mas também não era essa a intenção.
+
+---
+
+## Por que esse projeto existe
+
+Esse projeto não é sobre reinventar *Heap Sort*.
+
+É sobre dar um passo além do “funciona” e entrar no “como se comporta”.
+
+Porque em algum momento, só saber a teoria começa a ficar pouco.
+
+---
+
+## Fechamento
+
+No fim, a estrutura e o algoritmo são os mesmos de sempre.
+
+O que muda é a forma de olhar.
+
+Quando você mede, a complexidade deixa de ser só uma ideia e vira algo observável — quase palpável.
+
+E isso, por mais simples que pareça, muda bastante a forma como você enxerga algoritmos clássicos.
 
 ---
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Heap-HeapSort).
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Heap-HeapSort).
 
 ---
