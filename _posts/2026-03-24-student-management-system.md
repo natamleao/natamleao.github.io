@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gerenciando alunos e persistindo dados em C"
+title: "Gerenciando alunos e persistindo dados (em C)"
 date: 2026-03-24
 categories: portfolio
 mathjax: false
@@ -10,90 +10,141 @@ github: https://github.com/natamleao/Student-Management-System
 excerpt: "Sistema em C com lista duplamente encadeada e persistência em arquivo binário."
 ---
 
-## Ideia
+## Um passo além da memória
 
-Queria ir além de estruturas isoladas e montar algo mais próximo de um sistema.
+Esse projeto nasceu de uma mudança simples de foco.
 
-Nesse caso:  
-> armazenar dados, manipular em memória e persistir de forma consistente
+Até então, os programas começavam, rodavam e acabavam — tudo existia só durante a execução.
 
-Sem depender de bibliotecas externas.
+Aqui a ideia foi outra:
 
----
+> manter dados vivos mesmo depois do programa terminar
 
-## O que foi feito
-
-Implementei um gerenciador de alunos em C que permite:
-
-- cadastrar e remover registros  
-- buscar por matrícula  
-- listar dados  
-- manter persistência automática em arquivo  
-
-Cada aluno possui informações básicas e um campo adicional (livro favorito), adicionando um pouco mais de estrutura aos dados.
+Isso muda bastante o tipo de problema.
 
 ---
 
-## Estrutura escolhida
+## Não é só armazenar — é manter consistência
+
+Gerenciar alunos, por si só, não é complicado:
+
+* cadastrar
+* remover
+* buscar
+* listar
+
+Mas quando você adiciona persistência, entra outra camada:
+
+* o que está em memória precisa refletir o que está em disco
+* leitura e escrita precisam ser compatíveis
+* qualquer inconsistência quebra tudo silenciosamente
+
+Deixa de ser só manipulação de dados — vira manutenção de estado.
+
+---
+
+## A escolha da estrutura
 
 Usei uma **lista duplamente encadeada**.
 
-Isso facilita:
+Aqui a escolha foi bem intencional.
 
-- inserções nas extremidades  
-- remoções sem percorrer toda a lista  
-- navegação nos dois sentidos  
+Ela não é a mais simples, mas resolve bem algumas operações:
 
-Não é a estrutura mais simples, mas deixa as operações mais equilibradas.
+* remoção sem precisar percorrer desde o início
+* navegação nos dois sentidos
+* inserções mais flexíveis
+
+Para um sistema que sofre alterações frequentes, isso ajuda a manter o comportamento previsível.
 
 ---
 
-## Persistência
+## Onde o projeto realmente começa
 
-Os dados são armazenados em **arquivo binário**.
+A parte mais interessante não foi a lista.
 
-Aqui a ideia foi evitar parsing de texto e trabalhar direto com bytes.
+Foi a persistência em **arquivo binário**.
+
+Em vez de serializar para texto, a ideia foi trabalhar direto com bytes.
 
 Isso exige mais cuidado:
 
-- definir um formato consistente  
-- serializar strings manualmente  
-- reconstruir estruturas na leitura  
+* definir exatamente o que é escrito
+* garantir que a leitura reconstrua corretamente
+* lidar com tamanhos variáveis (principalmente strings)
 
-Mas em troca, o acesso fica mais direto.
-
----
-
-## Um ponto importante
-
-Quando você mistura:
-
-- memória dinâmica  
-- estruturas encadeadas  
-- escrita em arquivo  
-
-os erros ficam mais fáceis de aparecer.
-
-Esse tipo de projeto força mais atenção em:
-
-- alocação e liberação correta  
-- cópia de dados (especialmente strings)  
-- consistência entre leitura e escrita  
+Nada disso é difícil isoladamente — mas tudo precisa bater exatamente.
 
 ---
 
-## Por que esse projeto
+## Um detalhe que faz diferença
 
-A ideia aqui foi:
+Strings não são triviais aqui.
 
-- trabalhar com dados além do tempo de execução  
-- entender melhor serialização manual   
-- aproximar o código de algo mais próximo de um sistema real  
+Salvar um inteiro é direto.
+Salvar uma string exige:
+
+* armazenar o tamanho
+* escrever o conteúdo
+* reconstruir corretamente depois
+
+Se qualquer parte disso falhar, o dado corrompe.
+
+E não tem aviso.
+
+---
+
+## Quando as coisas começam a se conectar
+
+Esse projeto junta várias camadas que isoladamente são simples:
+
+* memória dinâmica
+* estruturas encadeadas
+* manipulação de arquivos
+
+Mas juntas, elas exigem mais rigor.
+
+Você precisa garantir:
+
+* alocação correta
+* liberação correta
+* cópia correta
+* leitura e escrita coerentes
+
+Não dá pra “deixar passar”.
+
+---
+
+## O que esse projeto representa
+
+Ele fica num ponto interessante entre exercício e sistema real.
+
+Não é complexo, mas já força a pensar em:
+
+* persistência
+* consistência
+* organização de dados
+
+Coisas que não aparecem quando tudo vive só em memória.
+
+---
+
+## Fechamento
+
+A principal diferença aqui não está no algoritmo nem na estrutura.
+
+Está no fato de que os dados continuam existindo depois.
+
+E isso muda o tipo de cuidado que o código exige.
+
+Quando você passa a lidar com estado persistente, pequenos erros deixam de ser locais — eles se acumulam.
+
+E é aí que o nível do problema sobe.
 
 ---
 
 ## Código
 
-O projeto completo está disponível [aqui](https://github.com/natamleao/Student-Management-System).
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Student-Management-System).
 
 ---
