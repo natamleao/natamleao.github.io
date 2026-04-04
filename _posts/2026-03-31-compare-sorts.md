@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Comparando Heap Sort e Insertion Sort: tempo real"
-date: 2026-03-30
+date: 2026-03-31
 categories: portfolio
 mathjax: true
 tags: [C, Algorithms, Sorting]
