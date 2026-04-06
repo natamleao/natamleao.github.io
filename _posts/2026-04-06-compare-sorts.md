@@ -4,7 +4,7 @@ title: "Comparando diferentes algoritmos de ordenação em C"
 date: 2026-04-06
 categories: portfolio
 mathjax: true
-tags: [C, Algorithms, Sorting, Performance]
+tags: [C, Algorithms, Sorting]
 image: "/assets/images/sorts-comparison.png"
 github: https://github.com/natamleao/Compare-Sorts
 excerpt: "Comparação prática de Bubble Sort, Insertion Sort, Optimized Bubble, Selection Sort, Merge Sort e Quick Sort em C com medição de tempo."
