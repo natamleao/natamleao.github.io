@@ -84,72 +84,93 @@ Conforme o tamanho cresce, a diferença deixa de ser detalhe e vira estrutura.
 
 ## Gráficos de comparação
 
-* **Gráfico 1:** *Bubble Sort* — crescimento do tempo de execução
+* **Gráfico 1**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - bubble-sort.svg"
        alt="Bubble Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Bubble Sort — crescimento do tempo de execução
+  </p>
 </div>
 
 ---
 
-* **Gráfico 2:** *Optimized Bubble Sort* — crescimento do tempo de execução
+* **Gráfico 2**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - optimized-bubble-sort.svg"
        alt="Optimized Bubble Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Optimized Bubble Sort — crescimento do tempo de execução
+  </p>
 </div>
 
 ---
 
-* **Gráfico 3:** *Insertion Sort* — crescimento do tempo de execução
+* **Gráfico 3** 
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - insertion-sort.svg"
        alt="Insertion Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Insertion Sort — crescimento do tempo de execução
+  </p>
 </div>
 
 ---
 
-* **Gráfico 4:** *Selection Sort* — crescimento do tempo de execução
+* **Gráfico 4**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - selection-sort.svg"
        alt="Selection Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Selection Sort — crescimento do tempo de execução
+  </p>
 </div>
 
 ---
 
-* **Gráfico 5:** *Merge Sort* — crescimento do tempo de execução
+* **Gráfico 5** 
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - merge-sort.svg"
        alt="Merge Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Merge Sort — crescimento do tempo de execução
+  </p>
 </div>
 
 ---
 
-* **Gráfico 6:** *Quick Sort* — crescimento do tempo de execução
+* **Gráfico 6** 
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - quick-sort.svg"
        alt="Quick Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Quick Sort — crescimento do tempo de execução
+  </p>
 </div>
 
 ---
 
-* **Gráfico 7:** Comparação direta — todos os algoritmos
+* **Gráfico 7** 
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - comparison-all-sorts.svg"
        alt="Comparação geral"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Comparação direta — todos os algoritmos
+  </p>
 </div>
 
 ---
