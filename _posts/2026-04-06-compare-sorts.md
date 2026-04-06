@@ -65,7 +65,7 @@ double executionTimeCalculate(void (*function)(void *), void *data){
     function(data);
     clock_gettime(CLOCK_MONOTONIC, &t2);
     
-    return elapsed(t1, t2); // retorna em segundos (double)
+    return elapsed(t1, t2); // retorna em nanosegundos (double)
 }
 ````
 
