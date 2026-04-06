@@ -6,7 +6,7 @@ categories: portfolio
 mathjax: true
 tags: [C, Algorithms, Sorting]
 image: "/assets/images/heap-vs-insertion.png"
-github: https://github.com/natamleao/Compare-Sorts
+github: https://github.com/natamleao/Compare-Insertion-Heap-Sort
 excerpt: "Comparação prática entre Heap Sort e Insertion Sort em C com medição de tempo, mostrando o custo real de cada algoritmo."
 ---
 
@@ -177,6 +177,6 @@ Vira uma decisão prática.
 
 ## Código
 
-Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Compare-Sorts).
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Compare-Insertion-Heap-Sort).
 
 ---
