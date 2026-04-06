@@ -71,7 +71,7 @@ Nada disso é surpresa — mas ver acontecendo é diferente.
 ## Gráfico: crescimento do tempo
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/Gráfico - Insertion Sort.svg"
+  <img src="/assets/images/post-images/graphics/CIH/graphic - insertion sort.svg"
        alt="Gráfico Insertion Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
