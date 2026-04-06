@@ -81,8 +81,6 @@ void executionTimePrint(double executionTime){
 
 ## Gráficos de comparação
 
-> Aqui você deve adicionar os gráficos de tempo para cada algoritmo, assim como o gráfico geral comparativo.
-
 * **Gráfico 1:** Bubble Sort — crescimento do tempo de execução
 
 <div style="text-align: center;">
