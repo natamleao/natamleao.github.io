@@ -64,7 +64,7 @@ Tem uma diferença grande entre saber e observar.
 
 ---
 
-## Gráfico: crescimento do tempo
+## Gráfico
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CIH/graphic - heap sort.svg"
