@@ -81,14 +81,14 @@ Ela começa a ficar estrutural.
 
 ## Gráficos de comparação
 
-* **Gráfico 1:** *Heap Sort* — crescimento do tempo de execução
+* **Gráfico 1**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CIH/graphic - heap sort.svg"
        alt="Gráfico Heap Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Heap Sort — crescimento do tempo de execução (escala log)
+    Heap Sort — crescimento do tempo de execução 
   </p>
 </div>
 
@@ -97,14 +97,14 @@ Nada surpreendente — mas também nada fora de controle.
 
 ---
 
-* **Gráfico 2:** *Insertion Sort* — crescimento do tempo de execução
+* **Gráfico 2**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CIH/graphic - insertion sort.svg"
        alt="Gráfico Insertion Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Insertion Sort — crescimento acelerado do tempo (escala log)
+    Insertion Sort — crescimento acelerado do tempo
   </p>
 </div>
 
@@ -115,14 +115,14 @@ O comportamento quadrático aparece sem disfarce.
 
 ---
 
-* **Gráfico 3:** *Heap Sort* vs *Insertion Sort* — comparação direta
+* **Gráfico 3**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CIH/graphic - heap sort vs insertion sort.svg"
        alt="Comparação Heap Sort vs Insertion Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Heap Sort vs Insertion Sort — diferença de crescimento (escala log)
+    Heap Sort vs Insertion Sort — diferença de crescimento 
   </p>
 </div>
 
