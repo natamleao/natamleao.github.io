@@ -67,7 +67,7 @@ Tem uma diferença grande entre saber e observar.
 ## Gráfico: crescimento do tempo
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/Gráfico - Heap Sort.svg"
+  <img src="/assets/images/post-images/graphics/CIH/graphic - heap sort.svg"
        alt="Gráfico Heap Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
