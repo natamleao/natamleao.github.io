@@ -10,30 +10,47 @@ github: https://github.com/natamleao/Compare-Sorts
 excerpt: "Comparação prática de Bubble Sort, Insertion Sort, Optimized Bubble, Selection Sort, Merge Sort e Quick Sort em C com medição de tempo."
 ---
 
-## Por que comparar seis algoritmos clássicos?
+## A comparação que parece simples — mas muda quando você mede
 
-Algoritmos como *Bubble Sort*, *Insertion Sort*, *Selection Sort*, *Quick Sort*, *Merge Sort* e sua versão otimizada do *Bubble Sort* são clássicos da ciência da computação.
+*Bubble Sort*, *Insertion Sort*, *Selection Sort*, *Quick Sort* e *Merge Sort* aparecem em qualquer introdução à computação.
 
-Cada um tem características próprias:
+Alguns são simples.
+Outros são eficientes.
+$O(n²)\; \text{vs}\; O(n \log n)$.
 
-* Simplicidade vs complexidade
-* Crescimento quadrático vs logarítmico
-* Efeito real na prática, dependendo do tamanho do conjunto de dados
+Beleza. Isso todo mundo já viu.
 
-A ideia aqui foi colocar **todos sob as mesmas condições** e medir os tempos reais de execução.
+Mas essa comparação normalmente para na teoria.
+
+Aqui a ideia foi ir além:
+
+> colocar todos sob as mesmas condições e observar o comportamento real
 
 ---
 
 ## Como montei o experimento
 
-Nada sofisticado, mas consistente:
+Nada exagerado — mas com controle suficiente pra não distorcer o resultado:
 
-* Cada algoritmo recebe **os mesmos dados aleatórios**
-* Estruturas separadas para não interferir entre implementações
-* Medição com `clock_gettime` usando `CLOCK_MONOTONIC`
-* Conjunto de dados escalonado, indo de 1.000 até 1.000.000 de elementos
+* todos os algoritmos recebem **os mesmos dados**
+* cada execução é isolada
+* medição com `clock_gettime` usando `CLOCK_MONOTONIC`
+* foco direto em tempo de execução
 
-O foco é mostrar **tempo real de execução**, não apenas complexidade teórica.
+Não é benchmark acadêmico — mas também não é chute.
+
+---
+
+## Estruturas
+
+Cada algoritmo roda de forma independente:
+
+* *Bubble Sort* e *Optimized Bubble Sort* com array dinâmico
+* *Insertion Sort* com array dinâmico
+* *Selection Sort* com array dinâmico
+* *Quick Sort* e *Merge Sort* com funções recursivas sobre arrays
+
+Isso evita interferência e mantém a comparação justa.
 
 ---
 
@@ -49,55 +66,25 @@ Os testes foram executados no meu notebook:
 * Compilador: GCC
 * Flags: `-O2 -Wall -Werror`
 
-Vale lembrar que os mesmos testes em outras máquinas podem dar resultados distintos, por isso, não leve como parâmetro absoluto.
+Tempo de execução depende diretamente do ambiente — não é absoluto.
 
 ---
 
-## Estruturas utilizadas
+## O que acontece quando você escala
 
-Cada algoritmo roda sobre sua própria estrutura:
+Com entradas pequenas, todos convivem bem.
 
-* *Bubble Sort* e *Optimized Bubble Sort* usam array dinâmico
-* *Insertion Sort* usa array dinâmico
-* *Selection Sort* idem
-* *Quick Sort* e *Merge Sort* operam sobre arrays através de funções recursivas auxiliares
+Os algoritmos quadráticos até parecem aceitáveis.
 
-Isso garante medições justas.
+Mas isso não dura.
 
----
-
-## Medição de tempo
-
-O tempo é calculado assim:
-
-```c
-double elapsed(struct timespec a, struct timespec b){
-    return (b.tv_sec - a.tv_sec) * 1e9 + (b.tv_nsec - a.tv_nsec);
-}
-
-double executionTimeCalculate(void (*function)(void *), void *data){
-    struct timespec t1, t2;
-    clock_gettime(CLOCK_MONOTONIC, &t1);
-    function(data);
-    clock_gettime(CLOCK_MONOTONIC, &t2);
-    
-    return elapsed(t1, t2); // retorna em nanosegundos (double)
-}
-````
-
-E exibido em formato legível:
-
-```c
-void executionTimePrint(double executionTime){
-    printf("Tempo de execução: %.6f ms\n", executionTime / 1e6);
-}
-```
+Conforme o tamanho cresce, a diferença deixa de ser detalhe e vira estrutura.
 
 ---
 
 ## Gráficos de comparação
 
-* **Gráfico 1:** Bubble Sort — crescimento do tempo de execução
+* **Gráfico 1:** *Bubble Sort* — crescimento do tempo de execução
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - bubble-sort.svg"
@@ -105,7 +92,9 @@ void executionTimePrint(double executionTime){
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
 
-* **Gráfico 2:** Optimized Bubble Sort — crescimento do tempo de execução
+---
+
+* **Gráfico 2:** *Optimized Bubble Sort* — crescimento do tempo de execução
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - optimized-bubble-sort.svg"
@@ -113,7 +102,9 @@ void executionTimePrint(double executionTime){
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
 
-* **Gráfico 3:** Insertion Sort — crescimento do tempo de execução
+---
+
+* **Gráfico 3:** *Insertion Sort* — crescimento do tempo de execução
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - insertion-sort.svg"
@@ -121,61 +112,107 @@ void executionTimePrint(double executionTime){
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
 
-* **Gráfico 4:** Selection Sort — crescimento do tempo de execução
+---
+
+* **Gráfico 4:** *Selection Sort* — crescimento do tempo de execução
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/selection-sort.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - selection-sort.svg"
        alt="Selection Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
 
-* **Gráfico 5:** Merge Sort — crescimento do tempo de execução
+---
+
+* **Gráfico 5:** *Merge Sort* — crescimento do tempo de execução
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/merge-sort.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - merge-sort.svg"
        alt="Merge Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
 
-* **Gráfico 6:** Quick Sort — crescimento do tempo de execução
+---
+
+* **Gráfico 6:** *Quick Sort* — crescimento do tempo de execução
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/quick-sort.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - quick-sort.svg"
        alt="Quick Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
 
+---
+
 * **Gráfico 7:** Comparação direta — todos os algoritmos
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/comparison-all-sorts.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - comparison-all-sorts.svg"
        alt="Comparação geral"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
 
 ---
 
-## Observações
+## Tabela de tempos de execução
 
-* Algoritmos quadráticos (*Bubble*, *Insertion*, *Selection*) crescem rápido demais com a escala
-* *Merge Sort* e *Quick Sort* mantêm crescimento estável
-* Optimized Bubble melhora, mas ainda é inviável em grandes conjuntos
-* Colocando tudo lado a lado, fica evidente o efeito real da complexidade
+A tabela abaixo apresenta os tempos de execução (em milissegundos) para cada algoritmo:
+
+| N (elementos) | Bubble (ms) | Opt. Bubble (ms) | Insertion (ms) | Selection (ms) | Merge (ms) | Quick (ms) |
+|--------------|-------------|------------------|----------------|----------------|------------|------------|
+|              |             |                  |                |                |            |            |
+|              |             |                  |                |                |            |            |
+|              |             |                  |                |                |            |            |
+|              |             |                  |                |                |            |            |
+|              |             |                  |                |                |            |            |
+
+> *Obs.: valores ausentes indicam execuções inviáveis ou não realizadas devido ao alto custo computacional.*
 
 ---
 
-## Conclusão
+## O ponto onde alguns algoritmos deixam de ser opção
 
-Este projeto deixa explícita a diferença entre $O(n²)$ e $O(n log\,n)$ no mundo real.
+Em determinado momento, alguns algoritmos simplesmente deixam de ser utilizáveis.
 
-Medir é diferente de só calcular complexidade.
+Não é questão de otimização.
 
-A escolha do algoritmo impacta diretamente na prática — e não só na teoria.
+É limite estrutural.
 
---- 
+Algoritmos $O(n²)$ começam a crescer rápido demais.
 
-## Código 
+E aí não importa quão bem você implementou — eles não escalam.
 
-Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Compare-Sorts). 
+---
+
+## O que ficou evidente
+
+Algumas coisas ficam muito claras quando você mede:
+
+* algoritmos quadráticos degradam rápido
+* otimizações ajudam, mas não salvam
+* *Merge Sort* e *Quick Sort* mantêm crescimento controlado
+* a diferença não é teórica — é prática
+
+E principalmente:
+
+> chega um ponto em que o algoritmo deixa de ser lento e passa a ser inviável
+
+---
+
+## Fechamento
+
+Esse projeto não tenta provar nada novo.
+
+Só coloca vários algoritmos clássicos no mesmo cenário e mede o comportamento real.
+
+E quando você faz isso, complexidade deixa de ser notação.
+
+Vira decisão.
+
+---
+
+## Código
+
+Você pode encontrar o projeto completo [aqui](https://github.com/natamleao/Compare-Sorts).
 
 ---
