@@ -71,7 +71,7 @@ Tem uma diferença grande entre saber e observar.
        alt="Gráfico Heap Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Heap Sort — crescimento do tempo de execução (escala log)
+    Heap Sort — crescimento do tempo de execução
   </p>
 </div>
 
