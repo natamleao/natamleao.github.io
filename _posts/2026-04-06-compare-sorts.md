@@ -37,6 +37,22 @@ O foco é mostrar **tempo real de execução**, não apenas complexidade teóric
 
 ---
 
+## Ambiente de execução
+
+Os testes foram executados no meu notebook:
+
+* CPU: AMD Ryzen 7 5825U (8 cores / 16 threads)
+* RAM: 7.2 GiB
+* Sistema: Debian GNU/Linux 12 (Bookworm)
+* Arquitetura: x86-64
+* Armazenamento: SSD
+* Compilador: GCC
+* Flags: `-O2 -Wall -Werror`
+
+Vale lembrar que os mesmos testes em outras máquinas podem dar resultados distintos, por isso, não leve como parâmetro absoluto.
+
+---
+
 ## Estruturas utilizadas
 
 Cada algoritmo roda sobre sua própria estrutura:
@@ -150,7 +166,7 @@ void executionTimePrint(double executionTime){
 
 ## Conclusão
 
-Este projeto deixa explícita a diferença entre **O(n²)** e **O(n log n)** no mundo real.
+Este projeto deixa explícita a diferença entre $O(n²)$ e $O(n log\,n)$ no mundo real.
 
 Medir é diferente de só calcular complexidade.
 
