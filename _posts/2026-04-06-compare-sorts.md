@@ -179,15 +179,14 @@ Conforme o tamanho cresce, a diferença deixa de ser detalhe e vira estrutura.
 
 A tabela abaixo apresenta os tempos de execução (em milissegundos) para cada algoritmo:
 
-| N.º (elementos) | Bubble (ms)    | Opt. Bubble (ms) | Insertion (ms) | Selection (ms) | Merge (ms) | Quick (ms) |
-|-----------------|----------------|------------------|----------------|----------------|------------|------------|
-|10000            |361,624544      |364,714845        |76,949429       |211,061148      |0,859636    |1,451690    |
-|20000            |1.606,169487    |1.603,761088      |304,501276      |852,086087      |1,842094    |3,028975    |
-|50000            |13.123,687579   |14.213,013411     |2.860,407006    |7.165,880355    |5,008859    |8,442315    |
-|100000           |55.208,348125   |55.396,325305     |10.470,233065   |30.058,587046   |10,938960   |18,114353   |
-|200000           |218.630,002317  |213.176,660570    |39.398,041528   |122.283,170624  |23,857442   |38,206816   |
-|500000           |1.299.383,856519|1.357.327,845344  |262.459,643596  |752.881,908408  |62,221124   |99,667940   |
-|1000000          |4.904.768,177758|4.752.519,986914  |1.059.251,940304|2.382.382,947495|166,784639  |260,777667  |
+<div style="text-align: center;">
+  <img src="/assets/images/post-images/graphics/CS/times-table.png"
+       alt="Selection Sort"
+       style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Tabela - tempos de execução (ms)
+  </p>
+</div>
 
 ---
 
