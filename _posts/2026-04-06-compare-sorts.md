@@ -100,7 +100,7 @@ void executionTimePrint(double executionTime){
 * **Gráfico 1:** Bubble Sort — crescimento do tempo de execução
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/bubble-sort.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - bubble-sort.svg"
        alt="Bubble Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
@@ -108,7 +108,7 @@ void executionTimePrint(double executionTime){
 * **Gráfico 2:** Optimized Bubble Sort — crescimento do tempo de execução
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/optimized-bubble-sort.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - optimized-bubble-sort.svg"
        alt="Optimized Bubble Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
@@ -116,7 +116,7 @@ void executionTimePrint(double executionTime){
 * **Gráfico 3:** Insertion Sort — crescimento do tempo de execução
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/insertion-sort.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - insertion-sort.svg"
        alt="Insertion Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
 </div>
