@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Insertion Sort e o que acontece quando você mede"
+title: "Medindo o tempo de execução do algoritmo Insertion Sort em um experimento simples"
 date: 2026-03-30
 categories: portfolio
 mathjax: true
@@ -12,7 +12,7 @@ excerpt: "Implementação de Insertion Sort em C com medição de tempo para obs
 
 ## O ponto de partida
 
-*Insertion Sort* é um daqueles algoritmos que todo mundo conhece cedo.
+*Insertion Sort* é um dos algoritmos com os quais logo se tem contato na ciência da computação ou cursos correlatos.
 
 Simples, direto, quase intuitivo.
 Você percorre o *array* e vai inserindo cada elemento na posição correta.
@@ -52,11 +52,11 @@ Porque dizer que o algoritmo é $O(n^2)$ é fácil.
 
 ---
 
-## O que muda quando você mede
+## O que acontece na medição
 
 Com poucos elementos, o algoritmo é rápido.
 
-Direto, eficiente, sem overhead.
+Direto, eficiente, sem *overhead*.
 
 Mas conforme o volume cresce, o comportamento começa a se acumular:
 
@@ -107,7 +107,7 @@ A medição aqui não tenta ser rigorosa ao extremo:
 * dados gerados de forma simples
 * sem análise estatística aprofundada
 
-Não é benchmark formal.
+Não é *benchmark* formal.
 
 Mas também não precisa ser pra mostrar o comportamento.
 
