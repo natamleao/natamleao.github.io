@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Comparando diferentes algoritmos de ordenação com diferentes tamanhos de entradas"
+title: "Comparando algoritmos de ordenação com diferentes tamanhos de entrada"
 date: 2026-04-06
 categories: portfolio
 mathjax: true
 tags: [C, Algorithms, Sorting]
 image: "/assets/images/sorts-comparison.png"
 github: https://github.com/natamleao/Compare-Sorts
-excerpt: "Comparação prática de Bubble Sort, Insertion Sort, Optimized Bubble, Selection Sort, Merge Sort e Quick Sort em C com medição de tempo."
+excerpt: "Comparação prática de algoritmos de ordenação em C com benchmark baseado em múltiplas execuções e cópias isoladas dos dados."
 ---
 
 ## A comparação é simples e evidencia a diferença teórica de complexidade
@@ -16,7 +16,7 @@ excerpt: "Comparação prática de Bubble Sort, Insertion Sort, Optimized Bubble
 
 Alguns são simples.
 Outros são eficientes.
-$O(n²)\; \text{vs}\; O(n \log n)$.
+$O(n²)\; \text{vs}\; O(n\log\,n)$.
 
 Beleza. Isso quase todo mundo já viu.
 
@@ -39,16 +39,59 @@ Nada muito "acadêmico" — mas com controle suficiente pra não distorcer o res
 
 ---
 
-## Estruturas
+## Estrutura dos dados
 
-Cada algoritmo roda de forma independente:
+Foi utilizada uma estrutura própria:
 
-* *Bubble Sort* e *Optimized Bubble Sort* com array dinâmico
-* *Insertion Sort* com array dinâmico
-* *Selection Sort* com array dinâmico
-* *Quick Sort* e *Merge Sort* com funções recursivas sobre arrays
+```c
+typedef struct{
+    float *_data;
+    int _size;
+} StructureArray;
+````
 
-Isso evita interferência e mantém a comparação justa.
+Ela encapsula:
+
+* dados dinâmicos (`float*`)
+* tamanho do *array*
+
+Isso facilita controle de memória e organização do código.
+
+---
+
+## *Benchmark* (o ponto mais importante)
+
+Cada algoritmo não roda apenas uma vez.
+
+O processo é:
+
+1. O *array* original é gerado
+2. São criadas **4 cópias independentes**
+3. Cada cópia é ordenada separadamente
+4. O tempo médio é calculado
+
+Isso evita um problema clássico:
+
+> medir algoritmo sobre *array* já ordenado sem perceber
+
+Trecho simplificado:
+
+```c
+double time = benchmarkExecutionTime(bubbleSort, data, size);
+executionTimePrint(time);
+```
+
+---
+
+## Geração dos dados
+
+Os valores são gerados aleatoriamente no intervalo: ```[-1e6, 1e6]```
+
+E copiados para todos os algoritmos, garantindo:
+
+* mesma distribuição
+* mesma dificuldade
+* comparação justa
 
 ---
 
@@ -68,15 +111,16 @@ Isso é necessário deixar claro, o tempo depende e vária de máquina para máq
 
 ---
 
-## O que acontece quando se escala
+## Escalabilidade 
 
-Com entradas pequenas, todos convivem bem.
+Com entradas pequenas:
 
-Os algoritmos quadráticos até parecem aceitáveis.
+* tudo funciona
+* diferenças são pequenas
 
 Mas isso não dura.
 
-Conforme o tamanho cresce, a diferença deixa de ser detalhe e vira estrutura.
+Quando o tamanho cresce, a complexidade começa a mandar no jogo.
 
 ---
 
@@ -88,8 +132,8 @@ Conforme o tamanho cresce, a diferença deixa de ser detalhe e vira estrutura.
   <img src="/assets/images/post-images/graphics/CS/graphic - bubble-sort.svg"
        alt="Bubble Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Bubble Sort — crescimento do tempo de execução
+  <p style="font-size: 0.9em; color: gray;">
+    Bubble Sort — crescimento do tempo
   </p>
 </div>
 
@@ -101,21 +145,21 @@ Conforme o tamanho cresce, a diferença deixa de ser detalhe e vira estrutura.
   <img src="/assets/images/post-images/graphics/CS/graphic - optimized-bubble-sort.svg"
        alt="Optimized Bubble Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Optimized Bubble Sort — crescimento do tempo de execução
+  <p style="font-size: 0.9em; color: gray;">
+    Optimized Bubble Sort — crescimento do tempo
   </p>
 </div>
 
 ---
 
-* **Gráfico 3** 
+* **Gráfico 3**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - insertion-sort.svg"
        alt="Insertion Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Insertion Sort — crescimento do tempo de execução
+  <p style="font-size: 0.9em; color: gray;">
+    Insertion Sort — crescimento do tempo
   </p>
 </div>
 
@@ -127,105 +171,104 @@ Conforme o tamanho cresce, a diferença deixa de ser detalhe e vira estrutura.
   <img src="/assets/images/post-images/graphics/CS/graphic - selection-sort.svg"
        alt="Selection Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Selection Sort — crescimento do tempo de execução
+  <p style="font-size: 0.9em; color: gray;">
+    Selection Sort — crescimento do tempo
   </p>
 </div>
 
 ---
 
-* **Gráfico 5** 
+* **Gráfico 5**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - merge-sort.svg"
        alt="Merge Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Merge Sort — crescimento do tempo de execução
+  <p style="font-size: 0.9em; color: gray;">
+    Merge Sort — crescimento do tempo
   </p>
 </div>
 
 ---
 
-* **Gráfico 6** 
+* **Gráfico 6**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - quick-sort.svg"
        alt="Quick Sort"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Quick Sort — crescimento do tempo de execução
+  <p style="font-size: 0.9em; color: gray;">
+    Quick Sort — crescimento do tempo
   </p>
 </div>
 
 ---
 
-* **Gráfico 7** 
+* **Gráfico 7**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - comparison-all-sorts.svg"
        alt="Comparação geral"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Comparação direta — todos os algoritmos
+  <p style="font-size: 0.9em; color: gray;">
+    Comparação direta entre todos os algoritmos
   </p>
 </div>
 
 ---
 
-## Tabela de tempos de execução
-
-A tabela abaixo apresenta os tempos de execução (em milissegundos) para cada algoritmo:
+## Tabela de tempos
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/times-table.png"
-       alt="Selection Sort"
+       alt="Tabela de tempos"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Tabela - tempos de execução (ms)
+  <p style="font-size: 0.9em; color: gray;">
+    Tempos médios de execução (ms)
   </p>
 </div>
 
 ---
 
-## O ponto onde alguns algoritmos deixam de ser opção
+## Quando alguns algoritmos deixam de ser opção
 
-Em determinado momento, alguns algoritmos simplesmente deixam de ser utilizáveis.
-
-Não é questão de otimização.
+Existe um ponto onde não é mais questão de otimizar.
 
 É limite estrutural.
 
-Algoritmos $O(n²)$ começam a crescer rápido demais.
+Algoritmos $O(n^2)$:
 
-E aí não importa quão bem você implementou — eles não escalam.
+* crescem rápido demais
+* deixam de ser práticos
+* viram inviáveis
 
 ---
 
-## O que ficou evidente
+## O que fica evidente
 
-Algumas coisas ficam muito claras quando você mede:
+Quando você mede de verdade:
 
-* algoritmos quadráticos degradam rápido
-* otimizações ajudam, mas não salvam, como no caso do *Bubble Sort* otimizado
-* *Merge Sort* e *Quick Sort* mantêm crescimento controlado
-* a diferença não é teórica — é prática
+* algoritmos quadráticos colapsam rápido
+* otimizações ajudam, mas não resolvem
+* *Merge Sort* e *Quick Sort* escalam bem
+* a diferença deixa de ser teórica
 
 E principalmente:
 
-> chega um ponto em que o algoritmo deixa de ser lento e passa a ser inviável
+> chega um ponto em que o algoritmo deixa de ser lento e passa a ser inútil
 
 ---
 
 ## Fechamento
 
-Esse projeto não tenta provar nada novo.
+Nada aqui é novo.
 
-Só coloca vários algoritmos clássicos no mesmo cenário e mede o comportamento real.
+Mas medir muda tudo.
 
-E quando você faz isso, coloca a complexidade em tempo real.
+Quando você coloca teoria contra dados reais:
 
-Vira decisão.
+* complexidade vira comportamento
+* comportamento vira decisão
 
 ---
 
