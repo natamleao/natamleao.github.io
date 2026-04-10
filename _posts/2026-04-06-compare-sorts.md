@@ -66,7 +66,7 @@ Cada algoritmo não roda apenas uma vez.
 O processo é:
 
 1. O *array* original é gerado
-2. São criadas **4 cópias independentes**
+2. São criadas **100 cópias independentes**
 3. Cada cópia é ordenada separadamente
 4. O tempo médio é calculado
 
