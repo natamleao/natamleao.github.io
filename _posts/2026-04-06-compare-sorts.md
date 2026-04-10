@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparando diferentes algoritmos de ordenação"
+title: "Comparando diferentes algoritmos de ordenação com diferentes tamanhos de entradas"
 date: 2026-04-06
 categories: portfolio
 mathjax: true
@@ -10,34 +10,32 @@ github: https://github.com/natamleao/Compare-Sorts
 excerpt: "Comparação prática de Bubble Sort, Insertion Sort, Optimized Bubble, Selection Sort, Merge Sort e Quick Sort em C com medição de tempo."
 ---
 
-## A comparação que parece simples — mas muda quando você mede
+## A comparação é simples e evidencia a diferença teórica de complexidade
 
-*Bubble Sort*, *Insertion Sort*, *Selection Sort*, *Quick Sort* e *Merge Sort* aparecem em qualquer introdução à computação.
+*Bubble Sort*, *Insertion Sort*, *Selection Sort*, *Quick Sort* e *Merge Sort* aparecem em introdução à computação.
 
 Alguns são simples.
 Outros são eficientes.
 $O(n²)\; \text{vs}\; O(n \log n)$.
 
-Beleza. Isso todo mundo já viu.
+Beleza. Isso quase todo mundo já viu.
 
 Mas essa comparação normalmente para na teoria.
 
-Aqui a ideia foi ir além:
+Aqui a ideia foi ir à prática:
 
-> colocar todos sob as mesmas condições e observar o comportamento real
+> colocar todos sob as mesmas condições e observar o comportamento e tempo reais
 
 ---
 
 ## Como montei o experimento
 
-Nada exagerado — mas com controle suficiente pra não distorcer o resultado:
+Nada muito "acadêmico" — mas com controle suficiente pra não distorcer o resultado:
 
 * todos os algoritmos recebem **os mesmos dados**
 * cada execução é isolada
 * medição com `clock_gettime` usando `CLOCK_MONOTONIC`
 * foco direto em tempo de execução
-
-Nada muito acadêmico — mas também sem ser um chute.
 
 ---
 
@@ -66,11 +64,11 @@ Os testes foram executados no meu notebook:
 * Compilador: GCC
 * Flags: `-O2 -Wall -Werror`
 
-Tempo de execução depende diretamente do ambiente — não é absoluto.
+Isso é necessário deixar claro, o tempo depende e vária de máquina para máquina.
 
 ---
 
-## O que acontece quando você escala
+## O que acontece quando se escala
 
 Com entradas pequenas, todos convivem bem.
 
@@ -209,7 +207,7 @@ E aí não importa quão bem você implementou — eles não escalam.
 Algumas coisas ficam muito claras quando você mede:
 
 * algoritmos quadráticos degradam rápido
-* otimizações ajudam, mas não salvam
+* otimizações ajudam, mas não salvam, como no caso do *Bubble Sort* otimizado
 * *Merge Sort* e *Quick Sort* mantêm crescimento controlado
 * a diferença não é teórica — é prática
 
@@ -225,7 +223,7 @@ Esse projeto não tenta provar nada novo.
 
 Só coloca vários algoritmos clássicos no mesmo cenário e mede o comportamento real.
 
-E quando você faz isso, complexidade deixa de ser notação.
+E quando você faz isso, coloca a complexidade em tempo real.
 
 Vira decisão.
 
