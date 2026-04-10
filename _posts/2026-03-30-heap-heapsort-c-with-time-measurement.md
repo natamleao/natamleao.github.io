@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Heap, Heap Sort e o que acontece quando você mede"
+title: "Medindo o tempo de execução do algoritmo Heap Sort em um experimento simples"
 date: 2026-03-30
 categories: portfolio
 mathjax: true
@@ -12,13 +12,13 @@ excerpt: "Implementação de heap e Heap Sort em C com medição de tempo para o
 
 ## O ponto de partida
 
-*Heap* e *Heap Sort* não têm mistério. São estruturas e algoritmos bem estabelecidos, bem documentados e já explorados até o limite.
+*Heap* e *Heap Sort* são estruturas e algoritmos bem estabelecidos, bem documentados e já explorados até o limite.
 
 Então a motivação aqui não foi “entender como funciona”.
 
 Foi outra coisa:
 
-> sair do nível teórico e olhar o comportamento quando você mede de fato
+> sair do nível teórico e olhar o comportamento real.
 
 ---
 
@@ -40,7 +40,7 @@ E isso é proposital — quando a base é conhecida, fica mais fácil observar o
 
 ## Onde começa a ficar interessante
 
-A diferença aqui foi adicionar medição de tempo de execução usando `clock_gettime`.
+A diferença aqui foi adicionar medição de tempo de execução usando `clock_gettime` com `CLOCK_MONOTONIC`.
 
 Não como detalhe, mas como parte central do projeto.
 
@@ -50,7 +50,7 @@ Mas isso, sozinho, não diz muita coisa na prática.
 
 ---
 
-## O que muda quando você mede
+## O que acontece quando se mede
 
 Quando você roda o algoritmo com volumes maiores de dados, algumas coisas começam a ficar mais concretas:
 
@@ -100,7 +100,7 @@ A medição aqui não tenta ser rigorosa ao extremo:
 * dados gerados de forma simples
 * sem análise estatística aprofundada
 
-Não é benchmark científico.
+Não é *benchmark* científico.
 
 Mas também não era essa a intenção.
 
