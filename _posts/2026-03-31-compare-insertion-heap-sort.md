@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparando Heap Sort e Insertion Sort: tempo real"
+title: "Comparando Heap Sort e Insertion Sort em um experimento com vários tamanhos de entradas"
 date: 2026-03-31
 categories: portfolio
 mathjax: true
@@ -10,9 +10,9 @@ github: https://github.com/natamleao/Compare-Insertion-Heap-Sort
 excerpt: "Comparação prática entre Heap Sort e Insertion Sort em C com medição de tempo, mostrando o custo real de cada algoritmo."
 ---
 
-## A comparação que todo mundo já viu — mas que muda quando você mede
+## A comparação que muitos já devem ter visto
 
-*Heap Sort* e *Insertion Sort* aparecem juntos em qualquer curso básico.
+*Heap Sort* e *Insertion Sort* aparecem em muitos cursos básicos.
 
 Um é eficiente, outro é simples.
 $O(nlog\,n)\; \text{vs}\; O(n²)$.
@@ -62,16 +62,15 @@ Os testes foram executados no meu notebook:
 * Compilador: GCC
 * Flags: `-O2 -Wall -Werror`
 
-Isso importa mais do que parece.
-Tempo de execução não é absoluto — ele depende diretamente de onde você roda.
+Isso é importante, dado que o tempo de execução não é absoluto, dependendo diretamente da máquina em que você roda.
 
 ---
 
-## O que aparece quando você começa a escalar
+## O que aparece quando se começa a escalar
 
 Com entradas pequenas, os dois algoritmos convivem bem.
 
-O *Insertion Sort* até se mantém competitivo — o que faz sentido, já que ele tem baixo overhead.
+O *Insertion Sort* até se mantém competitivo — o que faz sentido, já que ele tem baixo *overhead*.
 
 Mas conforme o tamanho cresce, a diferença deixa de ser sutil.
 
@@ -108,8 +107,6 @@ Nada surpreendente — mas também nada fora de controle.
   </p>
 </div>
 
-Aqui a coisa muda.
-
 O crescimento começa aceitável, mas rapidamente perde controle.
 O comportamento quadrático aparece sem disfarce.
 
@@ -140,7 +137,7 @@ Ao tentar escalar para 50 milhões de elementos, o *Insertion Sort* simplesmente
 
 Não por detalhe de implementação, mas por natureza do algoritmo.
 
-A conta é direta: $(5 \times 10^7)^2 = 2.5 \times 10^{15}$
+$(5 \times 10^7)^2 = 2.5 \times 10^{15}$, esse seria o número total de operações a serem realizadas.
 
 Mesmo com operações rápidas, isso escala para tempos absurdos.
 
@@ -150,7 +147,7 @@ Mesmo com operações rápidas, isso escala para tempos absurdos.
 
 ## O que ficou mais evidente
 
-Algumas coisas que já eram conhecidas ficam bem mais claras quando você mede:
+Algumas coisas que já eram conhecidas ficam bem mais claras após a medição:
 
 * *Heap Sort* mantém crescimento controlado
 * *Insertion Sort* degrada rápido com escala
