@@ -38,7 +38,10 @@ medição com `clock_gettime` usando `CLOCK_MONOTONIC`
 múltiplas execuções por entrada para reduzir ruído estatístico
 uso de média, desvio padrão e coeficiente de variação (CV)
 
-O coeficiente de variação (CV) — $\text{CV}\,=\,\frac{\sigma}{\mu}\times 100$ — é importante porque normaliza a dispersão em relação à média:
+O coeficiente de variação (CV) — $\text{CV}=\frac{\sigma}{\mu}\times 100$ — é importante porque normaliza a dispersão em relação à média:
+
+* $\sigma$: desvio padrão
+* $\mu$: média
 
 ele mostra o quanto o tempo oscila proporcionalmente ao valor médio
 
