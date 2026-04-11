@@ -2,7 +2,7 @@
 layout: post
 title: "Comparando algoritmos de ordenação com diferentes tamanhos de entrada"
 date: 2026-04-06
-categories: portfolio
+categories: portfoli
 mathjax: true
 tags: [C, Algorithms, Sorting]
 image: "/assets/images/sorts-comparison.png"
