@@ -2,7 +2,7 @@
 layout: post
 title: "Comparando algoritmos de ordenação com diferentes tamanhos de entrada"
 date: 2026-04-06
-categories: portfolio
+categories: portfoli
 mathjax: true
 tags: [C, Algorithms, Sorting]
 image: "/assets/images/sorts-comparison.png"
@@ -14,9 +14,9 @@ excerpt: "Comparação prática de algoritmos de ordenação em C com benchmark 
 
 *Bubble Sort*, *Insertion Sort*, *Selection Sort*, *Quick Sort* e *Merge Sort* aparecem em introdução à computação.
 
-Alguns são simples. Outros são eficientes.
+Alguns deles são simples. Outros são eficientes.
 
-$O(n^2)\; \text{vs}\; O(n\log n)$.
+$$O(n^2)\; \text{vs}\; O(n\log n)$$.
 
 Beleza. Isso quase todo mundo já viu.
 
@@ -40,10 +40,10 @@ uso de média, desvio padrão e coeficiente de variação (CV)
 
 O coeficiente de variação (CV) — $\text{CV}=\frac{\sigma}{\mu}\times 100$ — é importante porque normaliza a dispersão em relação à média:
 
-* $\sigma$: desvio padrão
-* $\mu$: média
-
 ele mostra o quanto o tempo oscila proporcionalmente ao valor médio
+
+* $\sigma \to \text{desvio padrão}$
+* $\mu \to \text{média}$
 
 Isso evita uma armadilha comum:
 desvio padrão parecer “grande” só porque o tempo médio também cresceu.
@@ -55,29 +55,29 @@ desvio padrão parecer “grande” só porque o tempo médio também cresceu.
 Foi utilizada uma estrutura própria:
 
 ```c
-typedef struct{
-    float *_data;
-    int _size;
-} StructureArray;
+struct _structureArray{
+    float *_input_data;
+    int _length;
+};
 ````
 
 Ela encapsula:
 
 * dados dinâmicos (`float*`)
-* tamanho do array
+* tamanho do *array*
 
 ---
 
-## *Benchmark* (o ponto mais importante)
+## *Benchmark*
 
 Cada algoritmo não roda apenas uma vez.
 
 O processo é:
 
-1. o array original é gerado
+1. o *array* original é gerado
 2. são criadas **100 execuções independentes**
 3. cada execução ordena uma cópia dos dados
-4. calcula-se **média e desvio padrão do tempo**
+4. calcula-se **média, desvio padrão e coeficiente de variação (CV) do tempo**
 
 Isso reduz ruído e melhora confiabilidade da medição.
 
@@ -85,11 +85,7 @@ Isso reduz ruído e melhora confiabilidade da medição.
 
 ## Geração dos dados
 
-Os valores são gerados aleatoriamente no intervalo:
-
-```
-[-1e6, 1e6]
-```
+Os valores são gerados aleatoriamente no intervalo: ```[-1e6, 1e6]```
 
 E copiados para todos os algoritmos, garantindo:
 
@@ -105,8 +101,11 @@ E copiados para todos os algoritmos, garantindo:
 * RAM: 7.2 GiB
 * Sistema: Debian GNU/Linux 12 (Bookworm)
 * Arquitetura: x86-64
-* SSD
-* GCC com otimização `-O2`
+* Armazenamento: SSD
+* Compilador: GCC com otimização `-O2`
+* Flags: -O2 -Wall -Werror -fsanitize=address -g
+
+Isso é necessário deixar claro, o tempo depende e vária de máquina para máquina.
 
 ---
 
@@ -122,15 +121,15 @@ Mas quando o tamanho cresce:
 
 ---
 
-## Resultados experimentais (ajustado)
+## Resultados experimentais
 
-Os resultados foram analisados sob três perspectivas:
+Os resultados foram analisados sob três métricas principais:
 
-crescimento do tempo de execução
-estabilidade estatística dos algoritmos
-validação empírica da complexidade teórica
+* média do tempo de execução
+* desvio padrão entre execuções
+* coeficiente de variação (CV)
 
-Isso permite enxergar não só “quem é mais rápido”, mas como e por que isso acontece.
+Essas métricas permitem avaliar não só o desempenho médio dos algoritmos, mas também a estabilidade das medições e a variabilidade relativa dos tempos.
 
 ---
 
@@ -148,8 +147,6 @@ Isso permite enxergar não só “quem é mais rápido”, mas como e por que is
 </div>
 
 Esse é o comportamento bruto do sistema.
-
-Aqui não tem teoria ainda — só realidade.
 
 O que ele mostra claramente:
 
@@ -171,8 +168,6 @@ Esse gráfico responde a pergunta mais básica: “quem escala melhor?”
     Variabilidade dos tempos de execução conforme o tamanho da entrada
   </p>
 </div>
-
-Aqui entra a parte que muita gente ignora: consistência.
 
 O desvio padrão mostra o quanto cada algoritmo varia entre execuções.
 
@@ -233,7 +228,7 @@ expõe padrões de crescimento
 Aqui fica evidente:
 
 crescimento quase linear no Quick Sort (em escala log)
-crescimento acelerado no Bubble / Selection / Insertion
+crescimento acelerado no Bubble / Selection / Insertion Sort
 
 Esse gráfico é o que mais aproxima prática e teoria.
 
@@ -261,7 +256,7 @@ comparar o formato de crescimento
 E o resultado é claro:
 
 Bubble Sort segue o comportamento quadrático
-Quick Sort acompanha o crescimento log-linear
+Quick Sort acompanha o crescimento linearítmico
 
 Esse é o gráfico que valida a teoria na prática.
 
@@ -296,8 +291,6 @@ Já $O(n \log n)$:
 
 ## O que fica evidente
 
-Quando você mede de verdade:
-
 * a teoria aparece no comportamento
 * diferenças pequenas viram enormes
 * o crescimento domina completamente o tempo de execução
@@ -310,7 +303,7 @@ Quando os gráficos são vistos em conjunto:
 o tempo médio mostra o custo real
 o desvio padrão mostra estabilidade
 o CV mostra consistência relativa
-o log scale revela padrões escondidos
+o *log scale* revela padrões escondidos
 a comparação teórica valida o modelo matemático
 
 ---
@@ -319,7 +312,7 @@ a comparação teórica valida o modelo matemático
 
 A teoria não é uma abstração aqui — ela aparece nos dados.
 
-Quando você mede corretamente:
+Quando se mede corretamente:
 
 > complexidade deixa de ser notação e vira comportamento observável
 
