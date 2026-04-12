@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Perceptron: onde redes neurais começam (e param)"
-date: 2026-03-30
+date: 2026-04-12
 categories: portfolio
 mathjax: true
 tags: [Python, Machine Learning]
