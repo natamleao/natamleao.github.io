@@ -4,7 +4,7 @@ title: "Perceptron: onde redes neurais começam (e param)"
 date: 2026-04-12
 categories: portfolio
 mathjax: true
-tags: [Python, Machine Learning]
+tags: [Python, Machine Learning, Neural Networks]
 image: /assets/images/perceptron-thumbnail.png
 github: https://github.com/natamleao/Perceptron-Neural-Network
 excerpt: "Implementação de um perceptron em Python para entender como modelos lineares aprendem — e onde falham."
