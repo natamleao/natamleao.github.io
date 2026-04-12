@@ -4,7 +4,7 @@ title: "Comparando preços com controle manual"
 date: 2026-03-18
 categories: portfolio
 mathjax: false
-tags: [C, Data Structures]
+tags: [C, Data Structures, Memory Management]
 image: /assets/images/price-comparison-c-thumbnail.png
 github: https://github.com/natamleao/Price-Comparison-C
 excerpt: "Sistema em C para manipulação e análise de preços com controle manual de memória."
