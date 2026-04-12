@@ -4,7 +4,7 @@ title: "Comparando preços e organizando dados"
 date: 2026-03-14
 categories: portfolio
 mathjax: false
-tags: [C++, Data Structures]
+tags: [C++, Data Structures, Memory Management]
 image: /assets/images/price-comparison-cpp-thumbnail.png
 github: https://github.com/natamleao/Price-Comparison-CPP
 excerpt: "Um pequeno sistema em C++ para organizar e comparar preços usando lista encadeada."
