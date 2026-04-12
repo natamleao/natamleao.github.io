@@ -46,24 +46,6 @@ desvio padrão parecer “grande” só porque o tempo médio também cresceu.
 
 ---
 
-## Estrutura dos dados
-
-Foi utilizada uma estrutura própria:
-
-```c
-struct _structureArray{
-    float *_input_data;
-    int _length;
-};
-````
-
-Ela encapsula:
-
-* dados dinâmicos (`float*`)
-* tamanho do *array*
-
----
-
 ## *Benchmark*
 
 Cada algoritmo não roda apenas uma vez.
