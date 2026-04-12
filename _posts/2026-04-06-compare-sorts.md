@@ -2,7 +2,7 @@
 layout: post
 title: "Comparando algoritmos de ordenação com diferentes tamanhos de entrada"
 date: 2026-04-06
-categories: portfoli
+categories: portfolio
 mathjax: true
 tags: [C, Algorithms, Sorting]
 image: "/assets/images/sorts-comparison.png"
@@ -138,7 +138,7 @@ Essas métricas permitem avaliar não só o desempenho médio dos algoritmos, ma
 ### **Gráfico 1 — Tempo médio vs tamanho da entrada (escala log)**
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/CS/log-scale-time.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - log-scale-time.svg"
        alt="Escala log"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray;">
@@ -165,7 +165,7 @@ Esse gráfico é o que mais aproxima prática e teoria.
 ### **Gráfico 2 — Desvio padrão vs tamanho da entrada**
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/CS/stddev-vs-input.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - stddev-vs-input.svg"
        alt="Desvio padrão"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray;">
@@ -188,7 +188,7 @@ Isso importa porque um algoritmo instável pode ser ruim mesmo sendo rápido.
 ### **Gráfico 3 — Coeficiente de variação (CV) vs tamanho da entrada**
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/CS/cv-vs-input.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - cv-vs-input.svg"
        alt="Coeficiente de variação"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray;">
@@ -214,7 +214,7 @@ Esse é o gráfico mais “estatístico” da análise.
 ### **Gráfico 5 — Comparação empírica com complexidade assintótica**
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/CS/asymptotic-comparison.svg"
+  <img src="/assets/images/post-images/graphics/CS/graphic - asymptotic-comparison.svg"
        alt="Complexidade assintótica"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray;">
