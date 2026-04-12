@@ -14,13 +14,9 @@ excerpt: "Comparação prática de algoritmos de ordenação em C com benchmark 
 
 *Bubble Sort*, *Insertion Sort*, *Selection Sort*, *Quick Sort* e *Merge Sort* aparecem em introdução à computação.
 
-Alguns deles são simples. Outros são eficientes.
+Alguns deles são simples. Outros são eficientes $O(n^2)\; \text{vs}\; O(n\log n)$.
 
-$$O(n^2)\; \text{vs}\; O(n\log n)$$.
-
-Beleza. Isso quase todo mundo já viu.
-
-Mas isso normalmente fica só na teoria.
+Beleza. Isso quase todo mundo já viu. Mas isso normalmente fica só na teoria.
 
 Aqui a ideia foi ir além:
 
@@ -75,9 +71,9 @@ Cada algoritmo não roda apenas uma vez.
 O processo é:
 
 1. o *array* original é gerado
-2. são criadas **100 execuções independentes**
+2. são criadas 100 execuções independentes
 3. cada execução ordena uma cópia dos dados
-4. calcula-se **média, desvio padrão e coeficiente de variação (CV) do tempo**
+4. calcula-se média, desvio padrão e coeficiente de variação (CV) do tempo
 
 Isso reduz ruído e melhora confiabilidade da medição.
 
@@ -142,7 +138,7 @@ Essas métricas permitem avaliar não só o desempenho médio dos algoritmos, ma
        alt="Escala log"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray; text-align: center;">
-    Tempo médio em escala logarítmica para evidenciar crescimento assintótico
+    Tempo médio para evidenciar crescimento assintótico
   </p>
 </div>
 
