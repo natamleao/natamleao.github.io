@@ -244,7 +244,7 @@ Quando se mede corretamente:
 
 ## Leitura complementar
 
-Uma análise complementar aprofunda o comportamento interno dos algoritmos a nível de CPU, utilizando `perf` para investigar IPC, cache hierarchy e branch prediction:
+Uma análise complementar aprofunda o comportamento interno dos algoritmos a nível de CPU, utilizando `perf` para investigar IPC, *cache hierarchy* e *branch prediction*:
 
 [O que a complexidade não mostra: análise de algoritmos com perf e CPU profiling](https://natamleao.github.io/complexity-vs-cpu-profiling/)
 
