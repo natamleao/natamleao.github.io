@@ -4,7 +4,7 @@ title: "Gerenciando playlists com lista encadeada circular"
 date: 2026-03-20
 categories: portfolio
 mathjax: false
-tags: [C, Data Structures]
+tags: [C, Data Structures, Linked List]
 image: /assets/images/playlist-manager-thumbnail.png
 github: https://github.com/natamleao/Playlist-Manager
 excerpt: "Gerenciador de playlists em C utilizando lista encadeada circular e manipulação manual de memória."
