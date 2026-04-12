@@ -350,9 +350,7 @@ Na prática:
 
 ## Leitura complementar
 
-Uma análise complementar explora o comportamento estatístico dos algoritmos de ordenação com múltiplas execuções, medindo variabilidade, desvio padrão e consistência dos tempos de execução:
-
-[Comparando algoritmos de ordenação com análise estatística de desempenho](https://natamleao.github.io/sorting-benchmark/)
+Uma análise complementar explora o comportamento estatístico dos algoritmos de ordenação com múltiplas execuções, medindo variabilidade, desvio padrão e consistência dos tempos de execução, você pode encontrá-la [aqui](https://natamleao.github.io/sorting-benchmark/).
 
 ---
 
