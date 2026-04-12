@@ -36,7 +36,7 @@ A pergunta é simples:
 
 ---
 
-## Ferramenta usada: perf
+## Ferramenta usada: *perf*
 
 O `perf` permite observar o que realmente acontece no *hardware*:
 
