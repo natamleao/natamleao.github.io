@@ -135,26 +135,30 @@ Essas métricas permitem avaliar não só o desempenho médio dos algoritmos, ma
 
 ## Gráficos de análise
 
-### **Gráfico 1 — Tempo médio vs tamanho da entrada**
+### **Gráfico 1 — Tempo médio vs tamanho da entrada (escala log)**
 
 <div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/CS/mean-time-vs-input.svg"
-       alt="Tempo médio vs entrada"
+  <img src="/assets/images/post-images/graphics/CS/log-scale-time.svg"
+       alt="Escala log"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
   <p style="font-size: 0.9em; color: gray;">
-    Tempo médio de execução em função do tamanho da entrada (n)
+    Tempo médio em escala logarítmica para evidenciar crescimento assintótico
   </p>
 </div>
 
-Esse é o comportamento bruto do sistema.
+Esse é o gráfico que revela o comportamento escondido.
 
-O que ele mostra claramente:
+A escala logarítmica faz duas coisas:
 
-algoritmos $O(n^2)$ crescem rapidamente
-Quick Sort e Merge Sort mantêm crescimento controlado
-a diferença começa pequena e explode conforme o tamanho aumenta
+comprime os valores grandes
+expõe padrões de crescimento
 
-Esse gráfico responde a pergunta mais básica: “quem escala melhor?”
+Aqui fica evidente:
+
+crescimento quase linear no Quick Sort (em escala log)
+crescimento acelerado no Bubble / Selection / Insertion Sort
+
+Esse gráfico é o que mais aproxima prática e teoria.
 
 ---
 
@@ -204,33 +208,6 @@ estabilidade relativa dos algoritmos eficientes
 explosão de variabilidade nos quadráticos em grandes entradas
 
 Esse é o gráfico mais “estatístico” da análise.
-
----
-
-### **Gráfico 4 — Tempo médio vs tamanho da entrada (escala log)**
-
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/CS/log-scale-time.svg"
-       alt="Escala log"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray;">
-    Tempo médio em escala logarítmica para evidenciar crescimento assintótico
-  </p>
-</div>
-
-Esse é o gráfico que revela o comportamento escondido.
-
-A escala logarítmica faz duas coisas:
-
-comprime os valores grandes
-expõe padrões de crescimento
-
-Aqui fica evidente:
-
-crescimento quase linear no Quick Sort (em escala log)
-crescimento acelerado no Bubble / Selection / Insertion Sort
-
-Esse gráfico é o que mais aproxima prática e teoria.
 
 ---
 
