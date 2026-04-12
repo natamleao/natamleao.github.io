@@ -7,7 +7,7 @@ mathjax: true
 tags: [C, Algorithms, Sorting]
 image: "/assets/images/sorts-comparison.png"
 github: https://github.com/natamleao/Compare-Sorts
-excerpt: "Comparação prática de algoritmos de ordenação em C com benchmark baseado em múltiplas execuções e cópias isoladas dos dados."
+excerpt: "Análise comparativa de algoritmos de ordenação em C utilizando benchmarks estatísticos com múltiplas execuções, medição de variabilidade e isolamento de dados para garantir consistência experimental."
 ---
 
 ## A comparação é simples e evidencia a diferença teórica de complexidade
