@@ -102,7 +102,7 @@ Algoritmos eficientes:
 
 Algoritmos $O(n²)$:
 
-- *Bubble* / *Selection* / *Insertion* $\to$ IPC variável, sem relação direta com eficiência
+- *Bubble* / *Selection* / *Insertion Sort* $\to$ IPC variável, sem relação direta com eficiência
 
 Importante: IPC alto não significa desempenho melhor. Ele só indica eficiência de pipeline.
 
@@ -146,7 +146,7 @@ Resultado:
 
 - desperdício de ciclos  
 - baixa eficiência global  
-- crescimento explosivo com n  
+- crescimento explosivo com $n$  
 
 ---
 
