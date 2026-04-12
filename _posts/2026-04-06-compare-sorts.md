@@ -81,7 +81,7 @@ E copiados para todos os algoritmos, garantindo:
 * Arquitetura: x86-64
 * Armazenamento: SSD
 * Compilador: GCC com otimização `-O2`
-* Flags: -O2 -Wall -Werror -fsanitize=address -g
+* Flags: `-O2 -Wall -Werror -fsanitize=address -g`
 
 Isso é necessário deixar claro, o tempo depende e varia de máquina para máquina.
 
