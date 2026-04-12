@@ -32,11 +32,11 @@ Aqui a ideia foi ir além:
 
 Nada muito “acadêmico”, mas com controle suficiente pra não distorcer os resultados:
 
-todos os algoritmos recebem os mesmos dados
-cada execução é isolada
-medição com `clock_gettime` usando `CLOCK_MONOTONIC`
-múltiplas execuções por entrada para reduzir ruído estatístico
-uso de média, desvio padrão e coeficiente de variação (CV)
+- todos os algoritmos recebem os mesmos dados
+- cada execução é isolada
+- medição com `clock_gettime` usando `CLOCK_MONOTONIC`
+- múltiplas execuções por entrada para reduzir ruído estatístico
+- uso de média, desvio padrão e coeficiente de variação (CV)
 
 O coeficiente de variação (CV) — $\text{CV}=\frac{\sigma}{\mu}\times 100$ — é importante porque normaliza a dispersão em relação à média:
 
@@ -105,7 +105,7 @@ E copiados para todos os algoritmos, garantindo:
 * Compilador: GCC com otimização `-O2`
 * Flags: -O2 -Wall -Werror -fsanitize=address -g
 
-Isso é necessário deixar claro, o tempo depende e vária de máquina para máquina.
+Isso é necessário deixar claro, o tempo depende e varia de máquina para máquina.
 
 ---
 
@@ -135,30 +135,24 @@ Essas métricas permitem avaliar não só o desempenho médio dos algoritmos, ma
 
 ## Gráficos de análise
 
-### **Gráfico 1 — Tempo médio vs tamanho da entrada (escala log)**
+### **Gráfico 1 — Tempo médio vs tamanho da entrada**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - log-scale-time.svg"
        alt="Escala log"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
     Tempo médio em escala logarítmica para evidenciar crescimento assintótico
   </p>
 </div>
 
-Esse é o gráfico que revela o comportamento escondido.
+Neste gráfico, é possível observar claramente a diferença de escalabilidade entre os algoritmos.
 
-A escala logarítmica faz duas coisas:
+*Merge Sort* e *Quick Sort* apresentam crescimento significativamente mais lento, mantendo tempos baixos mesmo com o aumento do tamanho da entrada, o que está em linha com a complexidade $O(n\log\,n)$.
 
-comprime os valores grandes
-expõe padrões de crescimento
+Por outro lado, *Bubble Sort* e *Optimized Bubble Sort* exibem crescimento acentuado, característico de algoritmos $O(n^2)$. A otimização aplicada ao *Bubble Sort* não resulta em ganho relevante de desempenho para entradas grandes, indicando que melhorias locais não alteram o comportamento assintótico do algoritmo.
 
-Aqui fica evidente:
-
-crescimento quase linear no Quick Sort (em escala log)
-crescimento acelerado no Bubble / Selection / Insertion Sort
-
-Esse gráfico é o que mais aproxima prática e teoria.
+Além disso, observa-se que o *Quick Sort* é consistentemente o algoritmo mais rápido entre todos os testados, enquanto os algoritmos quadráticos tornam-se rapidamente inviáveis conforme o tamanho da entrada aumenta.
 
 ---
 
@@ -168,20 +162,18 @@ Esse gráfico é o que mais aproxima prática e teoria.
   <img src="/assets/images/post-images/graphics/CS/graphic - stddev-vs-input.svg"
        alt="Desvio padrão"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
     Variabilidade dos tempos de execução conforme o tamanho da entrada
   </p>
 </div>
 
-O desvio padrão mostra o quanto cada algoritmo varia entre execuções.
+Neste gráfico, observa-se o comportamento da variabilidade dos tempos de execução à medida que o tamanho da entrada aumenta.
 
-O que ele revela:
+Algoritmos como *Merge Sort* e *Quick Sort* apresentam uma tendência de estabilização do desvio padrão, indicando maior consistência nas execuções mesmo para entradas maiores. Isso sugere que, além de eficientes, esses algoritmos são também mais previsíveis.
 
-algoritmos simples tendem a ter mais variação em entradas grandes
-algoritmos mais eficientes são mais estáveis
-o custo não é só tempo médio — é previsibilidade
+Por outro lado, algoritmos quadráticos como *Bubble Sort*, *Optimized Bubble Sort*, *Insertion Sort* e *Selection Sort* exibem maior instabilidade, com picos mais elevados de desvio padrão e crescimento mais acentuado à medida que o tamanho da entrada aumenta.
 
-Isso importa porque um algoritmo instável pode ser ruim mesmo sendo rápido.
+Esse comportamento indica que, além de mais lentos, esses algoritmos também são menos consistentes, sofrendo maior influência de fatores como distribuição dos dados, cache e variações de execução.
 
 ---
 
@@ -191,63 +183,37 @@ Isso importa porque um algoritmo instável pode ser ruim mesmo sendo rápido.
   <img src="/assets/images/post-images/graphics/CS/graphic - cv-vs-input.svg"
        alt="Coeficiente de variação"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray;">
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
     Relação entre dispersão e média dos tempos de execução
   </p>
 </div>
 
-Esse gráfico normaliza a variabilidade pelo tempo médio.
+Neste gráfico, observa-se a relação entre a variabilidade e o tempo médio de execução dos algoritmos.
 
-Ele responde uma pergunta mais profunda:
+*Merge Sort* e *Quick Sort* apresentam valores baixos e relativamente estáveis, indicando comportamento consistente mesmo com o aumento do tamanho da entrada.
 
-“qual algoritmo é mais confiável proporcionalmente ao seu custo?”
-
-Aqui dá pra ver:
-
-estabilidade relativa dos algoritmos eficientes
-explosão de variabilidade nos quadráticos em grandes entradas
-
-Esse é o gráfico mais “estatístico” da análise.
+Por outro lado, os algoritmos quadráticos exibem maior variação relativa, especialmente em entradas maiores, evidenciando menor previsibilidade.
 
 ---
 
-### **Gráfico 5 — Comparação empírica com complexidade assintótica**
+### **Gráfico 4 — Comparação empírica com complexidade assintótica**
 
 <div style="text-align: center;">
   <img src="/assets/images/post-images/graphics/CS/graphic - asymptotic-comparison.svg"
        alt="Complexidade assintótica"
        style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray;">
-    Comparação entre tempos reais e curvas teóricas O(n²) e O(n log n)
+  <p style="font-size: 0.9em; color: gray; text-align: center;">
+    Comparação entre tempos reais e curvas teóricas $O(n²)$ e $O(n\log\,n)$
   </p>
 </div>
 
-Esse é o fechamento do experimento.
+Neste gráfico, as curvas teóricas $O(n^2)$ e $O(n \log n)$ são ajustadas aos dados experimentais, permitindo a comparação direta entre comportamento real e crescimento assintótico.
 
-Aqui as curvas teóricas $O(n^2)$ e $O(n \log n)$ são ajustadas aos dados reais.
+Observa-se que o *Bubble Sort* acompanha de forma consistente a curva quadrática, apresentando crescimento mais acentuado à medida que o tamanho da entrada aumenta.
 
-O objetivo não é bater valores exatos, mas sim:
+Já o *Quick Sort* segue de perto a curva $O(n\log\,n)$, mantendo crescimento significativamente mais controlado.
 
-comparar o formato de crescimento
-
-E o resultado é claro:
-
-Bubble Sort segue o comportamento quadrático
-Quick Sort acompanha o crescimento linearítmico
-
-Esse é o gráfico que valida a teoria na prática.
-
----
-## Tabela de tempos
-
-<div style="text-align: center;">
-  <img src="/assets/images/post-images/graphics/CS/times-table.png"
-       alt="Tabela de tempos"
-       style="display: block; margin: 0 auto; max-width: 100%; width: 100%;">
-  <p style="font-size: 0.9em; color: gray;">
-    Tempos médios de execução (ms)
-  </p>
-</div>
+Essa correspondência evidencia que, apesar de abstrair constantes e detalhes de implementação, a análise assintótica descreve corretamente o comportamento dominante dos algoritmos na prática.
 
 ---
 
@@ -277,11 +243,11 @@ Já $O(n \log n)$:
 
 Quando os gráficos são vistos em conjunto:
 
-o tempo médio mostra o custo real
-o desvio padrão mostra estabilidade
-o CV mostra consistência relativa
-o *log scale* revela padrões escondidos
-a comparação teórica valida o modelo matemático
+- o tempo médio mostra o custo real
+- o desvio padrão mostra estabilidade
+- o CV mostra consistência relativa
+- a escala logarítmica revela padrões de crescimento
+- a comparação teórica valida o modelo matemático
 
 ---
 
