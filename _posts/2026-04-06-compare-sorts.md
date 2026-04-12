@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparando algoritmos de ordenação com diferentes tamanhos de entrada"
+title: "Comparando algoritmos de ordenação com análise estatística de desempenho"
 date: 2026-04-06
 categories: portfolio
 mathjax: true
