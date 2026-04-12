@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "O que a complexidade não mostra: análise de algoritmos com perf e CPU profiling"
+title: "Análise de algoritmos com perf e CPU profiling"
 date: 2026-04-08
 categories: portfolio
 mathjax: true
