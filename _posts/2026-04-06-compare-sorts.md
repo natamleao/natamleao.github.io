@@ -113,6 +113,9 @@ Essas métricas permitem avaliar não só o desempenho médio dos algoritmos, ma
 
 ## Gráficos de análise
 
+Para os gráficos abaixo, os algoritmos $O(n^2)$ foram executados com os tamanhos de entrada: 10000, 20000, 50000, 100000 e 200000.
+Já os algoritmos $O(n \log n)$ foram executados com os tamanhos: 10000, 20000, 50000, 100000, 200000, 500000 e 1000000.
+
 ### **Gráfico 1 — Tempo médio vs tamanho da entrada**
 
 <div style="text-align: center;">
