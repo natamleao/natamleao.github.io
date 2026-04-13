@@ -79,7 +79,6 @@ E copiados para todos os algoritmos, garantindo:
 * RAM: 7.2 GiB
 * Sistema: Debian GNU/Linux 12 (Bookworm)
 * Arquitetura: x86-64
-* Armazenamento: SSD
 * Compilador: GCC com otimização `-O2`
 * Flags: `-O2 -Wall -Werror -fsanitize=address -g`
 
