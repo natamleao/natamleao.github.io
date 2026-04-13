@@ -56,7 +56,6 @@ Isso transforma a análise de teórica para física.
 * RAM: 7.2 GiB
 * Sistema: Debian GNU/Linux 12 (Bookworm)
 * Arquitetura: x86-64
-* Armazenamento: SSD
 * Compilador: GCC com otimização `-O2`
 - Flags: `-O2 -Wall -Werror -g`  
 
@@ -150,7 +149,7 @@ Resultado:
 
 ---
 
-## *Branch prediction* importa mais do que parece
+## *Branch prediction* 
 
 Algoritmos com muitos condicionais:
 
@@ -195,7 +194,7 @@ Mesmo com a mesma complexidade:
 
 ---
 
-## Complexidade vs realidade
+## Complexidade *vs* realidade
 
 A teoria responde:
 
